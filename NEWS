@@ -1,0 +1,380 @@
+This NEWS file for ocempgui covers a short overview about the latest
+changes.
+
+0.2.9   2008-05-10:
+-------------------
+  * Removed explicit Numeric dependencies for pygame >= 1.8.0
+
+  widgets package:
+  * Added reversed focus switching through SHIFT+TAB in Renderer class.
+    Renderer.switch_index() features a new argument 'reverse' now.
+  * Fixed a set_focus() bug in Alignment class. It should not be
+    focusable by default.
+
+0.2.8   2008-01-10:
+-------------------
+  * Chat client example now requires Twisted >= 2.5.x
+  * Added Graph2D and StatusBar sections in manual.
+
+  access package:
+  * ocempgui.access.papi updated to version 0.0.5.
+
+  widgets package:
+  * New method 'set_cursor()' in ScrolledList class, which allows to set
+    the cursor programmatically.
+  * Fixed a bug in Style.copy_style(), which prevented subkeys from
+    being copied correctly (thanks to Ryan Dhuse).
+  * Fixed a bug in the *Frame.calculate_size() methods, that could lead
+    to crashes on setting *Frame.spacing.
+
+0.2.7   2007-03-23:
+-------------------
+  * Added installation note for Win32 environments and the
+   "No module named themes" error.
+
+  access package:
+  * ocempgui.access.papi updated to version 0.0.4.
+
+  widgets package:
+  * New 'locked' attribute and lock() and unlock() methods in the
+    Renderer class, which add locking abilities for updates.
+  * New 'linespace' attribute and set_linespace() method in the Label
+    class to set the line spacing amount for multiline labels. (Thanks
+    to Christophe and Ludovic).
+  * Multiline text in Label class now respects ALIGN_NONE alignment by
+    centering the text. (Thanks to Christophe and Ludovic).
+  * New 'drops' attribute and set_drops() method in the Renderer class
+    to improve the event handling speed by allowing to drop mouse
+    motion events, when the Renderer updates a portion of the screen.
+  * Fixed CTRL+Click selection behaviour in ScrolledList widget class.
+  * Dropshadows for windows will only be drawn, if the shadow style entry
+    is greater than 0.
+
+0.2.6   2007-02-01:
+-------------------
+  access package:
+  * New 'zoom_func' attribute and set_zoom_func() method in the
+    Magnifier class, which allow the usage of own zoom functions for
+    magnification.
+
+  widgets package:
+  * New Alignment widget class which controls the alignment of its child.
+  * New method invalidate() in the ImageMap class, which allows
+    optimized updates for portions of the displayed image on the
+    ImageMap.
+  * New 'align' attribute and set_align() method in the Label class,
+    which allows to set the alignment of the displayed text.
+  * Fixed Table.set_children() assignment.
+  * Fixed alignment check in Constants.constants_is_align().
+  * Fixed layer destruction in Renderer class.
+  * Fixed key code recognition in the Editable class (thanks to
+    Matthias Kievernagel).
+  * Fixed event.handled value for Editable, FileList, Graph2D, ImageMap,
+    Scale, ScrollBar, ScrolledList, ScrolledWindow and the ToggleButton
+    class, which could prevent them to work correctly on Window widgets.
+
+0.2.5   2007-01-22:
+-------------------
+  widgets package:
+  * Inheritors of the Container class now need to implement the
+    calculate_size() and dispose_widgets() methods of it.
+  * Fixed input handling for some keyboard layouts, which return a NUL
+    key code for valid input (such as ABNT 2) in the Editable class.
+  * Added SIG_DESTROYED signal handling when a widget is about to be
+    destroyed.
+
+0.2.4   2007-01-08:
+-------------------
+  access package:
+  * ocempgui.access.papi updated to version 0.0.3.
+
+  draw package:
+  * The FaderSurface will apply the alpha value on every assignment, not
+    only on value changes.
+
+  widgets package:
+  * New Box widget class, which allows its children to be positioned
+    absolutely.
+  * New 'opacity' attribute and set_opacity() method in the BaseWidget
+    class, which allow to set the alpha transparency for each widget.
+  * The create_screen() method of the Renderer accepts additional depth
+    as defined by pygame.display.set_mode().
+  * Fixed an error in Style.copy_style() which prevented certain styles
+    from being copied.
+  * Fixed multiple blits of the same area in the update() method of the
+    Renderer class.
+  * Fixed a parent relation bug in the remove_widget() method of the
+    Renderer class, which could lead to wrong updates.
+  * Fixed a blitting bug in the layer info display.
+  * Fixed update issues in the Container and BaseWidget classes, which
+    could cause overlapping widget not to be displayed correctly.
+
+0.2.3   2006-11-20:
+-------------------
+  access package:
+  * ocempgui.access.papi updated to version 0.0.2, which relies upon
+    ATK >= 1.12.1.
+
+  widgets packge:
+  * Added a new example for embedding the Renderer into an own mainloop
+    and the assignment of partial screen areas.
+  * New rect and rect style attributes in Renderer class.
+  * Improved drawing method of the Renderer (thanks to Martin Fuzzey).
+  * The Renderer supports event based polling now, which can be
+    chosen using Renderer.start (True). By default the timer based
+    polling will be used.
+  * Fixed a layer update bug for widgets that do not directly intersect
+    with screen portions to update.
+  * The remove_widget() method of the Renderer class now accepts
+    multiple widget arguments similar to the add_widget() method.
+  * Setting the state in the Button, ImageButton and ToggleButton
+    classes will not cause redraws anymore, if the state did not change.
+  * Fixed the assignment of surfaces to the Renderer and the event
+    handling for them.
+
+0.2.2   2006-10-19:
+-------------------
+  access package:
+  * Fixed a notify() bug in the Magnifier class, which could cause
+    exceptions if no mouse movements occured in the passed event list.
+
+  draw package:
+  * The font cache of the String module distinguishes between applied
+    styles when String.create_font(), String.create_file_font() and
+    String.create_system_font() are used. (Thanks to Regis Desgroppes)
+  * Fixed a bug in String.create_system_font(), which applied styles
+    two times and could lead to broken rendering of fonts. (Thanks to
+    Regis Desgroppes)
+
+  widgets packge:
+  * New TooltipWindow class which uses a certain color and displays
+    a simple line text.
+  * New SIG_ENTER and SIG_LEAVE signals, which indicate that the mouse
+    cursor entered or left a widget.
+  * New 'entered' attribute and set_entered() method in BaseWidget
+    class, which indicate, that the widget is entered by an input
+    device.
+  * Added SIG_ENTER and SIG_LEAVE support to the BaseWidget class.
+  * Minor speed optimizations in some widget classes.
+  * The WidgetStyle dictionary class will be imported using the module
+    namespace now.
+  * Fixed internal positioning for packed widgets.
+  * Removed doubled set_state() method in ToggleButton class.
+  * Fixed wrong SIG_FOCUSED emittance, when the focus was not set on the
+    widget.
+  * Fixed scrolling behaviour in the ScrolledList class.
+  * Fixed the update of deselected items in the ScrolledList class.
+  * Fixed drawing_engine example.
+
+0.2.1   2006-08-25:
+-------------------
+  * ATK version check fix.
+
+  access package:
+  * New Magnifier class, a magnification tool for pygame screens.
+
+  draw package:
+  * New Constants module.
+  * New FONT_STYLE_TYPES constants for styles to be passed to the
+    String module methods.
+  * String.* functions now allow additional style flags to be passed.
+  * New method apply_font_styles() in String module to apply different
+    rendering styles to a font.
+
+  events package:
+  * New Subject and IObserver class for simple Observer pattern needs.
+  * New method clear() in EventManager class, which removes all objects
+    and signals from all event queues.
+
+  widgets package:
+  * New SIG_SCREENCHANGED signal, which indicates changes of the bound
+    'screen' attribute of the Renderer.
+  * New method create_style() in BaseWidget class, which is a
+    replacement for the deprecated get_style() method.
+  * New WidgetStyle dictionary class, which can track key-value changes.
+  * New ImageLabel class for simple image displays.
+  * New style entry 'shadowcolor' for adjusting dropshadow effects.
+  * New method clear() in Renderer class, which removes all objects from
+    the Renderer layers.
+  * Fixed emittance of SIG_TICK events on all layers, if an
+    event grabber is set.
+  * The Style class now makes use of WidgetStyle dictionaries to track
+    style changes.
+  * Fixed drawing in the draw_dropshadow() method of the DefaultEngine
+    class for larger shadow values.
+  * Fixed doubled assignment of the 'screen' attribute in the Renderer
+    class on VIDEORESIZE events.
+  * Fixed a bug in the remove_index() method of the Renderer class for 
+    empty arguments.
+  * Fixed the size calculation for larger spacing values in the Table
+    class.
+  * Fixed a focusing bug in the Window class, which prevented children
+    to receive the correct input focus under some circumstances.
+  * Fixed depth assignment for widgets attached to the Bin or Container
+    class.
+  * Fixed 'indexable' assignment for the 'controls' attribute of the
+    BaseWidget class.
+  * Fixed creation of the Table internals on invocation of its
+    constructur.
+  * Fixed event.handled assignment on clicks in Entry class.
+  * The get_style() method of the BaseWidget class is deprecated.
+
+0.2.0   2006-07-22:
+-------------------
+  * Minimum pygame requirement changed to version 1.7.1.
+  * Installation of additional data now respects the user flags.
+  * Filename fixes for case insensitive filesystems.
+
+  access package:
+  * Renamed Accessible class to IAccessible to outline that it is an
+    interface class.
+  * Renamed Indexable class to IIndexable to outline that it is an
+    interface class.
+  * New _papi (python accessible programming interface) module, which
+    bridges to the ATK/AT-SPI accessibility system.
+  * New interface update_index() in Indexable for updating object
+    indices.
+  * Removed AccessibleContext class because it had no use.
+
+  draw package:
+  * New FaderSurface class, which can fade in and out surfaces using
+    alpha transparency.
+
+  events package:
+  * New INotifyable interface class.
+  * New method __len__() in the EventManager class, which counts the
+    total amount of objects addded in any of its queues.
+  * EventManager class does not use __slots__ anymore.
+  * Renamed 'eventgrabber' attribute in EventManager class to
+    'event_grabber' to synchronize the naming schemes.
+
+  object package:
+  * BaseObject class now inherits from ocempgui.events.INotifyable
+
+  widgets package:
+  * New style entry 'bordercolor' for flat borders (BORDER_FLAT).
+  * New abstract ButtonBase class for the fast creation of button type
+    widgets.
+  * New abstract Diagram class for diagram and graph widgets.
+  * New Graph2D class for drawing function graphs on a 2D coordinate
+    plane.
+  * New ViewPort class, which can act as proxy for widgets, which need
+    to be scrolled.
+  * New global StyleInformation dictionary, which contains additional
+    information about the Styles.
+  * New DEFAULTDATADIR constant which denotes the installation path of
+    the theme engines and additional resources.
+  * New ORIENTATION_TYPES constants for widgets, which can draw
+    themselves in a horizontal or vertival alignment.
+  * New signal SIG_UPDATED, which indicates, that the screen was updated
+    by the Renderer class.
+  * New signal groups SIGNALS_KEYS and SIGNALS_MOUSE.
+  * New 'maxsize' attribute and set_maximum_size () method in the
+    BaseWidget class.
+  * New 'minsize' attribute and set_minimum_size () method in the
+    BaseWidget class.
+  * New 'locked' attribute and lock() and unlock() methods in the
+    BaseWidget class, which add locking abilities for updates.
+  * New 'indexable' attribute and set_indexable() method in BaseWidget
+    class for setting the Indexable interface implementor to use.
+  * New method draw_bg() in BaseWidget class, which draws the plain
+    background for the widgets (formerly a part of the draw() method).
+  * New method rect_to_client() in BaseWidget class, which returns the
+    absolute rectangle position of a widget on the screen and can be
+    used as a replacement for the dropped 'eventarea' attribute.
+  * New method check_sizes() method in BaseWidget.class, which
+    guarantees valid sizes within the limitations of the BaseWidget.
+  * New 'date_width' attribute and set_date_width() method in the
+    StatusBar class.
+  * New 'tip_width' attribute and set_tip_width() method in the
+    StatusBar class.
+  * New method select_all() in the ScrolledList class.
+  * New 'managers' attribute and get_managers() method in the Renderer
+    class, which returns a dict containing the event managers of the 
+    different layers using the layer depths as keys.
+  * New 'active_layer' attribute and set_active_layer() method in the
+    Renderer class to set the active input layer
+  * New 'show_layer_info' attribute and set_show_layer_info() method in
+    the Renderer class to show layer information upon switching the
+    active layer.
+  * New 'support_resize' attribute and set_support_resize() method in
+    the Renderer class to support VIDEORESIZE events.
+  * New switch_layer() method in Renderer class to allow switching the
+    input layer using CTRL-SPACE.
+  * Full z-axis layer support through a new layer system within the
+    the Renderer class.
+  * Assigning the 'screen' attribute of the Renderer now will keep
+    the surface attributes such as alpha transparency or a colorkey
+    intact.
+  * Events passed to the Renderer will be sent to the currently active
+    layer only (except mouse events).
+  * The updating mechanisms heavily changed. Updates are applied
+    and shown instantly without a time bound loop mechanism. The event
+    manangement in the Renderer class however is still bound to a timer.
+  * Updating and drawing code was rewritten, which might break user
+    defined drawing code.
+  * Widgets are positioned relatively to their parents now, so that
+    widget.rect returns the relative coordinates.
+  * The 'position' attribute and set_position() method of the BaseWidget
+    class are deprecated. Use the 'topleft' attribute instead.
+  * The 'eventarea' attribute and set_event_area () method of the
+    BaseWidget class are deprecated. Use the rect_to_client () method
+    instead.
+  * The Style class was rewritten in order to make use of theme engines.
+  * Generic drawing routines were separated into an own default theme
+    engine.
+  * draw() methods of the widgets now take care of drawing the widget
+    specific parts (formerly the Style class methods did that).
+  * The BaseWidget class exposes all its pygame.Rect attributes.
+  * Made several hittest and drawing related methods of the Entry class
+    private.
+  * The ScrolledWindow class now expects a ViewPort widget as child.
+    Assigning any widget to its child attribute will encapsulate it in a
+    ViewPort automatically, if not already done.
+  * Made the get_visible_area() method of the ScrolledWindow class
+    private.
+  * The default value of the 'spacing' attribute for the ScrolledList
+    changed from 2 to 0.
+  * Made the get_coords_from_value() and get_value_from_coords() methods
+    of the Scale and ScrollBar classes private.
+  * Made get_slider_size() and get_button_coords() methods of the
+    ScrollBar class private.
+  * The StatusBar class uses fixed widths for the date and tips now.
+  * The 'rect' attribute of the BaseWidget will return a copy of itself
+    now.
+  * The update() method of the BaseWidget receives keyword arguments now.
+  * The set_dirty() method of the BaseWidget receives an additional
+    argument now.
+  * The 'caret_visible' attribute of the Editable class is writeable
+    now.
+  * The text argument in the CheckButton, RadioButton and ToggleButton
+    constructors is optional now.
+  * The image argument in the ImageButton constructor is optional now.
+  * The Button, ImageButton and ToggleButton classes now inherit from
+    ButtonBase.
+  * The Button, ToggleButton, ImageButton, CheckButton and RadioButton
+    classes now will draw a dashed border on focus regardless of a set
+    child.
+  * The create_screen() method of the Renderer class now allows to set
+    additional flags as defined by pygame.display.set_mode().
+  * The look of the Scale classes was overhauled.
+  * The load() style loading method of the Style class now recognizes
+    variables, which start with '_'.
+  * Improved navigation support in the ScrolledList class.
+  * The ListItemCollection now inherits from UserList.
+  * The ListItemCollection constructor now receives optional list
+    arguments.
+  * Fixed a bug in ListItemCollection.destroy() which prevented it from
+    being destroyed correctly.
+  * 'shadow' value of the default style changed from 2 to 1.
+  * Various former drawing methods of the Style class now draw directly
+    on the passed surface.
+  * Brushed up default FOLDER icon image.
+  * Removed the RenderLayer class.
+  * Removed the force_update() method from the Renderer class.
+  * 'size' attribute and set_size() method are replaced by the
+    'minsize' and 'maxsize' attributes and the set_minimum_size() and
+    set_maximum_size() methods in BaseWidget class. The 'size' attribute
+    itself will return the actual size of the widget.
+  * Removed the get_scrollable_area() method from the ScrolledWindow
+    class.

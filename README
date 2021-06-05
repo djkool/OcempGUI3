@@ -1,0 +1,187 @@
+This is the (always incomplete) README for OcempGUI.
+OcempGUI is a graphical user interface toolkit for pygame.
+
+--
+License: 2-clause BSD license (see the COPYING file in this package).
+         The examples located in the doc/examples directory are under the
+         Public Domain.
+
+Contact: ocemp-devel@lists.sourceforge.net (development mailing list)
+         marcus@sysfault.org (project lead)
+
+Thanks: - Thatcher Ulrich for the PD Tuffy font (doc/examples/tuffy.ttf)
+          from http://www.tulrich.com/fonts/.
+        - The people from #pygame at irc.freenode.net for feedback,
+          discussion and constructive critics.
+        - The Atk and AT-SPI developers and standard creators.
+        - The authors of Dia for a great UML modelling tool.
+--
+
+Content:
+--------
+0. Description
+1. Installation
+   1.1 Dependencies
+   1.2 Notes on CVS usage
+   1.3 Notes for Windows users
+   1.4 Notes for Mac OS users
+2. Getting started
+
+0. Description:
+---------------
+
+OcempGUI is a toolkit, which comes with various modules suitable for
+event management, user interfaces, 2D drawing and accessibility. It is
+completely written in Python[0] and its drawing routines and user
+interface elements are created with and especially created for the
+pygame[1] library.
+
+OcempGUI enables developers to enhance their python and/or pygame
+applications and games easily with graphical UI elements such as
+buttons, entry boxes, scrolling abilities and more as well as simple
+event brokers or features, which enhance the program by adding
+accessibility to its objects.
+
+It can save a developer much time by letting providing a broad range of
+drawing routines and ready-to-use event capable object types.
+The developer can focus on the main tasks instead of taking care about
+needed low-level components, which are given to him with OcempGUI.
+
+[0] http://www.python.org
+[1] http://www.pygame.org
+
+1. Installation:
+----------------
+
+You can either use the python way of installing the package or the make
+command using the Makefile.
+Simply type
+
+    python setup.py install 
+
+for the traditional python way or
+
+    make install
+
+for using the Makefile. 
+
+It must be said, that the install target of the Makefile does not do
+anything else than the python way. It simply calls 'python setup.py
+install'.
+
+1.1. Dependencies
+-----------------
+
+The minimum required dependencies of OcempGUI are
+
+    Python, at least version 2.3
+    PyGame, at least version 1.7.1*
+
+The system backend of the ocempgui.access module has the following
+additional requirements to be built successfully:
+
+   C Compiler        which supports the C99 standard (at least large
+                     parts of it) such as GCC[0].
+   ATK               at least version 1.12.1 and its dependencies[1].
+   pkg-config        for automatic generation of the compiler flags[2].
+   
+If none of the ocempgui.access requirements can be met, you can install
+OcempGUI anyways, but will not be able to use the accessibility support
+offered by it through the ocempgui.access module.
+
+[0] http://www.gnu.org/software/gcc/
+[1] http://developer.gnome.org/projects/gap/
+    ftp://ftp.gnome.org/pub/gnome/sources/atk
+[2] http://pkgconfig.freedesktop.org/
+
+* Earlier versions of OcempGUI (< 0.2.0) will work fine with PyGame 1.6.
+
+1.2 Notes on CVS usage
+----------------------
+
+The CVS versions of OcempGUI are not recommended to be used in a
+productive application environment. Interfaces my change from one
+checkin to another, methods, classes or modules can be broken and so
+on. If you want more reliable code, please refer to the official
+releases.
+
+If you are going to use a CVS snapshot of the actual development
+versions, it is highly recommended, that you run
+
+    make release
+
+before trying to install the package. The CVS version contains several
+methods and quirks for additional debugging output, profiling code and
+more, which are removed by the release target of the Makefile.
+Not invoking make release will slow down the library heavily and can
+make it unusable for your application or game.
+
+Afterwards, change into the created dist directory, unpack the build tar
+ball and install it as described in the previous section. By using the
+tar ball, you avoid installing superfluous files such as the xml source
+of the documentation and UML diagrams:
+
+   cd dist
+   tar xzvf OcempGUI-X.X.X.tar.gz
+   cd OcempGUI-X.X.X
+   make install
+
+Note, that you will need to have dia[0] and libxslt[1] installed in
+order to run the release target successfully for the documentation.
+
+[0] http://www.gnome.org/projects/dia/
+[1] http://www.xmlsoft.org/XSLT/
+
+1.3 Notes for Windows users
+---------------------------
+
+The windows pygame installer for version 1.7.1 and below will not ship
+with the python Numeric package. OcempGUI relies on this package for
+drawing with pygame <= 1.7.1 , thus you should explicitly install the
+Numeric[0] package. Note, that you will need a package called
+"Numeric-....exe". The "numarray-....exe" packages offered at the
+download site are NOT what you want.
+
+The accessibility support of ATK is currently not available on Win32
+platforms. You should be able build the module without problems, but
+cannot make use of assistive technologies using the MSAA accessibility
+system (ATK does not support that).
+
+Do not use the dist or dist_wininst targets for installing
+OcempGUI. Instead use the plain 'python setup.py install' procedure.
+The dist and dist_wininst turn out to break the installation process for
+the themes as they do not rewrite the DEFAULTDATADIR entry within
+ocempgui/widgets/Constants.py correctly. You then might run something
+like the following error then.
+
+  File "C:\Python24\Lib\ocempgui\widgets\base.py", line 29, in ?
+    from Style import Style
+  File "C:\Python24\Lib\ocempgui\widgets\Style.py", line 36, in ?
+    from themes import default
+ImportError: No module named themes
+
+If you consider this error, first check Constants.py, if DEFAULTDATADIR
+points to the correct themes directory. If it does not, please consider
+reinstalling OcempGUI using 'python setup.py install'.
+A patch for this issues is currently not available.
+
+[0] http://numeric.scipy.org/
+
+1.4 Notes for Mac OS users
+--------------------------
+
+The accessibility support of ATK is currently not available on Macintosh
+platforms. You should be able build the module without problems, but
+cannot make use of assistive technologies using the Mac accessibility
+system (ATK does not support that).
+
+2. Getting started
+------------------
+
+After finishing the installation, you will find tons of documentation,
+diagrams and examples in the <prefix>/share/doc/ocempgui directory of your
+OcempGUI intallation. The prefix usually relies on the Python
+installation prefix. So if Python was installed to /usr/local, you will
+find the OcempGUI documentation beneath /usr/local/share/doc/ocempgui.
+
+Have fun.

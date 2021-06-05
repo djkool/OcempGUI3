@@ -1,0 +1,19 @@
+from ocempgui.widgets import Constants
+
+# Variables, that will be used to ease the life.
+_normal = Constants.STATE_NORMAL
+_entered = Constants.STATE_ENTERED
+_active = Constants.STATE_ACTIVE
+_insensitive = Constants.STATE_INSENSITIVE
+
+button = { "bgcolor" : { _normal : (18, 12, 135),
+                         _entered : (32, 25, 164),
+                         _active : (18, 12, 135),
+                         _insensitive : (54, 51, 106) }
+           }
+label = { "font" : { "name" : "Helvetica", "size" : 16, "alias" : True },
+          "fgcolor" : { _normal : (250, 250, 250),
+                        _entered : (150, 150, 150),
+                        _active : (0, 0, 0),
+                        _insensitive : (235, 235, 235) }
+          }

@@ -1,0 +1,3600 @@
+2008-05-10 10:19  marcusva
+
+	* doc/examples/graph2d.py: Really fixed numpy/Numeric bindings
+
+2008-05-10 10:03  marcusva
+
+	* NEWS, README, setup.py, doc/examples/a11y_test.py,
+	  doc/examples/graph2d.py, ocempgui/access/papi/papi.c,
+	  ocempgui/access/papi/papi_atkutil.c, ocempgui/draw/Complex.py:
+	  Added numpy compatibility for pygame 1.8.x.
+
+2008-02-05 23:33  marcusva
+
+	* setup.py, ocempgui/__init__.py, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/Frame.py: Merged forgotton changes from HEAD.
+
+2008-01-12 11:48  marcusva
+
+	* NEWS, doc/uml/alignment.dia, ocempgui/widgets/Alignment.py,
+	  ocempgui/widgets/Renderer.py: Merged from HEAD: Fixed a focusing
+	  bug in Alignment class. It should not be focusable by default.
+	  Added reversed widget focus switching using SHIFT+TAB.
+
+2008-01-10 09:44  marcusva
+
+	* ChangeLog, NEWS, doc/Makefile: Release 0.2.8
+
+2008-01-10 00:58  marcusva
+
+	* doc/examples/: example.py, formatentry.py: Fixed FormatEntry
+	  removal.
+
+2008-01-10 00:23  marcusva
+
+	* doc/Makefile: Forget to change to the dia suffix in the build
+	  script
+
+2008-01-10 00:20  marcusva
+
+	* ocempgui/widgets/BaseWidget.py:
+	  BaseWidget should not be changed at the last commit.
+
+2008-01-10 00:13  marcusva
+
+	* doc/manual.xml, ocempgui/widgets/BaseWidget.py: Fixed manual tag.
+
+2008-01-10 00:03  marcusva
+
+	* COPYING, NEWS, doc/manual.xml, doc/img/drawing_widgets.dia,
+	  doc/img/drawing_widgets.xml, doc/img/event_management.dia,
+	  doc/img/event_management.xml, doc/img/layers_cycling.dia,
+	  doc/img/layers_cycling.xml, doc/img/layers_indices.dia,
+	  doc/img/layers_indices.xml, doc/img/layers_view.dia,
+	  doc/img/layers_view.xml, doc/img/signal_baseobject.dia,
+	  doc/img/signal_baseobject.xml, doc/uml/actionlistener.dia,
+	  doc/uml/actionlistener.xml, doc/uml/alignment.dia,
+	  doc/uml/alignment.xml, doc/uml/baseobject.dia,
+	  doc/uml/baseobject.xml, doc/uml/basewidget.dia,
+	  doc/uml/basewidget.xml, doc/uml/bin.dia, doc/uml/bin.xml,
+	  doc/uml/box.dia, doc/uml/box.xml, doc/uml/button.dia,
+	  doc/uml/button.xml, doc/uml/buttonbase.dia,
+	  doc/uml/buttonbase.xml, doc/uml/checkbutton.dia,
+	  doc/uml/checkbutton.xml, doc/uml/container.dia,
+	  doc/uml/container.xml, doc/uml/design.dia, doc/uml/design.xml,
+	  doc/uml/diagram.dia, doc/uml/diagram.xml,
+	  doc/uml/dialogwindow.dia, doc/uml/dialogwindow.xml,
+	  doc/uml/editable.dia, doc/uml/editable.xml, doc/uml/entry.dia,
+	  doc/uml/entry.xml, doc/uml/eventmanager.dia,
+	  doc/uml/eventmanager.xml, doc/uml/filedialog.dia,
+	  doc/uml/filedialog.xml, doc/uml/filelist.dia,
+	  doc/uml/filelist.xml, doc/uml/frame.dia, doc/uml/frame.xml,
+	  doc/uml/genericdialog.dia, doc/uml/genericdialog.xml,
+	  doc/uml/graph2d.dia, doc/uml/graph2d.xml,
+	  doc/uml/imagebutton.dia, doc/uml/imagebutton.xml,
+	  doc/uml/imagelabel.dia, doc/uml/imagelabel.xml,
+	  doc/uml/imagemap.dia, doc/uml/imagemap.xml, doc/uml/label.dia,
+	  doc/uml/label.xml, doc/uml/listviewport.dia,
+	  doc/uml/listviewport.xml, doc/uml/magnifier.dia,
+	  doc/uml/magnifier.xml, doc/uml/progressbar.dia,
+	  doc/uml/progressbar.xml, doc/uml/radiobutton.dia,
+	  doc/uml/radiobutton.xml, doc/uml/range.dia, doc/uml/range.xml,
+	  doc/uml/renderer.dia, doc/uml/renderer.xml, doc/uml/scale.dia,
+	  doc/uml/scale.xml, doc/uml/scrollbar.dia, doc/uml/scrollbar.xml,
+	  doc/uml/scrolledlist.dia, doc/uml/scrolledlist.xml,
+	  doc/uml/scrolledwindow.dia, doc/uml/scrolledwindow.xml,
+	  doc/uml/signals.dia, doc/uml/signals.xml, doc/uml/statusbar.dia,
+	  doc/uml/statusbar.xml, doc/uml/table.dia, doc/uml/table.xml,
+	  doc/uml/togglebutton.dia, doc/uml/togglebutton.xml,
+	  doc/uml/tooltipwindow.dia, doc/uml/tooltipwindow.xml,
+	  doc/uml/twistedrenderer.dia, doc/uml/twistedrenderer.xml,
+	  doc/uml/viewport.dia, doc/uml/viewport.xml, doc/uml/window.dia,
+	  doc/uml/window.xml:
+	  Merged from HEAD: Renamed dia XML files as dia 0.96.* seems to
+	  dislike the xml suffix. Fixed missing manual tag. Welcome to
+	  2008.
+
+2008-01-09 23:53  marcusva
+
+	* doc/: img/drawing_widgets.dia, img/event_management.dia,
+	  img/layers_cycling.dia, img/layers_indices.dia,
+	  img/layers_view.dia, img/signal_baseobject.dia,
+	  uml/actionlistener.dia, uml/alignment.dia, uml/baseobject.dia,
+	  uml/basewidget.dia, uml/bin.dia, uml/box.dia, uml/button.dia,
+	  uml/buttonbase.dia, uml/checkbutton.dia, uml/container.dia,
+	  uml/design.dia, uml/diagram.dia, uml/dialogwindow.dia,
+	  uml/editable.dia, uml/entry.dia, uml/eventmanager.dia,
+	  uml/filedialog.dia, uml/filelist.dia, uml/frame.dia,
+	  uml/genericdialog.dia, uml/graph2d.dia, uml/imagebutton.dia,
+	  uml/imagelabel.dia, uml/imagemap.dia, uml/label.dia,
+	  uml/listviewport.dia, uml/magnifier.dia, uml/progressbar.dia,
+	  uml/radiobutton.dia, uml/range.dia, uml/renderer.dia,
+	  uml/scale.dia, uml/scrollbar.dia, uml/scrolledlist.dia,
+	  uml/scrolledwindow.dia, uml/signals.dia, uml/statusbar.dia,
+	  uml/table.dia, uml/togglebutton.dia, uml/tooltipwindow.dia,
+	  uml/twistedrenderer.dia, uml/viewport.dia, uml/window.dia:
+	  Renamed dia XML files as dia 0.96.* seems to dislike the xml
+	  suffix.
+
+2007-09-23 09:37  marcusva
+
+	* NEWS, setup.py, ocempgui/__init__.py,
+	  ocempgui/access/papi/papi.c, ocempgui/access/papi/papi.h,
+	  ocempgui/access/papi/papi_atkactioniface.c,
+	  ocempgui/access/papi/papi_atkattribute.c,
+	  ocempgui/access/papi/papi_atkbridge.c,
+	  ocempgui/access/papi/papi_atkcomponentiface.c,
+	  ocempgui/access/papi/papi_atkdocumentiface.c,
+	  ocempgui/access/papi/papi_atkeditableiface.c,
+	  ocempgui/access/papi/papi_atkhyperlink.c,
+	  ocempgui/access/papi/papi_atkhyperlinkimpliface.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrelation.c,
+	  ocempgui/access/papi/papi_atkrelationset.c,
+	  ocempgui/access/papi/papi_atkrelationtype.c,
+	  ocempgui/access/papi/papi_atkrole.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstateset.c,
+	  ocempgui/access/papi/papi_atkstatetype.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextattribute.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atktextrange.c,
+	  ocempgui/access/papi/papi_atktextrectangle.c,
+	  ocempgui/access/papi/papi_atktype.c,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c,
+	  ocempgui/access/papi/papi_constants.c,
+	  ocempgui/access/papi/papi_private.h, ocempgui/widgets/Frame.py:
+	  Fixed *Frame.calculate_size() bug. Update to Papi 0.0.5
+
+2007-07-16 10:56  marcusva
+
+	* NEWS, ocempgui/widgets/FormatEntry.py,
+	  ocempgui/widgets/__init__.py:
+	  Removed FormatEntry class - Editable will need some redesign
+	  first.
+
+2007-07-11 09:42  marcusva
+
+	* setup.py, data/themes/default/DefaultEngine.py,
+	  ocempgui/access/papi/papi_atkhyperlink.c,
+	  ocempgui/access/papi/papi_atktextrange.c,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/access/papi/papi_private.h: Sync'ed with the changes in
+	  HEAD.
+
+2007-05-08 16:52  marcusva
+
+	* NEWS, doc/manual.xml, doc/examples/example.py,
+	  doc/examples/formatentry.py, ocempgui/widgets/FormatEntry.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/__init__.py: Merged from HEAD: Fixed
+	  Style.copy_style() bug (thanks to Ryan Dhuse). Added experimental
+	  FormatEntry widget class. Brushed up manual.
+
+2007-05-08 16:46  marcusva
+
+	* doc/examples/formatentry.py, ocempgui/widgets/FormatEntry.py:
+	  Fixed Style.copy_style() bug (thanks to Ryan Dhuse). Added
+	  experimental FormatEntry widget class. Brushed up manual.
+
+2007-03-29 21:37  marcusva
+
+	* NEWS, doc/examples/chat/guiclient.py: Chat client example now
+	  requires Twisted 2.5.x
+
+2007-03-26 13:44  marcusva
+
+	* NEWS, ocempgui/widgets/ScrolledList.py: Merged from HEAD: Made
+	  ScrolledList.set_cursor() publicly available.
+
+2007-03-23 13:06  marcusva
+
+	* ChangeLog, NEWS, setup.py, ocempgui/__init__.py: Release 0.2.7.
+
+2007-03-23 12:56  marcusva
+
+	* NEWS, data/themes/default/DefaultEngine.py,
+	  doc/examples/label.py, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/Table.py: Dropshadows for windows will only be
+	  drawn, if the 'shadow' style entry is greater than 0.
+
+2007-03-23 07:02  marcusva
+
+	* NEWS, README, ocempgui/access/papi/papi.c,
+	  ocempgui/access/papi/papi.h,
+	  ocempgui/access/papi/papi_atkactioniface.c,
+	  ocempgui/access/papi/papi_atkattribute.c,
+	  ocempgui/access/papi/papi_atkbridge.c,
+	  ocempgui/access/papi/papi_atkcomponentiface.c,
+	  ocempgui/access/papi/papi_atkdocumentiface.c,
+	  ocempgui/access/papi/papi_atkeditableiface.c,
+	  ocempgui/access/papi/papi_atkhyperlink.c,
+	  ocempgui/access/papi/papi_atkhyperlinkimpliface.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrelation.c,
+	  ocempgui/access/papi/papi_atkrelationset.c,
+	  ocempgui/access/papi/papi_atkrelationtype.c,
+	  ocempgui/access/papi/papi_atkrole.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstateset.c,
+	  ocempgui/access/papi/papi_atkstatetype.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextattribute.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atktextrange.c,
+	  ocempgui/access/papi/papi_atktextrectangle.c,
+	  ocempgui/access/papi/papi_atktype.c,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c,
+	  ocempgui/access/papi/papi_constants.c,
+	  ocempgui/access/papi/papi_private.h,
+	  ocempgui/widgets/Renderer.py: Merged from HEAD: Added new drops
+	  attribute to Renderer. Merged papi 0.0.4.
+
+2007-03-06 11:07  marcusva
+
+	* NEWS, ocempgui/widgets/ScrolledList.py: Merged from HEAD: Fixed
+	  CTRL+Click combinations in ScrolledList widget class.
+
+2007-03-01 13:20  marcusva
+
+	* doc/uml/: label.xml, renderer.xml:
+	  Merged from HEAD: Documented new methods and properties.
+
+2007-02-23 21:52  marcusva
+
+	* NEWS, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Renderer.py: Merged from HEAD: Added locking
+	  support to Renderer (Thanks to David Eyd). Improved the
+	  Renderer's event handling for mouse motions.
+
+2007-02-19 18:43  marcusva
+
+	* NEWS, data/themes/default/DefaultEngine.py,
+	  ocempgui/widgets/Label.py: Added linespace and alignment patches
+	  from Christophe and Ludovic.
+
+2007-02-01 09:40  marcusva
+
+	* ChangeLog, NEWS, setup.py, ocempgui/__init__.py: Release 0.2.6
+
+2007-02-01 09:33  marcusva
+
+	* doc/manual.xml: Merged from HEAD: Added texinfo patches from
+	  Matthias Kievernagel.
+
+2007-02-01 09:00  marcusva
+
+	* doc/examples/: alignment.py, example.py: Merged from HEAD: Added
+	  Alignment class examples.
+
+2007-02-01 08:59  marcusva
+
+	* doc/examples/alignment.py: Added Alignment class examples.
+
+2007-02-01 08:20  marcusva
+
+	* doc/uml/: alignment.xml, imagemap.xml: Merged from HEAD: Added
+	  Alignment UML diagram. Updated ImageMap UML.
+
+2007-02-01 08:18  marcusva
+
+	* doc/uml/alignment.xml: Added Alignment UML diagram. Updated
+	  ImageMap UML.
+
+2007-02-01 00:25  marcusva
+
+	* NEWS, ocempgui/widgets/Editable.py: Merged from HEAD: Added
+	  Editable key code recognition patch from Matthias Kievernagel.
+
+2007-01-29 11:43  marcusva
+
+	* NEWS, ocempgui/widgets/Table.py: Merged from HEAD: Fixed
+	  Table.set_children() assignment.
+
+2007-01-28 12:24  marcusva
+
+	* NEWS, data/themes/default/DefaultEngine.py, doc/manual.xml,
+	  ocempgui/widgets/Alignment.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/__init__.py:
+	  Merged from HEAD: Added Alignment widget class. Fixed align
+	  constants check. Fixed Label alignment.
+
+2007-01-28 12:19  marcusva
+
+	* ocempgui/widgets/Alignment.py: Added Alignment widget class.
+	  Fixed align constants check. Fixed Label alignment.
+
+2007-01-27 23:58  marcusva
+
+	* doc/manual.xml, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/Table.py: Merged from HEAD: Fixed docs about the
+	  alignment priority.
+
+2007-01-27 23:55  marcusva
+
+	* NEWS, data/themes/default/DefaultEngine.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/Table.py:
+	  Merged from HEAD: Added text alignment support to the Label
+	  class.
+
+2007-01-27 21:35  marcusva
+
+	* NEWS, ocempgui/widgets/Renderer.py: Merged from HEAD: Fixed layer
+	  destruction.
+
+2007-01-27 12:10  marcusva
+
+	* NEWS, ocempgui/widgets/ScrollBar.py: Merged from HEAD: Minor
+	  improvements in ScrollBar code.
+
+2007-01-26 23:51  marcusva
+
+	* NEWS, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/FileDialog.py, ocempgui/widgets/FileList.py,
+	  ocempgui/widgets/Graph2D.py, ocempgui/widgets/ImageMap.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/ToggleButton.py: Merged from HEAD: Fixed event
+	  issues in various widget classes, which could occur, when used on
+	  Window widgets. Fixed superfluous update in FileDialog class.
+
+2007-01-25 22:02  marcusva
+
+	* setup.py, doc/manual.xml: Merged from HEAD: Added papi version
+	  check fix by Matthias Kievernagel.
+
+2007-01-23 23:39  marcusva
+
+	* NEWS, doc/manual.xml, doc/uml/magnifier.xml,
+	  ocempgui/access/Magnifier.py: Merged from HEAD: Added support for
+	  the usage of an own zoom function in the Magnifier class.
+
+2007-01-23 13:02  marcusva
+
+	* ocempgui/widgets/: Graph2D.py, Renderer.py: Merged from HEAD:
+	  Minor Graph2D optimization and documentation improvements in
+	  Renderer class.
+
+2007-01-22 23:37  marcusva
+
+	* NEWS, ocempgui/widgets/ImageMap.py: Merged from HEAD: Added
+	  optimized update support for portions of a ImageMap's picture.
+
+2007-01-22 20:59  marcusva
+
+	* ocempgui/draw/String.py: Sync'ed both CVS branches.
+
+2007-01-22 16:48  marcusva
+
+	* COPYING, ChangeLog, NEWS, setup.py, ocempgui/__init__.py,
+	  ocempgui/widgets/Editable.py: Release 0.2.5
+
+2007-01-20 13:56  marcusva
+
+	* NEWS, doc/uml/container.xml, doc/uml/frame.xml,
+	  doc/uml/statusbar.xml, ocempgui/draw/String.py,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/StatusBar.py,
+	  ocempgui/widgets/Table.py:
+	  Merged from HEAD: calculate_size() and dispose_widgets() are now
+	  necessary abstract methods of the Container class.
+
+2007-01-19 10:38  marcusva
+
+	* ocempgui/widgets/BaseWidget.py: Added opacity attribute
+	  description.
+
+2007-01-16 01:02  marcusva
+
+	* NEWS, ocempgui/widgets/Editable.py: Merged from HEAD: Fixed
+	  keyboard input support for invalid key codes.
+
+2007-01-13 10:52  marcusva
+
+	* NEWS, ocempgui/widgets/BaseWidget.py: Merged from HEAD: Added
+	  SIG_DESTROYED callback handling to the BaseWidget class.
+
+2007-01-08 13:32  marcusva
+
+	* ChangeLog, NEWS: Release 0.2.4
+
+2007-01-08 12:27  marcusva
+
+	* doc/: examples/transparency.py, uml/box.xml: Merged from HEAD:
+	  Added Box widget UML diagram.
+
+2007-01-08 12:26  marcusva
+
+	* doc/uml/box.xml: Added Box widget UML diagram.
+
+2007-01-06 14:39  marcusva
+
+	* doc/: manual.xml, examples/box.py: Merged from HEAD: Added
+	  section about the Box widget class.
+
+2007-01-06 11:44  marcusva
+
+	* NEWS, data/themes/default/DefaultEngine.py, doc/manual.xml,
+	  doc/examples/box.py, doc/examples/example.py,
+	  doc/examples/transparency.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Box.py, ocempgui/widgets/Container.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/__init__.py: Added
+	  Box widget class. Container class now handles overlapping
+	  children areas. BaseWidget.update() deals cleans up and blits
+	  changes correctly now.
+
+2007-01-06 11:35  marcusva
+
+	* doc/examples/box.py, ocempgui/widgets/Box.py: Added Box widget
+	  class. Container class now handles overlapping children areas.
+	  BaseWidget.update() deals cleans up and blits changes correctly
+	  now.
+
+2007-01-02 13:35  marcusva
+
+	* TODO, doc/manual.xml: Merged from HEAD: Added note about the
+	  opacity feature.
+
+2007-01-02 12:44  marcusva
+
+	* NEWS, ocempgui/widgets/Renderer.py: Merged from HEAD: Fixed
+	  multiple updates of the same area.
+
+2007-01-02 12:00  marcusva
+
+	* NEWS, ocempgui/widgets/Renderer.py: Merged from HEAD: Fixed
+	  parent relation upon widget removal in Renderer class.
+
+2006-12-25 14:05  marcusva
+
+	* NEWS, TODO, setup.py, doc/examples/transparency.py,
+	  ocempgui/__init__.py, ocempgui/access/papi/papi.c,
+	  ocempgui/access/papi/papi.h,
+	  ocempgui/access/papi/papi_atkactioniface.c,
+	  ocempgui/access/papi/papi_atkattribute.c,
+	  ocempgui/access/papi/papi_atkbridge.c,
+	  ocempgui/access/papi/papi_atkcomponentiface.c,
+	  ocempgui/access/papi/papi_atkdocumentiface.c,
+	  ocempgui/access/papi/papi_atkeditableiface.c,
+	  ocempgui/access/papi/papi_atkhyperlink.c,
+	  ocempgui/access/papi/papi_atkhyperlinkimpliface.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrelation.c,
+	  ocempgui/access/papi/papi_atkrelationset.c,
+	  ocempgui/access/papi/papi_atkrelationtype.c,
+	  ocempgui/access/papi/papi_atkrole.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstateset.c,
+	  ocempgui/access/papi/papi_atkstatetype.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextattribute.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atktextrange.c,
+	  ocempgui/access/papi/papi_atktextrectangle.c,
+	  ocempgui/access/papi/papi_atktype.c,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c,
+	  ocempgui/access/papi/papi_constants.c,
+	  ocempgui/access/papi/papi_private.h, ocempgui/draw/Complex.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/ToggleButton.py,
+	  ocempgui/widgets/TwistedRenderer.py: Merged from HEAD: Added
+	  alpha transparency support for widgets. Improved alpha value
+	  assignment in FaderSurface class Sync'ed papi module with latest
+	  changes of the papi toolkit.
+
+2006-12-22 14:17  marcusva
+
+	* doc/examples/transparency.py: Added alpha transparency support to
+	  the BaseWidget class. Settting the alpha value of the
+	  FaderSurface will always cause applying it, not only on changes.
+
+2006-12-10 12:03  marcusva
+
+	* ocempgui/widgets/Style.py: Use deepcopy instead of copy.
+
+2006-12-10 11:20  marcusva
+
+	* NEWS, ocempgui/widgets/Style.py: Merged from HEAD: Fixed a style
+	  copying error.
+
+2006-11-20 19:07  marcusva
+
+	* ChangeLog: Release 0.2.3 (the real one)
+
+2006-11-20 19:06  marcusva
+
+	* ocempgui/widgets/TwistedRenderer.py: Fixed TwistedRenderer
+
+2006-11-20 18:43  marcusva
+
+	* ChangeLog:
+	  Release 0.2.3.
+
+2006-11-20 18:40  marcusva
+
+	* NEWS, README, doc/uml/renderer.xml:
+	  Merged from HEAD: Updated UML diagram for Renderer class. Updated
+	  NEWS.
+
+2006-11-20 16:22  marcusva
+
+	* doc/manual.xml, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/Style.py: Merged from HEAD: Improved docs. Added
+	  event based main loop to Renderer.
+
+2006-11-15 20:38  marcusva
+
+	* NEWS, ocempgui/widgets/Renderer.py: Merged from HEAD: Improved
+	  drawing method of the Renderer (thanks to Martin Fuzzey).
+
+2006-11-15 13:28  marcusva
+
+	* doc/examples/embedded_partial.py: Merged from HEAD: Added
+	  embedding example, which was not checked in with the last commit
+
+2006-11-15 13:27  marcusva
+
+	* NEWS, ocempgui/widgets/Renderer.py, ocempgui/widgets/__init__.py:
+
+	  Merged from HEAD: Fixed assignment of surfaces to the
+	  Renderer.screen attribute and the event handling for them. Added
+	  embedding example with partial screen assignments.
+
+2006-11-15 13:23  marcusva
+
+	* doc/examples/embedded_partial.py:
+	  Fixed assignment of surfaces to the  Renderer.screen attribute
+	  and the event handling for them. Added embedding example with
+	  partial screen assignments.
+
+2006-11-14 13:46  marcusva
+
+	* ocempgui/widgets/: Button.py, ImageButton.py, ToggleButton.py:
+	  Merged from HEAD: Fixed state setting issue in Button,
+	  ToggleButton and ImageButton classes, which forced them to be
+	  redrawn again and again.
+
+2006-11-14 13:17  marcusva
+
+	* NEWS, ocempgui/widgets/Renderer.py: Merged from HEAD:
+	  Renderer.remove_widget() accepts multiple widget arguments
+	  similar to Renderer.add_widget().
+
+2006-11-04 13:29  marcusva
+
+	* NEWS, setup.py, ocempgui/__init__.py,
+	  ocempgui/access/papi/papi.c, ocempgui/access/papi/papi.h,
+	  ocempgui/access/papi/papi_atkactioniface.c,
+	  ocempgui/access/papi/papi_atkattribute.c,
+	  ocempgui/access/papi/papi_atkbridge.c,
+	  ocempgui/access/papi/papi_atkcomponentiface.c,
+	  ocempgui/access/papi/papi_atkdocumentiface.c,
+	  ocempgui/access/papi/papi_atkeditableiface.c,
+	  ocempgui/access/papi/papi_atkhyperlink.c,
+	  ocempgui/access/papi/papi_atkhyperlinkimpliface.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrelation.c,
+	  ocempgui/access/papi/papi_atkrelationset.c,
+	  ocempgui/access/papi/papi_atkrelationtype.c,
+	  ocempgui/access/papi/papi_atkrole.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstateset.c,
+	  ocempgui/access/papi/papi_atkstatetype.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextattribute.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atktextrange.c,
+	  ocempgui/access/papi/papi_atktextrectangle.c,
+	  ocempgui/access/papi/papi_atktype.c,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c,
+	  ocempgui/access/papi/papi_constants.c,
+	  ocempgui/access/papi/papi_private.h: Merged from HEAD: Updated
+	  ocempgui.access.papi to version 0.0.2.
+
+2006-11-04 13:20  marcusva
+
+	* ocempgui/access/papi/papi_atkhyperlinkimpliface.c: Updated
+	  ocempgui.access.papi to version 0.0.2.
+
+2006-11-04 12:30  marcusva
+
+	* NEWS, ocempgui/widgets/Renderer.py: Merged from HEAD: Fixed a
+	  layer update bug for non-colliding widgets.
+
+2006-10-19 20:56  marcusva
+
+	* ChangeLog: Release 0.2.2
+
+2006-10-19 20:52  marcusva
+
+	* NEWS, doc/examples/drawing_engine.py,
+	  ocempgui/widgets/__init__.py: Fixed drawing_engine example. Fixed
+	  WidgetStyle import.
+
+2006-10-12 09:41  marcusva
+
+	* AUTHORS, NEWS, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/ScrolledList.py: Merged from HEAD: Fixed
+	  ScrolledList deselection and scrolling. The event queues in the
+	  Renderer will be pumped now.
+
+2006-09-16 14:38  marcusva
+
+	* NEWS, TODO, doc/uml/basewidget.xml,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Entry.py: Merged
+	  from HEAD: Updated BaseWidget UML. Updated Entry docs.
+
+2006-09-16 13:28  marcusva
+
+	* NEWS, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/ButtonBase.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/ListViewPort.py, ocempgui/widgets/Scale.py:
+	  Merged from HEAD: Minor optimization in ListViewPort.draw().
+	  Moved SIG_ENTER, SIG_LEAVE into BaseWidget class.
+
+2006-09-15 12:26  marcusva
+
+	* NEWS, ocempgui/widgets/ButtonBase.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Scale.py: Merged from HEAD: Added SIG_ENTER,
+	  SIG_LEAVE support to Entry and Scale widgets.
+
+2006-09-15 01:45  marcusva
+
+	* doc/uml/tooltipwindow.xml:
+	  Merged from HEAD: Added TooltipWindow UML diagram.
+
+2006-09-15 01:44  marcusva
+
+	* doc/uml/tooltipwindow.xml:
+	  Added TooltipWindow UML diagram.
+
+2006-09-15 01:32  marcusva
+
+	* Makefile, doc/examples/radiobutton.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/ButtonBase.py,
+	  ocempgui/widgets/Editable.py, ocempgui/widgets/FileList.py,
+	  ocempgui/widgets/Graph2D.py, ocempgui/widgets/ImageMap.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/ToggleButton.py, ocempgui/widgets/ViewPort.py,
+	  ocempgui/widgets/Window.py, ocempgui/widgets/base.py: Merged from
+	  HEAD: Removed debug code - this will be handled with the
+	  profiler. Minor event handling improvements in Renderer class.
+
+2006-09-14 09:50  marcusva
+
+	* NEWS, doc/examples/tictactoe/tictactoe.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/ButtonBase.py,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/ToggleButton.py:
+	  Merged from HEAD: Removed double set_state() method in
+	  ToggleButton class. Fixed states in ButtonBase.notify().
+
+2006-09-13 13:27  marcusva
+
+	* doc/examples/tooltipwindow.py: Added missing example.
+
+2006-09-13 13:27  marcusva
+
+	* NEWS, doc/manual.xml, doc/examples/example.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/ButtonBase.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/Renderer.py: Merged from HEAD: Added SIG_ENTER
+	  and SIG_LEAVE event constants. Added SIG_ENTER, SIG_LEAVE support
+	  to ButtonBase class. Added TooltipWindow example. Improved
+	  documentation.
+
+2006-09-13 13:18  marcusva
+
+	* doc/examples/tooltipwindow.py:
+	  Added SIG_ENTER and SIG_LEAVE event constants. Added SIG_ENTER,
+	  SIG_LEAVE support to ButtonBase class. Added TooltipWindow
+	  example. Improved documentation.
+
+2006-09-12 21:59  marcusva
+
+	* NEWS, doc/manual.xml, ocempgui/widgets/Graph2D.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/StyleInformation.py,
+	  ocempgui/widgets/TooltipWindow.py: Merged from HEAD:
+	  Documentation update.
+
+2006-09-09 09:34  marcusva
+
+	* ocempgui/draw/String.py:
+	  Merged from HEAD: Applied font caching patches from Regis
+	  Desgroppes.
+
+2006-09-07 08:43  marcusva
+
+	* data/themes/default/DefaultEngine.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Container.py,
+	  ocempgui/widgets/FileList.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/ListViewPort.py, ocempgui/widgets/StatusBar.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/StyleInformation.py,
+	  ocempgui/widgets/Table.py, ocempgui/widgets/TooltipWindow.py,
+	  ocempgui/widgets/Window.py, ocempgui/widgets/__init__.py: Merged
+	  from HEAD: Minor optimizations and simplifications. Added
+	  TooltipWindow class.
+
+2006-09-02 14:16  marcusva
+
+	* ocempgui/widgets/Renderer.py: Merged from HEAD: Minor Renderer
+	  optimizations.
+
+2006-09-02 13:18  marcusva
+
+	* NEWS, setup.py, ocempgui/__init__.py,
+	  ocempgui/access/Magnifier.py: Merged from HEAD: Fixed bug in
+	  Magnifier.notfiy(), if no mouse movement was passed.
+
+2006-08-26 20:16  marcusva
+
+	* ocempgui/widgets/TooltipWindow.py: Added TooltipWindow class.
+	  Added BaseWidget class handlers for tooltips. Added Renderer
+	  support for tooltips.
+
+2006-08-25 11:14  marcusva
+
+	* ChangeLog: Release 0.2.1.
+
+2006-08-25 10:09  marcusva
+
+	* NEWS, setup.py, doc/manual.xml, doc/examples/a11y_test.py: Merged
+	  from HEAD: Completed Magnifier documentation.
+
+2006-08-24 09:48  marcusva
+
+	* doc/manual.xml, doc/examples/magnifier.py,
+	  ocempgui/access/Magnifier.py: Merged from HEAD: Added Magnifier
+	  documentation. Fixed screen buffering and updates in Magnifier
+	  class.
+
+2006-08-23 22:05  marcusva
+
+	* doc/manual.xml, doc/img/layers_cycling.xml,
+	  doc/img/layers_indices.xml, doc/img/layers_view.xml,
+	  ocempgui/widgets/Renderer.py: Merged from HEAD: Added layer
+	  documentation.
+
+2006-08-23 22:02  marcusva
+
+	* doc/img/layers_cycling.xml: file layers_cycling.xml was added on
+	  branch rel_0_2 on 2006-08-23 20:05:43 +0000
+
+2006-08-23 22:02  marcusva
+
+	* doc/img/layers_view.xml: file layers_view.xml was added on branch
+	  rel_0_2 on 2006-08-23 20:05:43 +0000
+
+2006-08-23 22:02  marcusva
+
+	* doc/img/: layers_cycling.xml, layers_view.xml: Added layer
+	  documentation.
+
+2006-08-22 18:52  marcusva
+
+	* doc/manual.xml: Merged from HEAD: Added ImageLabel documentation.
+
+2006-08-22 12:34  marcusva
+
+	* doc/: manual.xml, examples/observer.py: Merged from HEAD: Added
+	  observer documentation.
+
+2006-08-22 12:33  marcusva
+
+	* doc/examples/observer.py: file observer.py was added on branch
+	  rel_0_2 on 2006-08-22 10:34:38 +0000
+
+2006-08-22 12:33  marcusva
+
+	* doc/examples/observer.py:
+	  Added observer pattern documentation.
+
+2006-08-21 10:45  marcusva
+
+	* NEWS, doc/examples/imagemap.py, doc/examples/magnifier.py,
+	  ocempgui/access/Magnifier.py: Added explicit restore() method to
+	  Magnifier class.
+
+2006-08-20 18:07  marcusva
+
+	* doc/uml/magnifier.xml, ocempgui/access/Magnifier.py: Merged from
+	  HEAD: Added Magnifier UML diagram. Changing the magnifier
+	  attributes will update it automatically.
+
+2006-08-20 18:06  marcusva
+
+	* doc/uml/magnifier.xml: Added Magnifier UML diagram. Changing the
+	  magnifier attributes will update it automatically.
+
+2006-08-20 18:06  marcusva
+
+	* doc/uml/magnifier.xml: file magnifier.xml was added on branch
+	  rel_0_2 on 2006-08-20 16:07:11 +0000
+
+2006-08-20 10:35  marcusva
+
+	* ocempgui/events/: IObserver.py, Subject.py: Merged from HEAD:
+	  Improved doc strings for Subject and IObserver.
+
+2006-08-20 09:40  marcusva
+
+	* NEWS, doc/examples/example.py, doc/examples/magnifier.py,
+	  ocempgui/access/Magnifier.py, ocempgui/access/__init__.py: Merged
+	  from HEAD: Added pygame magnification class.
+
+2006-08-20 09:35  marcusva
+
+	* ocempgui/access/Magnifier.py: file Magnifier.py was added on
+	  branch rel_0_2 on 2006-08-20 07:40:21 +0000
+
+2006-08-20 09:35  marcusva
+
+	* doc/examples/magnifier.py, ocempgui/access/Magnifier.py: Added
+	  pygame magnification class.
+
+2006-08-20 09:35  marcusva
+
+	* doc/examples/magnifier.py: file magnifier.py was added on branch
+	  rel_0_2 on 2006-08-20 07:40:21 +0000
+
+2006-08-19 12:33  marcusva
+
+	* NEWS, data/themes/default/DefaultEngine.py, doc/manual.xml,
+	  doc/examples/example.py, doc/examples/imagelabel.py,
+	  doc/uml/imagelabel.xml, ocempgui/widgets/ImageLabel.py,
+	  ocempgui/widgets/__init__.py: Merged from HEAD: Added new
+	  ImageLabel class for simple image display.
+
+2006-08-19 12:32  marcusva
+
+	* ocempgui/widgets/ImageLabel.py: file ImageLabel.py was added on
+	  branch rel_0_2 on 2006-08-19 10:33:56 +0000
+
+2006-08-19 12:32  marcusva
+
+	* doc/examples/imagelabel.py: file imagelabel.py was added on
+	  branch rel_0_2 on 2006-08-19 10:33:56 +0000
+
+2006-08-19 12:32  marcusva
+
+	* doc/uml/imagelabel.xml: file imagelabel.xml was added on branch
+	  rel_0_2 on 2006-08-19 10:33:56 +0000
+
+2006-08-19 12:32  marcusva
+
+	* doc/examples/imagelabel.py, doc/uml/imagelabel.xml,
+	  ocempgui/widgets/ImageLabel.py: Added new ImageLabel class for
+	  simple image display.
+
+2006-08-18 11:47  marcusva
+
+	* NEWS, ocempgui/widgets/Table.py: Merged from HEAD: Fixed creation
+	  of the Table internals on constructor invocation.
+
+2006-08-18 10:48  marcusva
+
+	* ocempgui/widgets/Renderer.py: Merged from HEAD: Fixed reference
+	  issue in Renderer.clear()
+
+2006-08-18 10:35  marcusva
+
+	* NEWS, doc/uml/basewidget.xml, doc/uml/eventmanager.xml,
+	  doc/uml/renderer.xml, ocempgui/events/EventManager.py,
+	  ocempgui/widgets/Renderer.py: Merged from HEAD: Added
+	  EventManager.clear() method. Added Renderer.clear () method.
+
+2006-08-17 23:42  marcusva
+
+	* NEWS, TODO, ocempgui/events/INotifyable.py,
+	  ocempgui/events/IObserver.py, ocempgui/events/Subject.py,
+	  ocempgui/events/__init__.py, ocempgui/widgets/Renderer.py: Merged
+	  from HEAD: Added Subject and IObserver classes for observer
+	  patterns.
+
+2006-08-17 23:41  marcusva
+
+	* ocempgui/events/: IObserver.py, Subject.py: Added Subject and
+	  IObserver classes for observer patterns.
+
+2006-08-17 23:41  marcusva
+
+	* ocempgui/events/IObserver.py: file IObserver.py was added on
+	  branch rel_0_2 on 2006-08-17 21:42:22 +0000
+
+2006-08-17 23:41  marcusva
+
+	* ocempgui/events/Subject.py: file Subject.py was added on branch
+	  rel_0_2 on 2006-08-17 21:42:22 +0000
+
+2006-08-17 20:04  marcusva
+
+	* NEWS, data/themes/default/DefaultEngine.py,
+	  ocempgui/widgets/Style.py: Merged from HEAD: Added 'shadowcolor'
+	  style entry for adjusting dropshadow colors. Fixed drawing bug in
+	  DefaultEngine.draw_dropshadow().
+
+2006-08-17 19:06  marcusva
+
+	* NEWS, ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/Frame.py: Merged
+	  from HEAD: Fixed indexable assignment for BaseWidget.controls.
+	  Fixed depth assignment for widgets attached to a Bin or
+	  Container.
+
+2006-08-17 18:03  marcusva
+
+	* NEWS, setup.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Table.py, ocempgui/widgets/Window.py: Merged
+	  from HEAD: Fixed a focusing bug in Window class. Fixed size
+	  calculation in Table for large spacing values. Fixed
+	  event.handled assignment on clicks in Entry class.
+
+2006-08-16 11:30  marcusva
+
+	* doc/manual.xml, doc/examples/drawing_engine.py,
+	  ocempgui/draw/Draw.py, ocempgui/draw/Image.py,
+	  ocempgui/draw/String.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/ButtonBase.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/FileList.py, ocempgui/widgets/Graph2D.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/ImageMap.py,
+	  ocempgui/widgets/ListViewPort.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/TwistedRenderer.py,
+	  ocempgui/widgets/ViewPort.py, ocempgui/widgets/base.py: Merged
+	  from HEAD: Import cleanups.
+
+2006-08-16 01:52  marcusva
+
+	* NEWS, setup.py, data/themes/default/DefaultEngine.py,
+	  ocempgui/draw/Complex.py, ocempgui/draw/Constants.py,
+	  ocempgui/draw/String.py, ocempgui/draw/__init__.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/Style.py:
+	  Merged from HEAD: New FONT_STYLE_TYPES constants for styles to be
+	  passed to the String methods.  String.* functions now allow
+	  additional style flags to be passed.	New method
+	  String.apply_font_styles() to apply different rendering styles to
+	  a font.
+
+2006-08-16 01:51  marcusva
+
+	* ocempgui/draw/Constants.py:
+	  Added missing Constants module.
+
+2006-08-16 01:51  marcusva
+
+	* ocempgui/draw/Constants.py: file Constants.py was added on branch
+	  rel_0_2 on 2006-08-15 23:52:45 +0000
+
+2006-08-09 19:24  marcusva
+
+	* NEWS, ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Style.py:
+	  Merged from HEAD: Fixed copy.deepcopy() issues for the
+	  WidgetStyle class.
+
+2006-08-09 11:07  marcusva
+
+	* ocempgui/widgets/: BaseWidget.py, Style.py,
+	  components/ListItemCollection.py: Merged from HEAD: Marked
+	  BaseWidget.get_style() method deprecated. Added
+	  BaseWidget.create_style() method. Added WidgetStyle style class,
+	  that tracks changes of its items.
+
+2006-08-02 22:16  marcusva
+
+	* NEWS, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Renderer.py: Added SIG_SCREENCHANGED event for
+	  screen changes. Fixed doubled assignment of the screen on
+	  VIDEORESIZE events. (merged from HEAD)
+
+2006-07-24 18:42  marcusva
+
+	* NEWS, setup.py, doc/manual.xml,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/widgets/Renderer.py: Sync'ed with HEAD: Renamed
+	  papi.set_atk_root_getter to set_root. papi.set_root accespts
+	  objects now. Fixed emittance of SIG_TICK events for all layers.
+
+2006-07-24 14:02  marcusva
+
+	* NEWS, setup.py: Version increment to 0.2.1
+
+2006-07-23 10:25  marcusva
+
+	* setup.py, ocempgui/__init__.py: Increased version info.
+
+2006-07-22 15:20  marcusva
+
+	* ChangeLog, NEWS, setup.py, ocempgui/__init__.py: Release 0.2.0
+
+2006-07-22 15:10  marcusva
+
+	* doc/manual.xml, doc/examples/bin.py, doc/examples/theme.py,
+	  doc/examples/theme_example.rc, ocempgui/widgets/Style.py:
+	  Documentation improvements.
+
+2006-07-22 12:47  marcusva
+
+	* Makefile, setup.py: Improved setup scripts.
+
+2006-07-21 12:08  marcusva
+
+	* TODO, doc/examples/bin.py: Improved Bin class example.
+
+2006-07-21 10:42  marcusva
+
+	* NEWS, data/themes/default/DefaultEngine.py, doc/Makefile,
+	  doc/manual.xml, doc/examples/checkbutton.py,
+	  doc/examples/radiobutton.py, doc/img/layers_indices.xml,
+	  ocempgui/access/IIndexable.py, ocempgui/access/__init__.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/Renderer.py:
+	  Renamed Indexable to IIndexable to outline that it is an
+	  interface. Added layer and index switchjing diagram.
+
+2006-07-21 09:22  marcusva
+
+	* NEWS, doc/examples/tictactoe/tictactoe.py: Fixed file names for
+	  case insensitive filesystems.
+
+2006-07-20 12:22  marcusva
+
+	* doc/manual.xml: Minor doc fixes.
+
+2006-07-20 11:56  marcusva
+
+	* doc/Makefile, doc/manual.xml, ocempgui/widgets/ScrolledWindow.py:
+	  Fixed UML release and installation targets. Fixed ScrolledWindow
+	  bug, if it is destroyed.
+
+2006-07-20 02:14  marcusva
+
+	* NEWS, data/themes/default/icons/16x16/folder.png, doc/manual.xml,
+	  doc/examples/a11y_test.py, ocempgui/widgets/ListViewPort.py,
+	  ocempgui/widgets/ViewPort.py: Brushed up FOLDER icon. Added
+	  ViewPort documentation. Reorganized appendix in manual.
+
+2006-07-19 21:24  marcusva
+
+	* doc/uml/renderer.xml, doc/uml/twistedrenderer.xml,
+	  doc/uml/viewport.xml, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/ListViewPort.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/ScrolledList.py: Added UML diagrams for
+	  Renderer, TwistedRenderer and ViewPort class. Fixed indexing
+	  issues in Renderer and a focus bug in the ScrolledList class.
+
+2006-07-19 12:33  marcusva
+
+	* NEWS, setup.py, doc/examples/drawing_engine.py,
+	  doc/img/drawing_widgets.xml, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Style.py: Made DEFAULTDATADIR globally
+	  available. Renamed style.py example to drawing_engine.py example.
+
+2006-07-19 11:36  marcusva
+
+	* doc/uml/: button.xml, checkbutton.xml, container.xml,
+	  diagram.xml, dialogwindow.xml, editable.xml, entry.xml,
+	  filedialog.xml, filelist.xml, frame.xml, graph2d.xml,
+	  imagebutton.xml, imagemap.xml, label.xml, listviewport.xml,
+	  progressbar.xml, radiobutton.xml, scale.xml, scrollbar.xml,
+	  scrolledlist.xml, scrolledwindow.xml, statusbar.xml, table.xml,
+	  togglebutton.xml, window.xml: UML updates.
+
+2006-07-18 21:42  marcusva
+
+	* setup.py, doc/examples/a11y_test.py, doc/examples/bin.py,
+	  doc/uml/basewidget.xml, doc/uml/bin.xml, doc/uml/button.xml,
+	  doc/uml/buttonbase.xml, doc/uml/checkbutton.xml,
+	  ocempgui/access/__init__.py, ocempgui/access/papi/papi.c,
+	  ocempgui/access/papi/papi_atkattribute.c,
+	  ocempgui/access/papi/papi_atkhyperlink.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrelation.c,
+	  ocempgui/access/papi/papi_atkrelationset.c,
+	  ocempgui/access/papi/papi_atkstateset.c,
+	  ocempgui/access/papi/papi_atktextrange.c,
+	  ocempgui/access/papi/papi_atktextrectangle.c,
+	  ocempgui/widgets/BaseWidget.py: Fixed papi namespace. Improved
+	  a11y example.
+
+2006-07-18 12:45  marcusva
+
+	* ocempgui/access/papi/papi_atkcomponentiface.c: Documentation fix.
+
+2006-07-18 11:34  marcusva
+
+	* NEWS, doc/manual.xml, doc/examples/a11y_test.py,
+	  ocempgui/access/papi/papi_atkactioniface.c: Improved
+	  documentation. Unbroke papi build.
+
+2006-07-17 18:24  marcusva
+
+	* doc/manual.xml, ocempgui/access/papi/papi_atkactioniface.c,
+	  ocempgui/access/papi/papi_atkcomponentiface.c,
+	  ocempgui/access/papi/papi_atkdocumentiface.c,
+	  ocempgui/access/papi/papi_atkeditableiface.c,
+	  ocempgui/access/papi/papi_atkhyperlink.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c: Documentation
+	  improvements
+
+2006-07-11 11:46  marcusva
+
+	* doc/examples/a11y_test.py, ocempgui/__init__.py,
+	  ocempgui/access/__init__.py,
+	  ocempgui/access/papi/papi_atkactioniface.c,
+	  ocempgui/access/papi/papi_atkattribute.c,
+	  ocempgui/access/papi/papi_atkcomponentiface.c,
+	  ocempgui/access/papi/papi_atkdocumentiface.c,
+	  ocempgui/access/papi/papi_atkeditableiface.c,
+	  ocempgui/access/papi/papi_atkhyperlink.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrelation.c,
+	  ocempgui/access/papi/papi_atkrelationset.c,
+	  ocempgui/access/papi/papi_atkrelationtype.c,
+	  ocempgui/access/papi/papi_atkrole.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstateset.c,
+	  ocempgui/access/papi/papi_atkstatetype.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextattribute.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c,
+	  ocempgui/draw/Complex.py, ocempgui/draw/__init__.py,
+	  ocempgui/events/EventManager.py, ocempgui/events/INotifyable.py,
+	  ocempgui/events/__init__.py, ocempgui/object/__init__.py,
+	  ocempgui/widgets/Style.py:
+	  Documentation fixes. Improved papi interfaces.
+
+2006-07-07 11:06  marcusva
+
+	* doc/examples/: example.py, scrollbar.py: Brushed up ScrollBar
+	  example.
+
+2006-07-06 09:05  marcusva
+
+	* doc/examples/a11y_test.py, doc/uml/design.xml,
+	  ocempgui/access/papi/papi_atkattribute.c,
+	  ocempgui/access/papi/papi_atkbridge.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atktextrectangle.c,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c: Indentation cleanup in
+	  papi wrapper. Updated some UMLs.
+
+2006-07-04 16:43  marcusva
+
+	* ocempgui/widgets/Renderer.py: Removed junk from Renderer.
+
+2006-07-04 16:28  marcusva
+
+	* TODO, doc/examples/a11y_test.py,
+	  ocempgui/access/papi/papi_atkutil.c: Sanitized atk interfaces.
+
+2006-07-04 14:36  marcusva
+
+	* ocempgui/access/papi/: papi_atkhyperlink.c,
+	  papi_atkstreamableiface.c, papi_atktextattribute.c,
+	  papi_atktype.c, papi_atkutil.c: Improved atkutil* wrapper code.
+
+2006-07-04 11:13  marcusva
+
+	* ocempgui/access/papi/: papi_atkobject.c, papi_atkutil.c,
+	  papi_atkvalueiface.c, papi_constants.c, papi_private.h: Added
+	  support for attaching multiple global event listeners to the papi
+	  bindings.
+
+2006-07-03 23:32  marcusva
+
+	* setup.py, ocempgui/access/papi/papi.c,
+	  ocempgui/access/papi/papi_atkbridge.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/access/papi/papi_private.h,
+	  ocempgui/widgets/BaseWidget.py: Improved _papi layout.
+
+2006-07-03 12:13  marcusva
+
+	* data/themes/default/DefaultEngine.py, doc/examples/example.py,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/components/FileListItem.py,
+	  ocempgui/widgets/components/ListItemCollection.py: Fixed
+	  Renderer.remove_widget(), so that widgets are remove recursively
+	  now. Fixed the indexable addition in Container._add(). Added Atk
+	  wrappers for focus handlers.
+
+2006-07-02 16:04  marcusva
+
+	* AUTHORS, data/themes/default/DefaultEngine.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/StatusBar.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/Table.py, ocempgui/widgets/ToggleButton.py,
+	  ocempgui/widgets/TwistedRenderer.py,
+	  ocempgui/widgets/ViewPort.py: Documentation updates.
+
+2006-07-02 15:08  marcusva
+
+	* ocempgui/widgets/: BaseWidget.py, Bin.py, Button.py,
+	  ButtonBase.py, Constants.py, Container.py, Diagram.py,
+	  DialogWindow.py, Editable.py, Entry.py, GenericDialog.py,
+	  Graph2D.py, Label.py, ListViewPort.py, RadioButton.py,
+	  Renderer.py, base.py: Documentation updates.
+
+2006-07-01 14:11  marcusva
+
+	* NEWS, ocempgui/widgets/Renderer.py: Added support for VIDEORESIZE
+	  events to Renderer class.
+
+2006-07-01 12:51  marcusva
+
+	* ocempgui/widgets/: ListViewPort.py, ScrollBar.py,
+	  ScrolledList.py, ScrolledWindow.py, ViewPort.py: Fixed ScrollBar
+	  minimum sizes. Fixed cursor and selection drawing in ListViewPort
+	  class.
+
+2006-07-01 10:49  marcusva
+
+	* ocempgui/widgets/Renderer.py: Fixed widgets refreshes for changes
+	  in the Renderer.
+
+2006-07-01 10:22  marcusva
+
+	* MANIFEST.in, ocempgui/widgets/Scale.py: Fixed Scale value
+	  calculation.
+
+2006-06-30 13:59  marcusva
+
+	* Makefile, doc/Makefile: Fixed release building.
+
+2006-06-30 13:45  marcusva
+
+	* setup.py, ocempgui/access/papi/papi_private.h: Fixed setup script
+	  for Python 2.3
+
+2006-06-30 13:28  marcusva
+
+	* NEWS, ocempgui/access/papi/papi_private.h: Fixed papi build for
+	  Python 2.3.
+
+2006-06-30 12:55  marcusva
+
+	* doc/examples/twisted_client.py, doc/examples/chat/guiclient.py,
+	  ocempgui/widgets/TwistedRenderer.py: Fixed TwistedRenderer
+
+2006-06-30 12:13  marcusva
+
+	* TODO, data/themes/default/DefaultEngine.py,
+	  doc/examples/example.py, doc/examples/graph2d.py,
+	  doc/examples/radiobutton.py, doc/examples/scrolledlist.py,
+	  doc/examples/window.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/FileDialog.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/StatusBar.py, ocempgui/widgets/Window.py: Fixed
+	  selection change signals in ScrolledList class. Fixed style
+	  issues in DefaultEngine. Sync'ed ScrolledList inheritors with
+	  latest changes. Imrpoved example(s).
+
+2006-06-30 10:02  marcusva
+
+	* ocempgui/widgets/ScrolledList.py: Fixed scrollbar behaviour for
+	  ScrolledList class.
+
+2006-06-30 09:53  marcusva
+
+	* NEWS, TODO, doc/examples/basewidget.py,
+	  doc/examples/scrolledlist.py, ocempgui/widgets/ScrolledList.py:
+	  Improved navigation in ScrolledList class.
+
+2006-06-29 13:01  marcusva
+
+	* NEWS, data/themes/default/DefaultEngine.py,
+	  doc/examples/listitemcollection.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/ListViewPort.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/components/ListItemCollection.py: Various
+	  drawing engine fixes. Improved ScrolledList class.
+
+2006-06-24 16:16  marcusva
+
+	* ocempgui/widgets/: BaseWidget.py, ListViewPort.py,
+	  ScrolledList.py: Improved mouse handling for the ScrolledList
+	  class.
+
+2006-06-24 13:21  marcusva
+
+	* NEWS, ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/ListViewPort.py,
+	  ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/ViewPort.py,
+	  ocempgui/widgets/components/ListItem.py: Various
+	  ScrolledList/ListViewPort class fixes.
+
+2006-06-23 14:09  marcusva
+
+	* NEWS, ocempgui/widgets/ListViewPort.py,
+	  ocempgui/widgets/ScrolledList.py: Readded keyboard/mouse
+	  navigation to ScrolledList class. Improved drawing of the
+	  ListViewPort class.
+
+2006-06-22 19:04  marcusva
+
+	* NEWS, doc/examples/listitemcollection.py,
+	  doc/examples/scrolledwindow.py, ocempgui/widgets/ListViewPort.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/components/ListItem.py,
+	  ocempgui/widgets/components/ListItemCollection.py: Various fixes
+	  in ScrolledList and ListViewPort classes.
+
+2006-06-15 14:14  marcusva
+
+	* doc/manual.xml, ocempgui/widgets/ListViewPort.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/ViewPort.py:
+	  Minor fixes in the ScrolledList and ListViewPort class.
+
+2006-06-13 11:46  marcusva
+
+	* ocempgui/: events/INotifyable.py, widgets/Style.py:
+	  Improved doc strings.
+
+2006-06-05 11:20  marcusva
+
+	* Makefile, NEWS, setup.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/CheckButton.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/Graph2D.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/ImageMap.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/ListViewPort.py,
+	  ocempgui/widgets/ProgressBar.py, ocempgui/widgets/RadioButton.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/StatusBar.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/StyleInformation.py, ocempgui/widgets/Table.py,
+	  ocempgui/widgets/ToggleButton.py, ocempgui/widgets/ViewPort.py,
+	  ocempgui/widgets/Window.py,
+	  ocempgui/widgets/components/FileListItem.py,
+	  ocempgui/widgets/images/Icons16x16.py:
+	  Improved theme system.
+
+2006-06-05 11:17  marcusva
+
+	* data/themes/: __init__.py, default/DefaultEngine.py,
+	  default/__init__.py, default/default.rc,
+	  default/icons/16x16/file_char.png,
+	  default/icons/16x16/file_link.png,
+	  default/icons/16x16/file_normal.png,
+	  default/icons/16x16/file_socket.png,
+	  default/icons/16x16/folder.png:
+	  Added theme subdirectories.
+
+2006-06-03 11:22  marcusva
+
+	* ocempgui/widgets/Style.py: Fixed a border bug in
+	  Style.draw_button(). Smoothed raised/sunken borders
+
+2006-06-02 19:22  marcusva
+
+	* ocempgui/widgets/: Scale.py, Style.py, StyleInformation.py:
+	  Brushed up Scale look.
+
+2006-06-02 13:48  marcusva
+
+	* ocempgui/widgets/: Style.py, StyleInformation.py: Cleaned Graph2D
+	  drawing method. Added StyleInformation docs.
+
+2006-06-02 13:31  marcusva
+
+	* ocempgui/widgets/Style.py: Fixed size calculation for Scales.
+
+2006-06-02 12:50  marcusva
+
+	* ocempgui/widgets/: Renderer.py, Scale.py, Style.py,
+	  StyleInformation.py: Brushed up Scale look. Fixed minor indexing
+	  issue in Renderer class.
+
+2006-06-02 12:21  marcusva
+
+	* NEWS, doc/examples/button.py, doc/examples/checkbutton.py,
+	  doc/examples/example.py, doc/examples/filedialog.py,
+	  doc/examples/genericdialog.py, doc/examples/imagebutton.py,
+	  doc/examples/import.py, doc/examples/label.py,
+	  doc/examples/radiobutton.py, doc/examples/theme.py,
+	  doc/examples/togglebutton.py, ocempgui/__init__.py,
+	  ocempgui/widgets/CheckButton.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/Graph2D.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/ProgressBar.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Range.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/StyleInformation.py,
+	  ocempgui/widgets/ToggleButton.py,
+	  ocempgui/widgets/TwistedRenderer.py,
+	  ocempgui/widgets/ViewPort.py, ocempgui/widgets/Window.py,
+	  ocempgui/widgets/__init__.py:
+	  Reimplemented correct scrolling behaviour for the ScrolledWindow
+	  and ViewPort. Brushed up the default theme and drawing methods.
+	  The text argument for Check-, Radio- and ToggleButtons is
+	  optional. The image argument for the ImageButton is optional.
+	  Improved Style.draw_scale() and Style.draw_scrollbar() methods to
+	  work correctly with inheritors.  Improved examples. Documentation
+	  fixes.
+
+2006-06-01 13:39  marcusva
+
+	* NEWS, ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/StyleInformation.py:
+	  Improved ScrollBar style. Added bordercolor style entry for
+	  flattened borders.
+
+2006-06-01 12:14  marcusva
+
+	* TODO, ocempgui/widgets/Graph2D.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/StyleInformation.py: Added mouse support to
+	  Graph2D class.
+
+2006-05-31 13:12  marcusva
+
+	* ocempgui/widgets/: Diagram.py, Graph2D.py:
+	  Added zoom in/out support and axis movement to Graph2D.
+
+2006-05-31 09:45  marcusva
+
+	* NEWS, ocempgui/events/EventManager.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Renderer.py:
+	  Added __len__() method to EventManager. Fixed indexable behaviour
+	  for Renderer and BaseWidget. Layers in Renderer now will be
+	  automatically destroyed.
+
+2006-05-25 18:47  marcusva
+
+	* doc/uml/graph2d.xml, ocempgui/widgets/Graph2D.py: Added UML for
+	  Graph2D class.
+
+2006-05-25 18:01  marcusva
+
+	* doc/uml/button.xml, doc/uml/diagram.xml, doc/uml/table.xml,
+	  doc/uml/togglebutton.xml, doc/uml/window.xml,
+	  ocempgui/widgets/Diagram.py, ocempgui/widgets/ToggleButton.py:
+	  Updated UMLs for Table, ToggleButton and Window class. Added UML
+	  for Diagram class.
+
+2006-05-25 00:01  marcusva
+
+	* doc/uml/: label.xml, progressbar.xml, radiobutton.xml, scale.xml,
+	  scrollbar.xml, statusbar.xml:
+	  Updated UMLs for Label, ProgressBar, RadioButton, Scale,
+	  ScrollBar and StatusBar class.
+
+2006-05-24 20:07  marcusva
+
+	* doc/uml/button.xml, doc/uml/buttonbase.xml, doc/uml/editable.xml,
+	  doc/uml/entry.xml, doc/uml/frame.xml, doc/uml/imagebutton.xml,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/ButtonBase.py:
+	  Updated UMLs for Editable, Entry, Frame and ImageButton classes.
+	  Corrected ButtonBase and Button class UMLs.
+
+2006-05-24 19:34  marcusva
+
+	* doc/uml/: actionlistener.xml, checkbutton.xml, container.xml,
+	  design.xml, dialogwindow.xml, signals.xml:
+	  Updated UMLs for ActionListener, CheckButton, Container,
+	  DialogWindow and Event class. Updated design image.
+
+2006-05-24 14:12  marcusva
+
+	* doc/uml/: bin.xml, button.xml, buttonbase.xml:
+	  Updated UMLs for Bin and Button class. Added UML for ButtonBase
+	  class.
+
+2006-05-24 13:55  marcusva
+
+	* doc/uml/baseobject.xml, doc/uml/basewidget.xml,
+	  doc/uml/eventmanager.xml, ocempgui/widgets/BaseWidget.py:
+	  Updated UMLs for BaseWidget BaseObject and EventManager class.
+
+2006-05-24 12:15  marcusva
+
+	* TODO, setup.py, doc/examples/a11y_test.py,
+	  doc/examples/graph2d.py,
+	  ocempgui/access/papi/papi_atkvalueiface.c,
+	  ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/ViewPort.py:
+	  Added AtkValueIface support for basic types. Minor improvements
+	  in ViewPort drawing and updating.
+
+2006-05-24 02:14  marcusva
+
+	* ocempgui/access/papi/: papi.c, papi_atkactioniface.c,
+	  papi_atkattribute.c, papi_atkbridge.c, papi_atkcomponentiface.c,
+	  papi_atkdocumentiface.c, papi_atkeditableiface.c,
+	  papi_atkhypertextiface.c, papi_atkimageiface.c, papi_atkobject.c,
+	  papi_atkrelationtype.c, papi_atkselectioniface.c,
+	  papi_atkstateset.c, papi_atkstatetype.c,
+	  papi_atkstreamableiface.c, papi_atktableiface.c,
+	  papi_atktextattribute.c, papi_private.h:
+	  Code cleanup in papi interface. Added AtkStateType functions.
+	  Changed AtkEditable interface methods to make use of the new
+	  AtkAttribute wrapper. Minor typo and bug fixes.
+
+2006-05-24 01:03  marcusva
+
+	* ocempgui/access/papi/: papi.c, papi_atkattribute.c,
+	  papi_atkrole.c, papi_atktextrange.c, papi_atktextrectangle.c,
+	  papi_private.h:
+	  Added global atk_text_attribute* functions.
+
+2006-05-23 20:48  marcusva
+
+	* ocempgui/: access/papi/papi.c, access/papi/papi.h,
+	  access/papi/papi_atkattribute.c, access/papi/papi_atktextiface.c,
+	  access/papi/papi_atktextrange.c,
+	  access/papi/papi_atktextrectangle.c, access/papi/papi_private.h,
+	  widgets/Renderer.py:
+	  Added AtkTextRange, AtkTextRectangle and AtkAttribute wrappers.
+	  Completed AtTextIface interface wrappers.
+
+2006-05-19 10:37  marcusva
+
+	* ocempgui/widgets/Style.py: Fixed focus border drawing for
+	  buttons, if no child is set.
+
+2006-05-19 10:24  marcusva
+
+	* NEWS, ocempgui/events/EventManager.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/Diagram.py,
+	  ocempgui/widgets/DialogWindow.py, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/FileDialog.py,
+	  ocempgui/widgets/FileList.py, ocempgui/widgets/ImageMap.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/StatusBar.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/Window.py,
+	  ocempgui/widgets/__init__.py: Sync'ed internal and external
+	  naming schemes. Improved window activation on child focus. Fixed
+	  several Style bugs introduced by a previous commit.
+
+2006-05-19 08:33  marcusva
+
+	* ocempgui/widgets/: Diagram.py, Graph2D.py: Added doc strings to
+	  the Diagram and Graph2d class. Fixed a minor bug in
+	  Diagram.evaluate().
+
+2006-05-18 13:19  marcusva
+
+	* NEWS, doc/examples/graph2d.py, ocempgui/widgets/Diagram.py,
+	  ocempgui/widgets/Graph2D.py:
+	  Added evaluate() method to the Diagram class for better
+	  evaluation of data.  Improved attribute behaviour of the Diagram
+	  and Graph2D class.  Added new attributes to Graph2D, which change
+	  its look.
+
+2006-05-18 01:39  marcusva
+
+	* doc/examples/graph2d.py, ocempgui/draw/Image.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Diagram.py,
+	  ocempgui/widgets/Graph2D.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/StyleInformation.py,
+	  ocempgui/widgets/TwistedRenderer.py,
+	  ocempgui/widgets/ViewPort.py, ocempgui/widgets/__init__.py,
+	  ocempgui/widgets/components/__init__.py:
+	  Cleaned up import statements. Added Diagram and Graph2D classes
+	  for graph and diagram drawing. Added ViewPort class for
+	  ScrolledWindow abstraction.
+
+2006-05-16 09:49  marcusva
+
+	* NEWS, ocempgui/widgets/Renderer.py: Added layer documentation in
+	  Renderer class.
+
+2006-05-15 16:42  marcusva
+
+	* MANIFEST.in, NEWS, ocempgui/widgets/Renderer.py: Fixed dist
+	  target. Added managers attribute to Renderer class.
+
+2006-05-15 15:49  marcusva
+
+	* TODO, doc/examples/fader_surface.py, ocempgui/access/papi/papi.c,
+	  ocempgui/access/papi/papi_atkrelation.c,
+	  ocempgui/access/papi/papi_atkstateset.c,
+	  ocempgui/draw/Complex.py, ocempgui/events/EventManager.py,
+	  ocempgui/widgets/Renderer.py:
+	  Fixed keyboard modifier checks in Renderer class. Memory
+	  allocation errors now set correct exceptions in papi module.
+
+2006-05-15 01:51  marcusva
+
+	* doc/examples/fader_surface.py, ocempgui/draw/Complex.py:
+	  Fixed bounds checks in FaderSurface class.
+
+2006-05-15 01:24  marcusva
+
+	* NEWS, doc/examples/window.py, ocempgui/events/EventManager.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/DialogWindow.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledWindow.py:
+	  Fixed locking value adjustments in BaseWidget.update().  Readded
+	  modality support to DialogWindow class and Renderer.	Fixed
+	  slider size calculation bug in ScrollBars.  Fixed Renderer bug,
+	  which could cause the pygame event queue to overflow on updates.
+
+2006-05-14 18:02  marcusva
+
+	* NEWS, README, TODO, setup.py, doc/examples/a11y_test.py,
+	  doc/examples/basewidget.py, doc/examples/bin.py,
+	  doc/examples/eventmanager.py, doc/examples/frame.py,
+	  doc/examples/hello_world.py, doc/examples/hello_world_signals.py,
+	  doc/examples/imagemap.py, doc/examples/progressbar.py,
+	  doc/examples/scale.py, doc/examples/scrollbar.py,
+	  doc/examples/table.py, doc/examples/theme.py,
+	  doc/examples/twisted_client.py, doc/examples/window.py,
+	  doc/examples/chat/guiclient.py,
+	  doc/examples/tictactoe/TicTacToeSimple.py, ocempgui/__init__.py,
+	  ocempgui/access/__init__.py,
+	  ocempgui/access/papi/papi_atkactioniface.c,
+	  ocempgui/access/papi/papi_atkbridge.c,
+	  ocempgui/access/papi/papi_atkcomponentiface.c,
+	  ocempgui/access/papi/papi_atkdocumentiface.c,
+	  ocempgui/access/papi/papi_atkeditableiface.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrole.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atktype.c,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c,
+	  ocempgui/access/papi/papi_constants.c,
+	  ocempgui/access/papi/papi_private.h, ocempgui/draw/Complex.py,
+	  ocempgui/draw/Image.py, ocempgui/draw/__init__.py,
+	  ocempgui/events/EventManager.py, ocempgui/events/INotifyable.py,
+	  ocempgui/events/__init__.py, ocempgui/media/__init__.py,
+	  ocempgui/object/__init__.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Bin.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/ButtonBase.py, ocempgui/widgets/CheckButton.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/Container.py,
+	  ocempgui/widgets/DialogWindow.py, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/FileDialog.py,
+	  ocempgui/widgets/FileList.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/GenericDialog.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/ImageMap.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/ListViewPort.py,
+	  ocempgui/widgets/ProgressBar.py, ocempgui/widgets/RadioButton.py,
+	  ocempgui/widgets/Range.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/StatusBar.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/StyleInformation.py, ocempgui/widgets/Table.py,
+	  ocempgui/widgets/ToggleButton.py,
+	  ocempgui/widgets/TwistedRenderer.py, ocempgui/widgets/Window.py,
+	  ocempgui/widgets/__init__.py, ocempgui/widgets/base.py,
+	  ocempgui/widgets/components/ListItem.py,
+	  ocempgui/widgets/components/__init__.py:
+	  Improved drawing logics. Changed absolute to relative positions.
+	  Added full z-axis support. Fixed several compiler warnings for
+	  ATK wrapper. Increased minimum pygame requirement to 1.7.1.
+
+2006-05-05 12:50  marcusva
+
+	* NEWS, README:
+	  Added documentation notes regarding the build.
+
+2006-05-05 12:26  marcusva
+
+	* setup.py, ocempgui/access/papi/papi.c,
+	  ocempgui/access/papi/papi.h,
+	  ocempgui/access/papi/papi_atkhyperlink.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrelation.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstateset.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c,
+	  ocempgui/access/papi/papi_private.h:
+	  Added AtkImageIface, AtkHypertextIface, AtkSelectionIface,
+	  AtkStreamableIface and AtkTableIface interfaces and incomplete
+	  AtkTextIface and AtkValueIface interfaces.  Added incomplete
+	  AtkHyperlink object type.
+
+2006-05-03 11:08  marcusva
+
+	* ocempgui/access/papi/: papi_atkcomponentiface.c,
+	  papi_atkdocumentiface.c, papi_atkeditableiface.c:
+	  Added AtkDocumentIface and AtkEditableTextIface wrappers.
+
+2006-05-03 09:53  marcusva
+
+	* doc/examples/a11y_test.py,
+	  ocempgui/access/papi/papi_atkactioniface.c,
+	  ocempgui/access/papi/papi_atkcomponentiface.c,
+	  ocempgui/access/papi/papi_atkdocumentiface.c,
+	  ocempgui/access/papi/papi_atkeditableiface.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrelation.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstateset.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atktype.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c,
+	  ocempgui/access/papi/papi_private.h:
+	  Completed AtkActionIface and AtkComponentIface wrappers.
+
+2006-05-02 21:21  marcusva
+
+	* doc/examples/a11y_test.py,
+	  ocempgui/access/papi/papi_atkactioniface.c,
+	  ocempgui/access/papi/papi_atkcomponentiface.c,
+	  ocempgui/access/papi/papi_atkdocumentiface.c,
+	  ocempgui/access/papi/papi_atkeditableiface.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atktype.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c: Prefixed interface
+	  method bindings to fix namespace troubles.
+
+2006-05-02 15:31  marcusva
+
+	* doc/examples/a11y_test.py, ocempgui/access/papi/papi.c,
+	  ocempgui/access/papi/papi.h,
+	  ocempgui/access/papi/papi_atkactioniface.c,
+	  ocempgui/access/papi/papi_atkbridge.c,
+	  ocempgui/access/papi/papi_atkcomponentiface.c,
+	  ocempgui/access/papi/papi_atkdocumentiface.c,
+	  ocempgui/access/papi/papi_atkeditableiface.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atktype.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c,
+	  ocempgui/access/papi/papi_constants.c,
+	  ocempgui/access/papi/papi_private.h:
+	  Added method definitions for the AtkAction interface. Improved
+	  interface additions for AtkObject types by converting them to
+	  binary flags.
+
+2006-05-02 11:47  marcusva
+
+	* setup.py, ocempgui/access/papi/papi.c,
+	  ocempgui/access/papi/papi_atkbridge.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrole.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atktype.c,
+	  ocempgui/access/papi/papi_atkutil.c,
+	  ocempgui/access/papi/papi_constants.c,
+	  ocempgui/access/papi/papi_private.h:
+	  Improved structure of the papi C interface. Completed
+	  AtkTextIface method definitions.
+
+2006-05-02 10:39  marcusva
+
+	* setup.py, ocempgui/access/papi/papi.c,
+	  ocempgui/access/papi/papi_atkutil.c:
+	  Added unbound ATK interfaces to the main module namespace.
+
+2006-05-01 16:58  marcusva
+
+	* ocempgui/access/papi/: papi_atkcomponentiface.c,
+	  papi_atkdocumentiface.c, papi_atkeditableiface.c,
+	  papi_atkhypertextiface.c, papi_atkimageiface.c, papi_atkobject.c,
+	  papi_atkselectioniface.c, papi_atkstreamableiface.c,
+	  papi_atktableiface.c, papi_atktextiface.c, papi_atkvalueiface.c:
+	  Added method definitions for the Atk interfaces.
+
+2006-04-30 12:54  marcusva
+
+	* doc/examples/a11y_test.py, ocempgui/access/papi/papi.h,
+	  ocempgui/access/papi/papi_atkactioniface.c,
+	  ocempgui/access/papi/papi_atkcomponentiface.c,
+	  ocempgui/access/papi/papi_atkdocumentiface.c,
+	  ocempgui/access/papi/papi_atkeditableiface.c,
+	  ocempgui/access/papi/papi_atkhypertextiface.c,
+	  ocempgui/access/papi/papi_atkimageiface.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrelation.c,
+	  ocempgui/access/papi/papi_atkrelationset.c,
+	  ocempgui/access/papi/papi_atkselectioniface.c,
+	  ocempgui/access/papi/papi_atkstateset.c,
+	  ocempgui/access/papi/papi_atkstreamableiface.c,
+	  ocempgui/access/papi/papi_atktableiface.c,
+	  ocempgui/access/papi/papi_atktextiface.c,
+	  ocempgui/access/papi/papi_atktype.c,
+	  ocempgui/access/papi/papi_atkvalueiface.c,
+	  ocempgui/access/papi/papi_constants.c,
+	  ocempgui/access/papi/papi_private.h:
+	  Added the different existing Atk interface type definitions.
+
+2006-04-26 12:02  marcusva
+
+	* ocempgui/access/papi/: papi.c, papi.h, papi_atkobject.c,
+	  papi_atkrelationset.c, papi_atkrole.c, papi_atkstateset.c,
+	  papi_private.h:
+	  Added AtkRole related function wrappers. Added more AtkObjcet
+	  interface wrappers. Removed superfluous keyword operators in
+	  various interfaces.
+
+2006-04-25 15:54  marcusva
+
+	* COPYING, NEWS, README, ocempgui/access/IAccessible.py,
+	  ocempgui/access/__init__.py,
+	  ocempgui/access/papi/papi_atkobject.c:
+	  Removed AccessibleContext class from ocempgui.access because it
+	  has no use. Made Papi iteration non-blocking. Minor documentation
+	  updates.
+
+2006-04-25 12:46  marcusva
+
+	* setup.py, doc/examples/a11y_test.py, ocempgui/access/__init__.py,
+	  ocempgui/access/papi/papi.c, ocempgui/access/papi/papi.h,
+	  ocempgui/access/papi/papi_atkbridge.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_atkrelation.c,
+	  ocempgui/access/papi/papi_atkrelationset.c,
+	  ocempgui/access/papi/papi_atkstateset.c,
+	  ocempgui/access/papi/papi_constants.c,
+	  ocempgui/access/papi/papi_private.h:
+	  Added AtkRelation, AtkRelationSet and AtkStateSet wrappers to the
+	  Papi module. Improved build of Papi module.
+
+2006-04-22 12:18  marcusva
+
+	* Makefile, setup.py, ocempgui/access/__init__.py,
+	  ocempgui/access/papi/papi.c,
+	  ocempgui/access/papi/papi_atkbridge.c,
+	  ocempgui/access/papi/papi_atkobject.c,
+	  ocempgui/access/papi/papi_constants.c:
+	  Added low-level atk bridging interface for accessibility support.
+
+2006-02-16 11:29  marcusva
+
+	* doc/manual.xml:
+	  Updated documentation to reflect the latest Container changes.
+
+2006-02-16 10:45  marcusva
+
+	* setup.py, doc/uml/container.xml, doc/uml/table.xml,
+	  ocempgui/__init__.py, ocempgui/widgets/Container.py,
+	  ocempgui/widgets/Table.py:
+	  Added set_children() and insert_child() methods to the Container
+	  class and added specific implementations to the Table class.
+
+2006-02-16 09:32  marcusva
+
+	* Makefile, NEWS, ocempgui/widgets/Label.py:
+	  Fixed a bug in Label.set_widget(), which prevented it from being
+	  reset.
+
+2006-02-16 00:11  marcusva
+
+	* doc/: manual.xml, examples/tictactoe/TicTacToeSimple.py:
+	  Improved Tic Tac Toe example.
+
+2006-01-09 12:14  marcusva
+
+	* doc/manual.xml:
+	  Fixed typo.
+
+2005-12-24 12:31  marcusva
+
+	* NEWS, ocempgui/access/IAccessible.py,
+	  ocempgui/access/__init__.py, ocempgui/events/EventManager.py,
+	  ocempgui/events/INotifyable.py, ocempgui/events/__init__.py,
+	  ocempgui/object/BaseObject.py:
+	  Added INotifyable interface class. Renamed Accessible class to
+	  IAccessible. BaseObject now inherits from INotifyable. Added
+	  emit_event() to EventManager.
+
+2005-12-21 02:37  marcusva
+
+	* ocempgui/widgets/Renderer.py: Do not loose set backgrounds.
+
+2005-12-10 19:33  marcusva
+
+	* NEWS, doc/manual.xml, doc/examples/example.py,
+	  doc/examples/filedialog.py, doc/examples/chat/guiclient.py,
+	  doc/examples/tictactoe/TicTacToeSimple.py,
+	  doc/uml/basewidget.xml, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/FileDialog.py,
+	  ocempgui/widgets/ProgressBar.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/StatusBar.py, ocempgui/widgets/Style.py:
+	  Added maxsize attribute and replaced size attribute by minsize
+	  attribute in BaseWidget class. Update docs and code base
+	  accordingly.
+
+2005-12-09 10:04  marcusva
+
+	* NEWS, ocempgui/widgets/Editable.py:
+	  Fixed recognition of ENTER key in Editable.
+
+2005-12-09 09:49  marcusva
+
+	* doc/: Makefile, examples/chat/guiclient.py,
+	  examples/chat/server.py:
+	  Added chat client/server example from Benjamin Olsen.
+
+2005-12-09 09:09  marcusva
+
+	* NEWS, doc/examples/twisted_client.py: Fixed typos.
+
+2005-12-08 12:02  marcusva
+
+	* NEWS, doc/examples/twisted_client.py,
+	  doc/examples/twisted_server.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Editable.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/TwistedRenderer.py:
+	  Cleaned up Editable/Entry enhancements. Fixed broken password
+	  mode. Cleaned up Twisted support.
+
+2005-12-08 01:22  marcusva
+
+	* NEWS, doc/manual.xml, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Bin.py, ocempgui/widgets/Container.py,
+	  ocempgui/widgets/Editable.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Style.py:
+	  Improved caret and scrolling behaviour in Entry (Benjamin Olsen).
+	  Fixed an eventarea bug, if a widget is about to be removed.
+
+2005-12-07 11:45  marcusva
+
+	* AUTHORS, NEWS, doc/examples/entry.py, doc/uml/entry.xml,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/Style.py:
+	  Added password support to Entry widget class.
+
+2005-12-06 00:53  marcusva
+
+	* AUTHORS, NEWS, doc/examples/twisted_client.py,
+	  doc/examples/twisted_server.py, ocempgui/object/BaseObject.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/DialogWindow.py,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/TwistedRenderer.py,
+	  ocempgui/widgets/__init__.py:
+	  Added TwistedRenderer renderer class for Twisted integration and
+	  a server/client example for those
+
+2005-11-24 14:37  marcusva
+
+	* ChangeLog, NEWS: Release 0.1.0
+
+2005-11-24 14:27  marcusva
+
+	* setup.py: Fixed directory path listing in installation script.
+
+2005-11-24 14:06  marcusva
+
+	* doc/manual.xml: Fixed documentation reference.
+
+2005-11-24 13:50  marcusva
+
+	* doc/manual.xml: Documentation improvements.
+
+2005-11-23 11:45  marcusva
+
+	* doc/manual.xml, ocempgui/widgets/Style.py: Documentation
+	  improvements. style cleanups.
+
+2005-11-22 10:29  marcusva
+
+	* doc/: manual.xml, examples/frame.py:
+	  Documentation improvements.
+
+2005-11-20 22:46  marcusva
+
+	* MANIFEST.in, doc/manual.xml, doc/examples/theme.py,
+	  doc/examples/theme_example.rc, ocempgui/widgets/CheckButton.py,
+	  ocempgui/widgets/Style.py:
+	  Added theme examples. Documentation improvements.
+
+2005-11-20 12:42  marcusva
+
+	* doc/: Makefile, manual.xml, img/drawing_widgets.xml:
+	  Documentation improvements, added style section.
+
+2005-11-20 00:11  marcusva
+
+	* Makefile, doc/Makefile, doc/manual.xml,
+	  doc/examples/tictactoe/TicTacToeSimple.py,
+	  doc/examples/tictactoe/circle.png,
+	  doc/examples/tictactoe/cross.png,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/ProgressBar.py:
+
+	  Documentation improvements. Added custom widget examples.
+
+2005-11-19 15:56  marcusva
+
+	* NEWS, doc/manual.xml, ocempgui/widgets/FileList.py,
+	  ocempgui/widgets/Window.py,
+	  ocempgui/widgets/components/ListItem.py:
+	  Documentation improvements.
+
+2005-11-19 00:22  marcusva
+
+	* doc/manual.xml, doc/examples/listitemcollection.py,
+	  ocempgui/widgets/components/ListItem.py:
+	  Documentation improvements. Added ListItemCollection example.
+
+2005-11-18 12:36  marcusva
+
+	* NEWS, TODO, doc/manual.xml, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Editable.py, ocempgui/widgets/ImageMap.py,
+	  ocempgui/widgets/ListViewPort.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/Window.py, ocempgui/widgets/__init__.py,
+	  ocempgui/widgets/base.py,
+	  ocempgui/widgets/components/ListItem.py,
+	  ocempgui/widgets/images/Icons16x16.py:
+	  Documentation improvements and code cleanup.
+
+2005-11-17 14:41  marcusva
+
+	* ocempgui/widgets/ScrolledList.py: Added automatic scrolling on
+	  keyboard navigation.
+
+2005-11-16 23:52  marcusva
+
+	* NEWS, TODO, ocempgui/widgets/FileList.py,
+	  ocempgui/widgets/ListViewPort.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/__init__.py:
+	  Split up ScrolledList and ListViewPort. Made ScrolledList full
+	  keyboard accessible. Improved draw routines for the ListViewPort.
+
+2005-11-16 20:53  marcusva
+
+	* NEWS, TODO, doc/uml/eventmanager.xml,
+	  ocempgui/events/EventManager.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/Style.py:
+	  Added first keyboard navigation support to ScrolledList. New
+	  method for adding high priority objects in EventManager.
+
+2005-11-16 14:38  marcusva
+
+	* NEWS, ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/__init__.py: Added
+	  experimental CombBox widget code.
+
+2005-11-16 13:15  marcusva
+
+	* NEWS, doc/manual.xml, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/Table.py: More
+	  documentation.
+
+2005-11-16 02:06  marcusva
+
+	* doc/manual.xml: Added Bin and Container section to manual.
+
+2005-11-15 19:20  marcusva
+
+	* NEWS, doc/manual.xml, doc/examples/example.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/CheckButton.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/ProgressBar.py, ocempgui/widgets/RadioButton.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/StatusBar.py, ocempgui/widgets/Table.py,
+	  ocempgui/widgets/ToggleButton.py, ocempgui/widgets/__init__.py:
+	  Removed unused Accessible interfaces. More documentation.
+
+2005-11-13 23:23  marcusva
+
+	* NEWS, ocempgui/widgets/Editable.py, ocempgui/widgets/Renderer.py:
+
+	  Editable input fixes.
+
+2005-11-13 21:45  marcusva
+
+	* ocempgui/widgets/images/Icons16x16.py:
+	  See previous commit.
+
+2005-11-13 21:44  marcusva
+
+	* doc/examples/: button.py, checkbutton.py, imagebutton.py,
+	  imagemap.py, label.py, radiobutton.py, togglebutton.py:
+	  Fixed up image path for ocempgui.widgets.images.Icons16x16. Fixed
+	  platform incompatible code in several examples.
+
+2005-11-13 19:39  marcusva
+
+	* doc/examples/imagemap.py, ocempgui/widgets/Style.py: Fixed bugs
+	  in Style.draw_window() and imagemap example.
+
+2005-11-13 18:21  marcusva
+
+	* ocempgui/: draw/Image.py, widgets/FileDialog.py,
+	  widgets/components/FileListItem.py,
+	  widgets/components/ListItem.py, widgets/images/Icons16x16.py:
+	  More icons, documentation improvements.
+
+2005-11-13 16:11  marcusva
+
+	* NEWS, doc/examples/filedialog.py, doc/examples/label.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/FileDialog.py,
+	  ocempgui/widgets/Label.py:
+	  Improved mnemonic detection in Label widget class. Documented
+	  FileDialog widget class.
+
+2005-11-13 14:20  marcusva
+
+	* NEWS, doc/uml/window.xml, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/Window.py:
+	  Added Style.draw_dropshadow() for drop shadows. Made Window
+	  drawing method public available via Style.draw_window(). Added
+	  minimizing attribute and method to Window class.
+
+2005-11-13 12:27  marcusva
+
+	* doc/examples/filedialog.py, ocempgui/widgets/FileDialog.py,
+	  ocempgui/widgets/FileList.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py: Minor optimizations.
+
+2005-11-13 03:20  marcusva
+
+	* NEWS, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/FileList.py, ocempgui/widgets/GenericDialog.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/base.py:
+	  Updated documentation for the GenericDialog class and DLGRESULT_*
+	  constants.
+
+2005-11-13 02:32  marcusva
+
+	* TODO, doc/uml/scrolledwindow.xml:
+	  Documented keyboard behaviour in UML for the ScrolledWindow
+	  class.
+
+2005-11-13 02:08  marcusva
+
+	* MANIFEST.in, NEWS, setup.py, doc/Makefile,
+	  doc/uml/actionlistener.xml, doc/uml/baseobject.xml,
+	  doc/uml/basewidget.xml, doc/uml/bin.xml, doc/uml/button.xml,
+	  doc/uml/checkbutton.xml, doc/uml/container.xml,
+	  doc/uml/dialogwindow.xml, doc/uml/editable.xml,
+	  doc/uml/entry.xml, doc/uml/eventmanager.xml,
+	  doc/uml/filedialog.xml, doc/uml/filelist.xml, doc/uml/frame.xml,
+	  doc/uml/genericdialog.xml, doc/uml/imagebutton.xml,
+	  doc/uml/imagemap.xml, doc/uml/label.xml,
+	  doc/uml/listviewport.xml, doc/uml/progressbar.xml,
+	  doc/uml/radiobutton.xml, doc/uml/range.xml, doc/uml/scale.xml,
+	  doc/uml/scrollbar.xml, doc/uml/scrolledlist.xml,
+	  doc/uml/scrolledwindow.xml, doc/uml/signals.xml,
+	  doc/uml/statusbar.xml, doc/uml/table.xml,
+	  doc/uml/togglebutton.xml, doc/uml/window.xml,
+	  ocempgui/widgets/ScrolledList.py:
+	  Updated UML diagrams. Added data directory to installation.
+
+2005-11-12 23:58  marcusva
+
+	* NEWS, doc/examples/example.py, doc/examples/filedialog.py,
+	  doc/examples/genericdialog.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/DialogWindow.py,
+	  ocempgui/widgets/FileDialog.py, ocempgui/widgets/FileList.py,
+	  ocempgui/widgets/GenericDialog.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/__init__.py,
+	  ocempgui/widgets/base.py:
+	  Separated FileList widget class. Added double click detection to
+	  the widget system. Added new GenericDialog widget class and
+	  DLGRESULT_* constants to be distributed on clicking on the dialog
+	  action buttons.  Fixed a scrollbar value bug in the ScrolledList
+	  class. Fixed a widget.controls event notification bug in the
+	  DialogWindow class.  Minor improvements in the FileDialog class.
+	  Improved examples.
+
+2005-11-10 15:34  marcusva
+
+	* Makefile, NEWS, README, setup.py, doc/manual.xml,
+	  doc/examples/filedialog.py, ocempgui/draw/Image.py,
+	  ocempgui/widgets/FileDialog.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/__init__.py,
+	  ocempgui/widgets/components/FileListItem.py,
+	  ocempgui/widgets/components/ListItem.py,
+	  ocempgui/widgets/components/__init__.py,
+	  ocempgui/widgets/images/Icons16x16.py,
+	  ocempgui/widgets/images/__init__.py:
+	  ListViewPort has become a public class. Completed ScrolledList
+	  documentation. Improved list item drawing. Added new FileList and
+	  FileDialog widget classes. New submodule images in
+	  ocempgui.widgets. Image.load_image now handles colorkeys and
+	  alpha transparency. Added various icons. Improved installation
+	  routines.
+
+2005-11-09 10:09  marcusva
+
+	* NEWS, TODO, doc/Makefile, doc/examples/example.py,
+	  doc/examples/imagemap.py, doc/uml/imagemap.xml,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/ImageMap.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/__init__.py,
+	  ocempgui/widgets/components/ListItem.py:
+	  Added ImageMap widget class. Removed editing capability from
+	  ScrolledList.
+
+2005-11-04 09:23  marcusva
+
+	* NEWS, doc/examples/scrolledlist.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Container.py,
+	  ocempgui/widgets/Editable.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/components/ListItem.py: Added first editing
+	  ability to TextListItem class.
+
+2005-11-03 11:05  marcusva
+
+	* TODO, ocempgui/widgets/Editable.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/StatusBar.py:
+	  ----------------------------------------------------------------------
+	  ocempgui/widgets/Editable.py ocempgui/widgets/Entry.py CVS:
+	  ocempgui/widgets/Renderer.py ocempgui/widgets/ScrollBar.py CVS:
+	  ocempgui/widgets/ScrolledList.py CVS:
+	  ocempgui/widgets/ScrolledWindow.py
+	  ocempgui/widgets/components/ListItem.py CVS:
+	  ocempgui/widgets/components/ListItemCollection.py CVS:
+	  ----------------------------------------------------------------------
+	  SIG_TICK will be distributed every 10 ms now. Adjusted widgets to
+	  respect this. First steps to make the ListViewPort class public.
+	  Added mouse button press delay for automatic scrolling in
+	  ScrollBar classes.
+
+2005-11-02 22:27  marcusva
+
+	* doc/manual.xml: Added documentation section about Editable,
+	  Entry, Range and Scales.
+
+2005-11-02 14:24  marcusva
+
+	* README, doc/manual.xml, doc/ocempgui.xsl,
+	  ocempgui/widgets/Renderer.py: Added Buttons to documentation.
+	  Renderer loop improvements (again...)
+
+2005-11-01 00:18  marcusva
+
+	* doc/manual.xml:
+	  Added label section in documentation.
+
+2005-10-30 15:40  marcusva
+
+	* doc/: manual.xml, examples/actionlistener.py:
+	  Added ActionListener description to documentation.
+
+2005-10-29 16:53  marcusva
+
+	* doc/: manual.xml, examples/baseobject.py: More documentation
+
+2005-10-29 13:17  marcusva
+
+	* Makefile, NEWS, doc/Makefile, doc/manual.xml,
+	  doc/examples/baseobject.py, doc/img/signal_baseobject.xml,
+	  ocempgui/widgets/Renderer.py:
+	  Improved documentation. Added new method refresh() for complete
+	  screen refreshes to the Renderer class.
+
+2005-10-28 01:46  marcusva
+
+	* NEWS, doc/manual.xml, doc/examples/example.py,
+	  doc/examples/progressbar.py, doc/examples/scale.py,
+	  doc/examples/scrolledlist.py, doc/uml/basewidget.xml,
+	  doc/uml/progressbar.xml, doc/uml/range.xml,
+	  doc/uml/scrolledlist.xml, doc/uml/table.xml,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/CheckButton.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Editable.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/ProgressBar.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Range.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/StatusBar.py, ocempgui/widgets/Table.py,
+	  ocempgui/widgets/ToggleButton.py, ocempgui/widgets/Window.py:
+	  Fixed SIG_INPUT bug in Editable. Update documentation. Made
+	  naming scheme for signals constant. Implemented Accessible
+	  interface for all widgets. Added new alignment methods to Table
+	  widget.
+
+2005-10-22 11:01  marcusva
+
+	* NEWS, TODO, doc/examples/checkbutton.py,
+	  doc/examples/radiobutton.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Renderer.py:
+	  SIG_TICK will be distributed every 500ms now. Fixed up
+	  checkbutton and radiobutton examples.
+
+2005-10-20 20:00  marcusva
+
+	* doc/examples/profiler.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Renderer.py:
+	  Reduced CPU load by explicit updates of changed areas only.
+	  Changed profiling script to the python hotshots module.
+
+2005-10-18 19:10  marcusva
+
+	* NEWS, setup.py, doc/examples/button.py,
+	  doc/examples/checkbutton.py, doc/examples/imagebutton.py,
+	  doc/examples/label.py, doc/examples/radiobutton.py,
+	  doc/examples/togglebutton.py, doc/uml/label.xml,
+	  ocempgui/__init__.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/StatusBar.py,
+	  ocempgui/widgets/Style.py:
+	  Added multiline text support to Label widget. Fixed high event
+	  delays in Renderer class. Updated examples and UML diagram to
+	  reflect latest changes.
+
+2005-10-15 13:36  marcusva
+
+	* doc/manual.xml, doc/examples/hello_world_signals.py,
+	  ocempgui/widgets/Renderer.py:
+	  Added signal and event section for gui applications in manual.
+
+2005-10-15 11:49  marcusva
+
+	* doc/manual.xml, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Editable.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/StatusBar.py:
+	  SIG_TICK will be emitted only once each second. This should
+	  heavily decrese the CPU load. Added hello world example
+	  explanation to manual.
+
+2005-10-14 14:31  marcusva
+
+	* doc/: manual.xml, examples/hello_world.py:
+	  Added the allmighty hello world example. Started with the GUI
+	  usage section in the manual.
+
+2005-10-13 13:10  marcusva
+
+	* ChangeLog:
+	  Release 0.0.9
+
+2005-10-13 12:48  marcusva
+
+	* ocempgui/widgets/Editable.py:
+	  Fixed KEYDOWN signalling in Editable class for keys, which should
+	  have no effect.
+
+2005-10-13 12:06  marcusva
+
+	* ChangeLog, NEWS, doc/Makefile, doc/examples/statusbar.py,
+	  doc/uml/statusbar.xml, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/StatusBar.py, ocempgui/widgets/Style.py:
+	  StatusBar is aware of its children now. Improved StatusBar
+	  example. Updated StatusBar UML diagram.
+
+2005-10-12 13:28  marcusva
+
+	* TODO, setup.py, doc/manual.xml, doc/ocempgui.xsl,
+	  doc/examples/renderer.py, ocempgui/__init__.py:
+	  Added __version__ flag to ocempgui. Cleaned up manual.
+
+2005-10-12 10:51  marcusva
+
+	* doc/examples/example.py:
+	  Added statusbar notifications in the example.
+
+2005-10-12 10:47  marcusva
+
+	* doc/examples/statusbar.py, doc/uml/statusbar.xml,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/StatusBar.py,
+	  ocempgui/widgets/Style.py:
+	  Added date_format attribute to StatusBar widget. Fixed sizing
+	  bugs in statusbar drawing. Updated UML diagram.
+
+2005-10-12 01:25  marcusva
+
+	* NEWS, setup.py, doc/Makefile, doc/examples/statusbar.py,
+	  doc/uml/statusbar.xml, ocempgui/__init__.py,
+	  ocempgui/widgets/StatusBar.py:
+	  Fixed installation of default.rc for Python 2.3.x. Added
+	  StatusBar example. StatusBar widget refreshes itself every 500
+	  ticks from now on.  Fixed cleanup in doc/.
+
+2005-09-28 07:00  marcusva
+
+	* NEWS, doc/uml/statusbar.xml, ocempgui/widgets/StatusBar.py,
+	  ocempgui/widgets/Style.py:
+	  Added UML diagram for the StatusBar widget class.
+
+2005-09-27 22:34  marcusva
+
+	* doc/examples/example.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/StatusBar.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/__init__.py:
+	  Added new StatusBar widget class.  Renderer will now distribute
+	  any event.
+
+2005-09-21 19:05  marcusva
+
+	* NEWS, doc/examples/button.py, doc/uml/button.xml,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Style.py:
+	  Added 'border' attribute and set_border() method to Button class.
+	  Fixed a bug in  Style.load(), which caused existing style dict
+	  contents to get lost.
+
+2005-09-17 16:45  marcusva
+
+	* ocempgui/widgets/Editable.py:
+	  Set blinking rate of the caret to a better value.
+
+2005-09-17 16:09  marcusva
+
+	* README:
+	  Added notice about the Numeric for Windows users.
+
+2005-09-17 12:26  marcusva
+
+	* ChangeLog:
+	  Release 0.0.8
+
+2005-09-17 12:24  marcusva
+
+	* MANIFEST.in, Makefile, NEWS:
+	  Fixed missing tuffy.ttf file in release package. Completed
+	  release notes. Improved release target in Makefile.
+
+2005-09-17 11:07  marcusva
+
+	* doc/uml/dialogwindow.xml, doc/uml/window.xml,
+	  ocempgui/events/EventManager.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/DialogWindow.py, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/ProgressBar.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Window.py,
+	  ocempgui/widgets/components/ListItem.py:
+	  Corrected caret visibility on input actions in Editable class.
+	  Made ProgressBar non-focusable. Cleaned up import statements.
+	  Updated doc strings. Added UML diagram for the Window classes.
+
+2005-09-16 12:00  marcusva
+
+	* doc/: examples/imagebutton.py, uml/basewidget.xml,
+	  uml/progressbar.xml, uml/togglebutton.xml:
+	  Made ProgressBar non-focusble. Updated UML diagrams.
+
+2005-09-16 11:09  marcusva
+
+	* TODO, doc/examples/scrolledlist.py,
+	  ocempgui/widgets/components/ListItem.py,
+	  ocempgui/widgets/components/ListItemCollection.py:
+	  Corrected bug in remove() method of the ListItemCollection class.
+	  Corrected get_style() method of ListItem class to reflect latest
+	  changes.  Improved ScrolledList example.
+
+2005-09-16 01:37  marcusva
+
+	* doc/examples/frame.py, doc/examples/imagebutton.py,
+	  doc/examples/progressbar.py, ocempgui/widgets/ProgressBar.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/ToggleButton.py:
+	  Improved and enhanced styles for the ScrolledList and ProgressBar
+	  class.  Fixed minor bug in ToggleButton, when the state is set to
+	  STATE_ACTIVE.  Added text attribute to ProgressBar, which draw a
+	  string on its center.
+
+2005-09-15 18:24  marcusva
+
+	* ocempgui/widgets/: BaseWidget.py, Button.py, Editable.py,
+	  Frame.py, Scale.py, ScrollBar.py, ScrolledList.py,
+	  ScrolledWindow.py, Style.py, ToggleButton.py, Window.py,
+	  components/ListItem.py, components/ListItemCollection.py:
+	  Improved cascading of styles by using the class.__mro__ and a
+	  reverse lookup. Fixed _ListViewPort bug when assigning a new
+	  ListItemCollection.
+
+2005-09-15 09:24  marcusva
+
+	* NEWS, doc/Makefile, doc/manual.xml, doc/examples/eventmanager.py,
+	  doc/img/event_management.xml:
+	  Completed manual section about the event management.
+
+2005-09-14 10:15  marcusva
+
+	* doc/examples/button.py, doc/examples/checkbutton.py,
+	  doc/examples/example.py, doc/examples/imagebutton.py,
+	  doc/examples/label.py, doc/examples/radiobutton.py,
+	  doc/examples/scrolledlist.py, doc/examples/scrolledwindow.py,
+	  doc/examples/table.py, doc/examples/togglebutton.py,
+	  ocempgui/widgets/Style.py:
+	  Improved examples.  ImageButton will place its label besides the
+	  image.
+
+2005-09-13 23:30  marcusva
+
+	* doc/uml/scrollbar.xml, doc/uml/scrolledwindow.xml,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Style.py:
+	  Moved drawing of ScrollBar, ScrolledList and ScrolledWindow
+	  classes into the Style class. Fixed up several small bugs in the
+	  ScrolledList and ScrolledWindow class.
+
+2005-09-13 10:36  marcusva
+
+	* NEWS, TODO, setup.py, doc/examples/actionlistener.py,
+	  doc/examples/baseobject.py, doc/examples/basewidget.py,
+	  doc/examples/bin.py, doc/examples/create_font.py,
+	  doc/examples/create_system_font.py, doc/examples/draw_line.py,
+	  doc/examples/draw_rect.py, doc/examples/draw_string.py,
+	  doc/examples/draw_string_with_bg.py,
+	  doc/examples/draw_triangle.py, doc/examples/event.py,
+	  doc/examples/eventcallback.py, doc/examples/eventmanager.py,
+	  doc/examples/example.py, doc/examples/import.py,
+	  doc/examples/label.py, doc/examples/load_image.py,
+	  doc/examples/profiler.py, doc/examples/renderer.py,
+	  doc/examples/scale.py, doc/examples/scrollbar.py,
+	  doc/examples/table.py, doc/uml/scale.xml,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/Range.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/Style.py:
+	  Brushed up scale example and integrated it into the main example.
+	  Moved drawing of the Scales into the Style class.
+
+2005-09-12 14:43  marcusva
+
+	* doc/uml/button.xml, doc/uml/checkbutton.xml, doc/uml/entry.xml,
+	  doc/uml/frame.xml, doc/uml/imagebutton.xml, doc/uml/label.xml,
+	  doc/uml/progressbar.xml, doc/uml/radiobutton.xml,
+	  doc/uml/table.xml, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/CheckButton.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/ProgressBar.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/Table.py, ocempgui/widgets/Window.py:
+	  Moved drawing of the Button, Check-, Radio-, ImageButton, Entry,
+	  Frames, ProgressBar and Table into the Style class.
+
+2005-09-10 13:08  marcusva
+
+	* doc/examples/example.py, doc/examples/frame.py,
+	  doc/examples/table.py, doc/examples/window.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/Style.py:
+	  Made styles cascadable in relation to the default style entry.
+	  Improved copyying of styles.	Added table example to main example
+	  application.
+
+2005-09-09 18:55  marcusva
+
+	* doc/examples/: example.py, frame.py:
+	  Improved frame example. Added frame example to the main example
+	  application.
+
+2005-09-09 11:53  marcusva
+
+	* ocempgui/widgets/: Frame.py, Window.py:
+	  Added alignment support for Window classes.
+
+2005-09-09 11:30  marcusva
+
+	* ocempgui/: __init__.py, widgets/BaseWidget.py, widgets/Button.py,
+	  widgets/Constants.py, widgets/Entry.py, widgets/Frame.py,
+	  widgets/ImageButton.py, widgets/ProgressBar.py,
+	  widgets/ScrollBar.py, widgets/ScrolledList.py,
+	  widgets/ScrolledWindow.py, widgets/Style.py:
+	  Improved Style documentation. Improved drawing methods for
+	  various widgets. Added ARROW_TYPES constants.
+
+2005-09-08 23:46  marcusva
+
+	* README, TODO, doc/examples/example.py, doc/examples/window.py,
+	  ocempgui/events/EventManager.py,
+	  ocempgui/widgets/DialogWindow.py, ocempgui/widgets/Window.py:
+	  Added window examples to main example application. Made event
+	  grabber in EventManager public. Added minmizing feature to Window
+	  classes.
+
+2005-09-08 17:45  marcusva
+
+	* doc/examples/button.py, doc/examples/profiler.py,
+	  doc/examples/window.py, ocempgui/events/EventManager.py,
+	  ocempgui/events/Signals.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/DialogWindow.py, ocempgui/widgets/Window.py,
+	  ocempgui/widgets/__init__.py:
+	  Fixed up Window and DialogWindow classes. Fixed up depth bug in
+	  RenderLayer class. Added set_depth() method in BaseWidget class.
+	  Added event grabbing capability to EventManager class. Enhanced
+	  Event class by a handled attribute. Added profiling script.
+
+2005-09-08 00:04  marcusva
+
+	* ChangeLog, MANIFEST.in, Makefile:
+	  Release 0.0.8-NYR
+
+2005-09-07 23:23  marcusva
+
+	* MANIFEST.in, Makefile, NEWS, README, TODO, setup.py,
+	  doc/Makefile:
+	  Improved make processes. Preparation for a prerelease.
+
+2005-09-07 20:44  marcusva
+
+	* doc/examples/button.py, doc/examples/checkbutton.py,
+	  doc/examples/entry.py, doc/examples/example.py,
+	  doc/examples/frame.py, doc/examples/imagebutton.py,
+	  doc/examples/label.py, doc/examples/progressbar.py,
+	  doc/examples/radiobutton.py, doc/examples/scale.py,
+	  doc/examples/scrollbar.py, doc/examples/scrolledlist.py,
+	  doc/examples/scrolledwindow.py, doc/examples/table.py,
+	  doc/examples/togglebutton.py, doc/examples/window.py,
+	  doc/uml/basewidget.xml, doc/uml/bin.xml, doc/uml/container.xml,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/DialogWindow.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/Table.py, ocempgui/widgets/Window.py:
+	  Updated several widget examples to fit in the main example.
+	  Fixed various parent-child relation bugs in the container
+	  classes.  Fixed several redrawing and update bugs in several
+	  classes.  Added color attribute to the Renderer for setting the
+	  background color.  Improved Window class and Window cpation
+	  drawing in Style class.  Updated UML diagrams to reflect the
+	  latest changes.
+
+2005-09-06 21:19  marcusva
+
+	* Makefile, doc/manual.xml, doc/ocempgui.xsl,
+	  doc/examples/eventcallback.py, doc/examples/load_image.py:
+	  Added Image.load_image() example. Restructured manual.
+
+2005-09-05 19:23  marcusva
+
+	* doc/uml/basewidget.xml, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/ScrolledList.py:
+	  Made _ListViewPort class non-focusable for the moment. Fixed bug
+	  in BaseWidget.destroy, so that it will be removed from the
+	  Indexable.
+
+2005-09-05 14:00  marcusva
+
+	* ChangeLog, TODO, doc/uml/basewidget.xml, doc/uml/frame.xml,
+	  doc/uml/table.xml, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/Table.py:
+	  Widgets automatically add themselves to the Indexable interfaces,
+	  if found in the event manager. Table and Frame classes are not
+	  focusable by default.
+
+2005-09-05 13:17  marcusva
+
+	* doc/uml/frame.xml, ocempgui/widgets/Frame.py:
+	  Added UML diagram for the Frame classes. Added doc strings for
+	  the Frame classes.
+
+2005-09-04 13:01  marcusva
+
+	* doc/uml/table.xml, ocempgui/widgets/Table.py: Added UML diagram
+	  for the Table class.
+
+2005-09-04 12:21  marcusva
+
+	* TODO, doc/examples/button.py, doc/examples/checkbutton.py,
+	  doc/examples/entry.py, doc/examples/example.py,
+	  doc/examples/imagebutton.py, doc/examples/label.py,
+	  doc/examples/radiobutton.py, doc/examples/table.py,
+	  doc/examples/togglebutton.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/RadioButton.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/Table.py:
+	  Added Table doc strings. Fixed RadioButton grouping. Improved
+	  RadioButton look. Improved examples.
+
+2005-09-04 10:03  marcusva
+
+	* doc/examples/frame.py, ocempgui/widgets/Frame.py:
+	  Fixed positioning in Frame classes.
+
+2005-09-04 01:14  marcusva
+
+	* doc/examples/frame.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/Table.py, ocempgui/widgets/__init__.py:
+	  Added VFrame class and frame example.
+
+2005-09-03 23:31  marcusva
+
+	* ocempgui/widgets/: Button.py, CheckButton.py, Constants.py,
+	  Container.py, Entry.py, Frame.py, ImageButton.py, RadioButton.py,
+	  Scale.py, ScrollBar.py, ScrolledList.py, ScrolledWindow.py,
+	  Style.py, Table.py, ToggleButton.py, __init__.py:
+	  Updated Frame and HFrame class to fit new structure. Added border
+	  size getter in the Style class. Changed widget classes to make
+	  use of new border size getter.
+
+2005-09-03 17:18  marcusva
+
+	* doc/examples/example.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Bin.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/CheckButton.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/ProgressBar.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/Table.py:
+	  Simplified border drawing for widgets. Made destroy() safe for
+	  parent-child relationships.
+
+2005-09-03 12:03  marcusva
+
+	* doc/examples/example.py, doc/examples/table.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/Table.py,
+	  ocempgui/widgets/__init__.py:
+	  Updated Table class to fit new structure. Made Table class
+	  alignment aware. Added alignment types to constants. Added Table
+	  class example.
+
+2005-09-03 09:01  marcusva
+
+	* TODO, doc/examples/example.py, doc/uml/container.xml,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/RadioButton.py:
+	  Added UML diagram for Container widget class. Fixed up
+	  RadioButton activation behaviour.
+
+2005-09-02 22:52  marcusva
+
+	* doc/uml/basewidget.xml, doc/uml/bin.xml, doc/uml/button.xml,
+	  doc/uml/editable.xml, doc/uml/entry.xml, doc/uml/imagebutton.xml,
+	  doc/uml/label.xml, doc/uml/progressbar.xml,
+	  doc/uml/radiobutton.xml, doc/uml/range.xml,
+	  doc/uml/scrolledlist.xml, doc/uml/scrolledwindow.xml,
+	  doc/uml/togglebutton.xml, ocempgui/draw/Draw.py,
+	  ocempgui/draw/Image.py, ocempgui/draw/String.py,
+	  ocempgui/events/EventManager.py, ocempgui/events/Signals.py,
+	  ocempgui/object/ActionListener.py, ocempgui/object/BaseObject.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Container.py,
+	  ocempgui/widgets/DialogWindow.py, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/ProgressBar.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Range.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/ToggleButton.py, ocempgui/widgets/Window.py,
+	  ocempgui/widgets/components/ListItem.py,
+	  ocempgui/widgets/components/ListItemCollection.py:
+	  Updated Container widget class to reflect the last changes.
+	  Updated doc strings and UML diagrams.
+
+2005-09-01 23:08  marcusva
+
+	* doc/uml/scrolledlist.xml, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py:
+	  Added UML diagram for the ScrolledList class. Removed superfluous
+	  padding attribute from the ScrolledWindow class.
+
+2005-09-01 19:40  marcusva
+
+	* doc/uml/design.xml:
+	  Decrompessed design UML diagram.
+
+2005-09-01 09:42  marcusva
+
+	* doc/examples/scrolledlist.py, ocempgui/__init__.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/__init__.py:
+	  Unbreak 'import ocempgui'. unbreak ScrolledList example. Better
+	  doc strings.
+
+2005-08-31 10:17  marcusva
+
+	* ocempgui/: __init__.py, access/__init__.py, draw/Image.py,
+	  draw/String.py, draw/__init__.py, events/Signals.py,
+	  events/__init__.py, object/ActionListener.py,
+	  object/BaseObject.py, object/__init__.py, widgets/__init__.py:
+	  Better doc strings for various modules and classes, added module
+	  import to the main ocempgui module.
+
+2005-08-29 23:37  marcusva
+
+	* TODO, doc/uml/design.xml:
+	  Added component design model.
+
+2005-08-29 11:10  marcusva
+
+	* README, setup.py, doc/examples/scrolledlist.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/ScrolledList.py:
+
+	  Speeded up ScrolledList drawing. Added documentation installation
+	  target in setup.py.
+
+2005-08-27 23:11  marcusva
+
+	* Makefile, README, TODO, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/base.py:
+	  Added more debugging and profiling code and automatic stripping
+	  target in Makefile.
+
+2005-08-27 15:44  marcusva
+
+	* NEWS, README, TODO, doc/uml/scrolledwindow.xml,
+	  ocempgui/events/EventManager.py, ocempgui/object/BaseObject.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/ProgressBar.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Range.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/Window.py,
+	  ocempgui/widgets/components/ListItem.py,
+	  ocempgui/widgets/components/ListItemCollection.py:
+	  Documented exceptions, added index() method and length attribute
+	  to the ListItemCollection class. Added several scrolling methods
+	  to the ScrolledWindow class. Made clicking behaviour for the
+	  _ListViewPort class more flexible.
+
+2005-08-26 10:14  marcusva
+
+	* TODO, doc/examples/scrolledlist.py, doc/uml/scrolledwindow.xml,
+	  ocempgui/access/__init__.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/components/ListItem.py,
+	  ocempgui/widgets/components/ListItemCollection.py:
+	  Added abstract Indexable class in ocempgui.access. Added item
+	  change notifier slot in ListItemCollection and internal
+	  _ListViewPort class. Added activate() method and mouse scrolling
+	  to ScrolledWindow. Changed Renderer to make use of the Indexable
+	  class.
+
+2005-08-25 16:37  marcusva
+
+	* ocempgui/widgets/: BaseWidget.py, Label.py, ScrollBar.py,
+	  ScrolledList.py, ScrolledWindow.py, Style.py, __init__.py,
+	  components/ListItem.py: Guaranteed min size for scrollbars. Fixed
+	  minor bugs in the ListItem class. Added keyboard events to
+	  ScrolledWindow class. Fixed positioning and eventarea bugs in
+	  ScrolledWindow. Fixed and enhanced ScrolledList behaviour.
+	  Updated UML diagrams. Removed old ListItem class.
+
+2005-08-25 16:36  marcusva
+
+	* TODO, doc/examples/scrolledlist.py,
+	  doc/examples/scrolledwindow.py, doc/uml/scrollbar.xml,
+	  doc/uml/scrolledwindow.xml:
+	  Guaranteed min size for scrollbars. Fixed minor bugs in the
+	  ListItem class. Added keyboard events to ScrolledWindow class.
+	  Fixed positioning and eventarea bugs in ScrolledWindow. Fixed and
+	  enhanced ScrolledList behaviour. Updated UML diagrams. Removed
+	  old ListItem class.
+
+2005-08-24 20:06  marcusva
+
+	* ocempgui/widgets/: BaseWidget.py, ScrollBar.py,
+	  ScrolledWindow.py:
+	  Fixed state setting bug in BaseWidget.set_sensitive(). Added
+	  dynamic calculation of the scrollbar slider size
+
+2005-08-24 11:28  marcusva
+
+	* ChangeLog, README, doc/examples/scrolledwindow.py,
+	  doc/uml/basewidget.xml, doc/uml/scrolledwindow.xml,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Editable.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py,
+	  ocempgui/widgets/ToggleButton.py:
+	  Added UML diagram for ScrolledWindow class. New attributes
+	  eventarea and controls in BaseWidget. Changed notify() methods to
+	  use the eventarea attribute. Bin sets the sensitivity of its
+	  child to its own. Editable resets caret position on input.
+
+2005-08-22 23:48  marcusva
+
+	* Makefile, setup.py, doc/examples/button.py,
+	  doc/examples/checkbutton.py, doc/examples/entry.py,
+	  doc/examples/label.py, doc/examples/progressbar.py,
+	  doc/examples/scrolledlist.py, doc/examples/scrolledwindow.py,
+	  doc/examples/window.py, doc/uml/basewidget.xml,
+	  doc/uml/button.xml, doc/uml/checkbutton.xml,
+	  doc/uml/imagebutton.xml, doc/uml/radiobutton.xml,
+	  doc/uml/scrollbar.xml, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/CheckButton.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/Window.py, ocempgui/widgets/__init__.py,
+	  ocempgui/widgets/components/ListItem.py,
+	  ocempgui/widgets/components/ListItemCollection.py,
+	  ocempgui/widgets/components/__init__.py:
+	  Added list item classes. Created first ScrolledWindow class
+	  implementation. Simplified dashed border drawing for widgets.
+	  Simplified style cascading. Updated some UML diagrams.
+
+2005-07-29 11:32  marcusva
+
+	* doc/uml/scrollbar.xml, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py:
+	  Added UML diagram for ScrollBar widgets.  Fixed signal handling
+	  and state changes in ScrollBar class.
+
+2005-07-28 17:03  marcusva
+
+	* TODO, doc/examples/scrollbar.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/CheckButton.py, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/Range.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/ToggleButton.py,
+	  ocempgui/widgets/__init__.py: Reimplemented the ScrollBar
+	  widgets.
+
+2005-07-22 10:11  marcusva
+
+	* NEWS, doc/examples/progressbar.py, doc/uml/progressbar.xml:
+	  Added uml diagram for ProgressBar widget class.  Changed fill
+	  color of progressbar.
+
+2005-07-21 17:49  marcusva
+
+	* doc/manual.xml, doc/examples/baseobject.py,
+	  doc/examples/progressbar.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/ProgressBar.py,
+	  ocempgui/widgets/Range.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/__init__.py:
+	  Reimplemented ProgressBar widget and added styles for it.
+	  Cleaned up and added several doc strings.
+
+2005-07-21 01:18  marcusva
+
+	* doc/: manual.xml, uml/actionlistener.xml: Added example index and
+	  first BaseWidget sections to the manual. Fixed wrong attribute in
+	  ActionListener uml diagram.
+
+2005-07-20 20:38  marcusva
+
+	* TODO, doc/uml/actionlistener.xml, doc/uml/baseobject.xml: Added
+	  UML diagrams for the object module.
+
+2005-07-20 20:05  marcusva
+
+	* doc/examples/scale.py, doc/uml/basewidget.xml, doc/uml/bin.xml,
+	  doc/uml/button.xml, doc/uml/entry.xml, doc/uml/imagebutton.xml,
+	  doc/uml/label.xml, doc/uml/radiobutton.xml, doc/uml/scale.xml,
+	  ocempgui/widgets/Bin.py, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/Style.py:
+	  Improved Scale input behaviour. Fixed up styles for *Scale.
+	  Cleaned up private/public attribute access in several classes.
+	  Updated uml diagrams to stay in sync with the latest changes.
+
+2005-07-20 11:11  marcusva
+
+	* doc/examples/scale.py, doc/uml/range.xml, doc/uml/scale.xml,
+	  ocempgui/widgets/Range.py:
+	  Added Range widget class and UML diagrams.
+
+2005-07-20 11:08  marcusva
+
+	* NEWS, TODO, doc/uml/button.xml, doc/uml/radiobutton.xml,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/CheckButton.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Editable.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/RadioButton.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/__init__.py:
+	  Added new abstract Range widget class. Changed Scale widget
+	  classes to inherit from the Range widget and use the new
+	  strucures.
+
+2005-07-18 15:35  marcusva
+
+	* doc/: examples/entry.py, uml/editable.xml, uml/entry.xml:
+	  Added uml diagrams for Editable and Entry classes.
+
+2005-07-16 14:47  marcusva
+
+	* doc/examples/entry.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/CheckButton.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/ToggleButton.py, ocempgui/widgets/__init__.py:
+	  Changed Editable and Entry to fit new features. Fixed several doc
+	  strings. Better and hopefully bulletproof _switch_index() method
+	  in Renderer.
+
+2005-07-15 18:32  marcusva
+
+	* ocempgui/widgets/BaseWidget.py: Fixed updating behaviour for
+	  several methods in BaseWidget. This especially impacted the
+	  RadioButton widget.
+
+2005-07-15 18:13  marcusva
+
+	* MANIFEST.in, setup.py, doc/examples/button.py,
+	  doc/examples/checkbutton.py, doc/examples/imagebutton.py,
+	  doc/examples/label.py, doc/examples/radiobutton.py,
+	  doc/examples/togglebutton.py, doc/uml/radiobutton.xml,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/ToggleButton.py,
+	  ocempgui/widgets/__init__.py:
+	  Added external default style. Fixed up style loader. Improved
+	  RadioButton widget class. Improved draw_check() method in Style
+	  class. Added draw_radio() method in Style class. Improved and
+	  fixed sensitivity of various widgets. Improved examples.
+
+2005-07-14 16:11  marcusva
+
+	* doc/examples/checkbutton.py, doc/examples/imagebutton.py,
+	  doc/uml/checkbutton.xml, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Bin.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/CheckButton.py, ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/ToggleButton.py,
+	  ocempgui/widgets/__init__.py: New CheckButton widget class.
+	  Better check drawing. Fixed several tab/space mixings. Fixed
+	  small bug in imagebutton example. Fixed child bug in
+	  Bin.destroy().
+
+2005-07-13 13:05  marcusva
+
+	* doc/uml/button.xml, doc/uml/togglebutton.xml,
+	  ocempgui/widgets/ToggleButton.py: Removed superfluous method in
+	  ToggleButton. Added UML diagram for ToggleButton class. Corrected
+	  signal ids in Button UML diagram.
+
+2005-07-13 10:58  marcusva
+
+	* doc/examples/togglebutton.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/ToggleButton.py,
+	  ocempgui/widgets/__init__.py: Changed ToggleButton class to fit
+	  new system. The ToggleButton now uses the same look as the usual
+	  Button.
+
+2005-07-11 20:59  marcusva
+
+	* doc/examples/button.py, doc/examples/imagebutton.py,
+	  doc/uml/imagebutton.xml, ocempgui/widgets/ImageButton.py: Added
+	  uml for ImageButton class, improved Button and ImageButton
+	  examples.
+
+2005-07-11 18:59  marcusva
+
+	* doc/examples/example.py, doc/examples/image.png,
+	  doc/examples/imagebutton.py, doc/uml/button.xml,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/__init__.py:
+	  Changed ImageButton to fit new styles, fixed minor relationship
+	  bugs in Button, cleaned the demo directory.
+
+2005-07-09 14:10  marcusva
+
+	* doc/manual.xml, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Bin.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/Label.py: Improved widget documentations, added
+	  Actionlistener example.
+
+2005-07-09 12:03  marcusva
+
+	* doc/examples/bin.py, ocempgui/widgets/Bin.py: Fixed and improved
+	  parent-child behaviour in Bin.
+
+2005-07-09 11:46  marcusva
+
+	* doc/manual.xml, doc/examples/actionlistener.py,
+	  ocempgui/object/ActionListener.py, ocempgui/object/__init__.py:
+	  Fixed ActionListener
+
+2005-07-08 19:35  marcusva
+
+	* COPYING, MANIFEST.in, Makefile, NEWS, README, TODO, setup.py,
+	  doc/manual.xml, doc/examples/baseobject.py,
+	  doc/examples/basewidget.py, doc/examples/bin.py,
+	  doc/examples/button.py, doc/examples/create_font.py,
+	  doc/examples/create_system_font.py, doc/examples/draw_line.py,
+	  doc/examples/draw_rect.py, doc/examples/draw_string.py,
+	  doc/examples/draw_string_with_bg.py,
+	  doc/examples/draw_triangle.py, doc/examples/event.py,
+	  doc/examples/eventcallback.py, doc/examples/eventmanager.py,
+	  doc/examples/example.py, doc/examples/label.py,
+	  doc/examples/renderer.py, doc/examples/tuffy.ttf,
+	  doc/uml/basewidget.xml, doc/uml/bin.xml, doc/uml/button.xml,
+	  doc/uml/eventmanager.xml, doc/uml/label.xml, doc/uml/signals.xml,
+	  ocempgui/__init__.py, ocempgui/access/__init__.py,
+	  ocempgui/draw/Draw.py, ocempgui/draw/Image.py,
+	  ocempgui/draw/String.py, ocempgui/draw/__init__.py,
+	  ocempgui/events/EventManager.py, ocempgui/events/Signals.py,
+	  ocempgui/events/__init__.py, ocempgui/object/BaseObject.py,
+	  ocempgui/object/__init__.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Bin.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/Style.py, ocempgui/widgets/__init__.py,
+	  ocempgui/widgets/base.py:
+
+	  First mass checkin in favour for a better GUI structure and
+	  accessibility.
+
+2005-06-06 19:51  marcusva
+
+	* ChangeLog, NEWS, setup.py, doc/manual.xml,
+	  doc/examples/actionlistener.py, doc/examples/draw_rect.py,
+	  doc/examples/eventmanager.py: Release 0.0.7
+
+2005-06-06 19:08  marcusva
+
+	* Makefile, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py: Changed ScrolledList and
+	  ScrollBar to new event management.
+
+2005-06-06 18:50  marcusva
+
+	* COPYING, Makefile, NEWS, TODO, ocempgui/__init__.py,
+	  ocempgui/draw/Complex.py, ocempgui/draw/Draw.py,
+	  ocempgui/draw/Image.py, ocempgui/draw/String.py,
+	  ocempgui/draw/__init__.py, ocempgui/events/EventManager.py,
+	  ocempgui/events/Signals.py, ocempgui/events/__init__.py,
+	  ocempgui/media/Sound.py, ocempgui/media/__init__.py,
+	  ocempgui/object/ActionListener.py, ocempgui/object/BaseObject.py,
+	  ocempgui/object/__init__.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Bin.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/Container.py,
+	  ocempgui/widgets/DialogWindow.py, ocempgui/widgets/Editable.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/ProgressBar.py, ocempgui/widgets/RadioButton.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Style.py,
+	  ocempgui/widgets/Table.py, ocempgui/widgets/ToggleButton.py,
+	  ocempgui/widgets/Window.py, ocempgui/widgets/__init__.py,
+	  ocempgui/widgets/base.py: Less restrictive license, documentation
+	  improvements, several demo fixes.
+
+2005-06-05 19:33  marcusva
+
+	* ocempgui/: object/ActionListener.py, object/BaseObject.py,
+	  widgets/Button.py, widgets/Container.py, widgets/Entry.py,
+	  widgets/Frame.py, widgets/ImageButton.py, widgets/ProgressBar.py,
+	  widgets/RadioButton.py, widgets/Renderer.py, widgets/Scale.py,
+	  widgets/ScrollBar.py, widgets/ToggleButton.py: Documentation
+	  improvements, several changes to respect the new event
+	  management.
+
+2005-06-01 12:58  marcusva
+
+	* ChangeLog, NEWS, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Editable.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/Renderer.py: Improved
+	  doc strings, simpler event distribution, new set_title_widget()
+	  metod in Frame
+
+2005-06-01 01:18  marcusva
+
+	* NEWS, ocempgui/events/EventManager.py,
+	  ocempgui/object/BaseObject.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Bin.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/DialogWindow.py,
+	  ocempgui/widgets/Editable.py, ocempgui/widgets/Entry.py: Added
+	  better event management, fixed up event order of some widgets,
+	  improved doc strings.
+
+2005-05-27 13:33  marcusva
+
+	* NEWS, ocempgui/events/EventManager.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/ProgressBar.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py:
+	  Improved doc strings, better modality, better size assignment.
+
+2005-05-26 15:09  marcusva
+
+	* NEWS, ocempgui/draw/String.py, ocempgui/media/Sound.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Button.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ToggleButton.py: Improved doc strings.
+
+2005-05-26 12:30  marcusva
+
+	* NEWS, ocempgui/events/EventManager.py,
+	  ocempgui/events/Signals.py, ocempgui/object/ActionListener.py,
+	  ocempgui/object/BaseObject.py: Improved doc strings.
+
+2005-05-26 09:53  marcusva
+
+	* ocempgui/: draw/Draw.py, draw/Image.py, draw/String.py,
+	  widgets/Style.py: Improved doc strings.
+
+2005-05-25 13:57  marcusva
+
+	* ocempgui/: draw/Complex.py, draw/Draw.py, draw/String.py,
+	  draw/__init__.py, widgets/BaseWidget.py, widgets/Button.py,
+	  widgets/Constants.py, widgets/Editable.py, widgets/Entry.py,
+	  widgets/Frame.py, widgets/ImageButton.py, widgets/Label.py,
+	  widgets/ProgressBar.py, widgets/RadioButton.py, widgets/Scale.py,
+	  widgets/ScrollBar.py, widgets/ScrolledList.py, widgets/Table.py,
+	  widgets/ToggleButton.py, widgets/Window.py, widgets/base.py,
+	  widgets/Style.py: New style handling, many other changes
+
+2005-05-25 13:48  marcusva
+
+	* NEWS, doc/manual.xml: New style handling, many other changes
+
+2005-05-23 23:46  marcusva
+
+	* NEWS, ocempgui/widgets/Button.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/RadioButton.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ToggleButton.py: Better event mechanism for the
+	  widgets, buttons and scrollbars support state effects on mouse
+	  button press
+
+2005-05-23 13:57  marcusva
+
+	* NEWS, ocempgui/widgets/Button.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/RadioButton.py,
+	  ocempgui/widgets/ToggleButton.py: VFrame size correction,
+	  ToggleButton signal correction
+
+2005-05-23 13:09  marcusva
+
+	* NEWS, ocempgui/widgets/Button.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/ProgressBar.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Scale.py,
+	  ocempgui/widgets/ScrollBar.py, ocempgui/widgets/Table.py,
+	  ocempgui/widgets/ToggleButton.py, ocempgui/widgets/Window.py:
+	  Fixed inheritance problem with update()
+
+2005-05-23 10:16  marcusva
+
+	* ChangeLog, NEWS, setup.py, doc/manual.xml: Release 0.0.6
+
+2005-05-20 16:19  marcusva
+
+	* NEWS, ocempgui/widgets/Editable.py, ocempgui/widgets/Entry.py:
+	  Added abstract Editable class, update Entry inheritance to
+	  Editable.
+
+2005-05-20 09:02  marcusva
+
+	* NEWS, ocempgui/widgets/Frame.py: Frame classes now respect the
+	  size property
+
+2005-05-19 23:32  marcusva
+
+	* ocempgui/draw/String.py: Fixed dumb copy & paste errors
+
+2005-05-19 22:43  marcusva
+
+	* NEWS, doc/manual.xml, ocempgui/draw/String.py: Add system font
+	  loading support
+
+2005-05-19 21:11  marcusva
+
+	* NEWS, README, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/DialogWindow.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/ProgressBar.py, ocempgui/widgets/RadioButton.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/Table.py,
+	  ocempgui/widgets/ToggleButton.py, ocempgui/widgets/Window.py:
+	  Removed copyright notice from demos, add update() on
+	  initialization of widgets
+
+2005-05-17 19:50  marcusva
+
+	* ChangeLog, NEWS: Release 0.0.5
+
+2005-05-17 19:43  marcusva
+
+	* NEWS, setup.py, doc/manual.xml, ocempgui/events/EventManager.py,
+	  ocempgui/widgets/BaseWidget.py, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/base.py: made
+	  linter happy, centralized scrolledlist related stuff, added
+	  modifier methods to base
+
+2005-05-16 22:02  marcusva
+
+	* NEWS, doc/manual.xml, ocempgui/widgets/ProgressBar.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/__init__.py: Added
+	  ProgressBar class
+
+2005-05-16 19:12  marcusva
+
+	* setup.py: Release 0.0.4 (second)
+
+2005-05-16 19:07  marcusva
+
+	* ChangeLog, NEWS: Release 0.0.4
+
+2005-05-16 18:43  marcusva
+
+	* doc/manual.xml, doc/examples/actionlistener.py,
+	  doc/examples/eventmanager.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrolledList.py:
+	  Documentation imrpovements, ScrolledList now raises a
+	  selection-change event on changes
+
+2005-05-09 17:48  marcusva
+
+	* ocempgui/widgets/Bin.py: Fixed minor issues
+
+2005-05-09 17:04  marcusva
+
+	* NEWS: Added keyboard repeat
+
+2005-05-09 10:14  marcusva
+
+	* NEWS, ocempgui/widgets/Entry.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/ScrolledList.py: Minor bugfixes
+
+2005-05-08 17:48  marcusva
+
+	* ChangeLog: Release 0.0.3
+
+2005-05-08 17:46  marcusva
+
+	* MANIFEST.in, NEWS, setup.py, doc/manual.xml,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/__init__.py:
+	  documentation improvements
+
+2005-05-06 18:37  marcusva
+
+	* ChangeLog, doc/manual.xml, ocempgui/draw/String.py,
+	  ocempgui/object/ActionListener.py, ocempgui/widgets/Table.py:
+	  manual improvements
+
+2005-05-06 13:16  marcusva
+
+	* doc/Makefile, doc/manual.xml, doc/ocempgui.xsl, doc/xinclude.mod,
+	  doc/examples/draw_line.py, doc/examples/draw_rect.py,
+	  doc/examples/draw_triangle.py, doc/examples/import.py,
+	  ocempgui/widgets/BaseWidget.py: manual improvements, added
+	  examples, update() now does not return a value anymore
+
+2005-05-04 13:13  marcusva
+
+	* NEWS, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/ScrolledList.py, ocempgui/widgets/Table.py:
+	  Bugfixes, more flexible image handling by ImageButton
+
+2005-05-04 10:27  marcusva
+
+	* ocempgui/widgets/: Constants.py, RadioButton.py, ScrollBar.py,
+	  ScrolledList.py: Added selection modes, better size calculation
+	  for scrolled list
+
+2005-05-04 08:32  marcusva
+
+	* ChangeLog, ocempgui/draw/Draw.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/RadioButton.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Table.py,
+	  ocempgui/widgets/ToggleButton.py, ocempgui/widgets/Window.py:
+	  Better style integration
+
+2005-05-03 23:21  marcusva
+
+	* MANIFEST.in, ocempgui/widgets/Bin.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/Container.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledList.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Window.py,
+	  ocempgui/widgets/__init__.py:
+	  fixed some scrollbar calculation bugs, fixed child bugs in Bin,
+	  added new ScrolledList and ListItem widgets
+
+2005-04-29 12:09  marcusva
+
+	* ChangeLog: Release 0.0.2
+
+2005-04-29 12:08  marcusva
+
+	* ChangeLog, MANIFEST.in, NEWS, setup.py: Added doc subdirectory to
+	  dist target
+
+2005-04-29 11:41  marcusva
+
+	* MANIFEST.in, NEWS, setup.py, doc/manual.xml,
+	  ocempgui/widgets/Bin.py, ocempgui/widgets/Container.py,
+	  ocempgui/widgets/DialogWindow.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Table.py,
+	  ocempgui/widgets/Window.py, ocempgui/widgets/__init__.py:
+	  Added abstract Bin class, added set_maximum () override in
+	  ScrollBar, more documentation
+
+2005-04-18 19:58  marcusva
+
+	* doc/manual.xml, ocempgui/events/Signals.py,
+	  ocempgui/object/BaseObject.py, ocempgui/widgets/Frame.py: Fixed
+	  minor border type and widget bug in Frames
+
+2005-04-16 14:36  marcusva
+
+	* doc/manual.xml: updated documentation - events
+
+2005-04-16 12:11  marcusva
+
+	* doc/: manual.xml, ocempgui.xsl:
+	  updated documentation
+
+2005-04-16 01:38  marcusva
+
+	* doc/: Makefile, manual.xml, ocempgui.xsl:
+	  Added first parts of the documentation
+
+2005-04-16 01:34  marcusva
+
+	* Makefile, NEWS, README, ocempgui/draw/Draw.py,
+	  ocempgui/events/EventManager.py, ocempgui/widgets/Renderer.py:
+	  Removed threading, which is not necessary at the moment
+
+2005-04-15 13:07  marcusva
+
+	* ocempgui/widgets/RadioButton.py:
+	  fixed up a bug in set_active()
+
+2005-04-12 11:44  marcusva
+
+	* ChangeLog:
+	  RELEASE 0.0.1
+
+2005-04-12 11:36  marcusva
+
+	* README, TODO:
+	  added README content
+
+2005-04-12 11:09  marcusva
+
+	* ocempgui/: draw/Draw.py, draw/Image.py, media/Sound.py,
+	  widgets/Entry.py, widgets/Frame.py, widgets/RadioButton.py,
+	  widgets/Renderer.py: various small bugfixes
+
+2005-04-11 16:54  marcusva
+
+	* MANIFEST.in, NEWS, setup.py: Added news file and manifest
+	  template
+
+2005-04-10 21:57  marcusva
+
+	* ocempgui/widgets/DialogWindow.py: Fixed DialogWindow, added demo
+
+2005-04-10 21:16  marcusva
+
+	* ocempgui/draw/Draw.py: Primitve drawing functions
+
+2005-04-10 21:15  marcusva
+
+	* ocempgui/: draw/__init__.py, widgets/ScrollBar.py: Added better
+	  look and mouse wheel movements for scrollbars
+
+2005-04-10 19:09  marcusva
+
+	* ocempgui/widgets/: Scale.py, ScrollBar.py, __init__.py: Added
+	  horizontal scrollbar, dynamic slider calculation
+
+2005-04-08 13:58  marcusva
+
+	* ocempgui/widgets/: Scale.py, ScrollBar.py, __init__.py:
+	  Added vertical scrollbar
+
+2005-04-07 19:32  marcusva
+
+	* ChangeLog: Added ChangeLog
+
+2005-04-07 19:26  marcusva
+
+	* COPYING, TODO, ocempgui/__init__.py, ocempgui/draw/Complex.py,
+	  ocempgui/draw/Image.py, ocempgui/draw/String.py,
+	  ocempgui/draw/__init__.py, ocempgui/events/EventManager.py,
+	  ocempgui/events/Signals.py, ocempgui/events/__init__.py,
+	  ocempgui/media/Sound.py, ocempgui/media/__init__.py,
+	  ocempgui/object/ActionListener.py, ocempgui/object/BaseObject.py,
+	  ocempgui/object/__init__.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Constants.py,
+	  ocempgui/widgets/Container.py, ocempgui/widgets/DialogWindow.py,
+	  ocempgui/widgets/Entry.py, ocempgui/widgets/Frame.py,
+	  ocempgui/widgets/ImageButton.py, ocempgui/widgets/Label.py,
+	  ocempgui/widgets/RadioButton.py, ocempgui/widgets/Renderer.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Table.py,
+	  ocempgui/widgets/ToggleButton.py, ocempgui/widgets/Window.py,
+	  ocempgui/widgets/__init__.py, ocempgui/widgets/base.py:
+	  added scale widgets, fixed up some minor init bugs
+
+2005-04-06 10:42  marcusva
+
+	* AUTHORS, COPYING, Makefile, README, TODO, setup.py,
+	  ocempgui/__init__.py, ocempgui/draw/Complex.py,
+	  ocempgui/draw/Image.py, ocempgui/draw/String.py,
+	  ocempgui/draw/__init__.py, ocempgui/media/Sound.py,
+	  ocempgui/events/EventManager.py, ocempgui/events/Signals.py,
+	  ocempgui/events/__init__.py, ocempgui/media/__init__.py,
+	  ocempgui/object/ActionListener.py, ocempgui/object/BaseObject.py,
+	  ocempgui/object/__init__.py, ocempgui/widgets/BaseWidget.py,
+	  ocempgui/widgets/Button.py, ocempgui/widgets/Container.py,
+	  ocempgui/widgets/Renderer.py, ocempgui/widgets/__init__.py,
+	  ocempgui/widgets/DialogWindow.py, ocempgui/widgets/Entry.py,
+	  ocempgui/widgets/Frame.py, ocempgui/widgets/ImageButton.py,
+	  ocempgui/widgets/Label.py, ocempgui/widgets/RadioButton.py,
+	  ocempgui/widgets/Scale.py, ocempgui/widgets/ScrollBar.py,
+	  ocempgui/widgets/ScrolledWindow.py, ocempgui/widgets/Table.py,
+	  ocempgui/widgets/Constants.py, ocempgui/widgets/ToggleButton.py,
+	  ocempgui/widgets/Window.py, ocempgui/widgets/base.py: Initial
+	  revision
+

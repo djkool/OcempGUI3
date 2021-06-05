@@ -1,0 +1,28 @@
+Important:
+  ocemgpui.widgets:
+    - Improve layer notifications.
+    - Speed up drawing/updates.
+
+Should be done later:
+  - Add generic drag'n' drop features.
+
+  ocempgui.draw:
+    - Add cairo support (as C module?) for text and anything else.
+
+  ocempgui.widgets:
+    - Add border blinking for hidden (overlayed) objects.
+    - Add configuration loader for users.
+    - Add keyboard control to ImageMap.
+    - More image files.
+    - Menu widgets for interactive menus.
+    - Add support for copy and paste operations.
+    - Add TextView class for multiline editing.
+    - Add text selections.
+    - Add optional alpha transparency for non-active layers.
+ 
+Nice to have:
+  ocempgui.widgets, ocempgui.draw:
+    - Add more intelligent style caches to speed up drawing.
+
+  ocempgui.widgets:
+    - bidirectional support for widgets.
