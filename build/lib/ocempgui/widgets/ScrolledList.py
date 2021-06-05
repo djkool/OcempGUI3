@@ -28,11 +28,11 @@
 from pygame import KMOD_SHIFT, KMOD_CTRL, K_UP, K_DOWN, K_HOME, K_END, K_SPACE
 from pygame import K_a, key
 from ocempgui.widgets.components import ListItemCollection
-from ScrolledWindow import ScrolledWindow
-from ListViewPort import ListViewPort
-from Constants import *
-from StyleInformation import StyleInformation
-import base
+from .ScrolledWindow import ScrolledWindow
+from .ListViewPort import ListViewPort
+from .Constants import *
+from .StyleInformation import StyleInformation
+from . import base
 
 class ScrolledList (ScrolledWindow):
     """ScrolledList (width, height, collection=None) -> ScrolledList
@@ -243,7 +243,7 @@ class ScrolledList (ScrolledWindow):
         set to SELECTION_MULTIPLE
         """
         if self.selectionmode == SELECTION_MULTIPLE:
-            notselected = filter (lambda x: x.selected == False, self.items)
+            notselected = [x for x in self.items if x.selected == False]
             for i in notselected:
                 i.selected = True
             if len (notselected) > 0:
@@ -353,7 +353,7 @@ class ScrolledList (ScrolledWindow):
 
         Scrolls the list to the cursor.
         """
-        if not self.cursor or not self.child.images.has_key (self.cursor):
+        if not self.cursor or self.cursor not in self.child.images:
             return
 
         border = base.GlobalStyle.get_border_size \
@@ -446,7 +446,7 @@ class ScrolledList (ScrolledWindow):
                  multiselect:
             self._last_direction = K_DOWN
             self.lock ()
-            notselected = filter (lambda x: x.selected == False, self.items)
+            notselected = [x for x in self.items if x.selected == False]
             for i in notselected:
                 i.selected = True
             self.unlock ()

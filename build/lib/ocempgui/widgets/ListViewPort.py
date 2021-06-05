@@ -29,11 +29,11 @@ from pygame import Rect
 from ocempgui.draw import Draw
 from ocempgui.widgets.components import ListItemCollection
 from ocempgui.widgets.components import TextListItem, FileListItem
-from ViewPort import ViewPort
-from Bin import Bin
-from Constants import *
-from StyleInformation import StyleInformation
-import base
+from .ViewPort import ViewPort
+from .Bin import Bin
+from .Constants import *
+from .StyleInformation import StyleInformation
+from . import base
 
 class ListViewPort (ViewPort):
     """ListViewPort (scrolledlist) -> ListViewPort

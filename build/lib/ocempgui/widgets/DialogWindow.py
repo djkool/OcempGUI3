@@ -25,7 +25,7 @@
 
 """A modal window suitable for dialogs and similar purposes."""
 
-from Window import Window
+from .Window import Window
 from ocempgui.events import EventManager
 
 class DialogWindow (Window):

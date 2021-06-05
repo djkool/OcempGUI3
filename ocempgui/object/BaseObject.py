@@ -143,7 +143,7 @@ class BaseObject (INotifyable):
         # boolean expression, thus we need to explicitly check for such
         # objects.
         if self._manager != None:
-            self._manager.add_object (self, *self._signals.keys ())
+            self._manager.add_object (self, *list(self._signals.keys ()))
 
     def emit (self, signal, data):
         """B.emit (...) -> bool

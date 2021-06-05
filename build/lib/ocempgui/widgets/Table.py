@@ -25,9 +25,10 @@
 
 """Widget class, which places its children in a table grid"""
 
-from Container import Container
-from Constants import *
-import base
+from .Container import Container
+from .Constants import *
+from . import base
+from functools import reduce
 
 class Table (Container):
     """Table (rows, cols) -> Table
@@ -98,22 +99,22 @@ class Table (Container):
 
         # The grid for the children.
         self._grid = {}
-        for i in xrange (self._rows):
-            for j in xrange (self._cols):
+        for i in range (self._rows):
+            for j in range (self._cols):
                 self._grid[(i, j)] = None # None means unused, !None is used.
 
         # Grid for the layout.
         self._layout = {}
-        for i in xrange (self._rows):
-            for j in xrange (self._cols):
+        for i in range (self._rows):
+            for j in range (self._cols):
                 self._layout[(i, j)] = ALIGN_NONE
 
         # Width and height grids.
         self._colwidth = {}
         self._rowheight = {}
-        for i in xrange (self._cols):
+        for i in range (self._cols):
             self._colwidth[i] = 0
-        for i in xrange (self._rows):
+        for i in range (self._rows):
             self._rowheight[i] = 0
 
         self.dirty = True # Enforce creation of the internals.
@@ -142,8 +143,8 @@ class Table (Container):
         Removes a widget from the Table.
         """
         Container.remove_child (self, widget)
-        for i in xrange (self._rows):
-            for j in xrange (self._cols):
+        for i in range (self._rows):
+            for j in range (self._cols):
                 if self.grid[(i, j)] == widget:
                     self.grid[(i, j)] = None
 
@@ -164,16 +165,16 @@ class Table (Container):
                 raise ValueError ("children exceed the Table size.")
 
         # Remove all children first.
-        for i in xrange (self._rows):
-            for j in xrange (self._cols):
+        for i in range (self._rows):
+            for j in range (self._cols):
                 self.grid[(i, j)] = None
         Container.set_children (self, children)
         if children == None:
             return
         
         cells = len (children)
-        for i in xrange (self._rows):
-            for j in xrange (self._cols):
+        for i in range (self._rows):
+            for j in range (self._cols):
                 self.grid[(i, j)] = children[-cells]
                 cells -= 1
                 if cells == 0:
@@ -233,7 +234,7 @@ class Table (Container):
         if not constants_is_align (align):
             raise TypeError ("align must be a value from ALIGN_TYPES")
 
-        for i in xrange (self.rows):
+        for i in range (self.rows):
             self._layout[(i, col)] = align
         self.dirty = True
 
@@ -252,7 +253,7 @@ class Table (Container):
         if not constants_is_align (align):
             raise TypeError ("align must be a value from ALIGN_TYPES")
 
-        for i in xrange (self.columns):
+        for i in range (self.columns):
             self._layout[(row, i)] = align
         self.dirty = True
     
@@ -276,17 +277,17 @@ class Table (Container):
         Calculates the size needed by the children and returns the
         resulting width and height.
         """
-        for i in xrange (self._cols):
+        for i in range (self._cols):
             self._colwidth[i] = 0
-        for i in xrange (self._rows):
+        for i in range (self._rows):
             self._rowheight[i] = 0
 
         spacing = self.spacing
         
         # Fill the width and height grids with correct values.
-        for row in xrange (self._rows):
+        for row in range (self._rows):
             actheight = 0
-            for col in xrange (self._cols):
+            for col in range (self._cols):
                 widget = self.grid[(row, col)]
                 if not widget: # No child here.
                     continue
@@ -300,9 +301,9 @@ class Table (Container):
             if self._rowheight[row] < actheight:
                 self._rowheight[row] = actheight
         
-        height = reduce (lambda x, y: x + y, self._rowheight.values (), 0)
+        height = reduce (lambda x, y: x + y, list(self._rowheight.values ()), 0)
         height += 2 * self.padding - spacing
-        width = reduce (lambda x, y: x + y, self._colwidth.values (), 0)
+        width = reduce (lambda x, y: x + y, list(self._colwidth.values ()), 0)
         width += 2 * self.padding - spacing
         return max (width, 0), max (height, 0)
     
@@ -317,8 +318,8 @@ class Table (Container):
         x = padding
         y = padding
         
-        for row in xrange (self._rows):
-            for col in xrange (self._cols):
+        for row in range (self._rows):
+            for col in range (self._cols):
                 widget = self.grid[(row, col)]
                 if not widget: # no child here
                     x += self._colwidth[col]

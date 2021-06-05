@@ -31,9 +31,9 @@ from pygame import sprite, Rect, Surface
 from pygame import error as PygameError
 from ocempgui.object import BaseObject
 from ocempgui.access import IIndexable
-from Style import WidgetStyle
-from Constants import *
-import base
+from .Style import WidgetStyle
+from .Constants import *
+from . import base
 
 class BaseWidget (BaseObject, sprite.Sprite):
     """BaseWidget () -> BaseWidget
@@ -368,8 +368,8 @@ class BaseWidget (BaseObject, sprite.Sprite):
 
         DEPRECATED - use the 'topleft' attribute instead
         """
-        print "*** Warning: set_position() is deprecated, use the topleft"
-        print "             attribute instead."
+        print("*** Warning: set_position() is deprecated, use the topleft")
+        print("             attribute instead.")
         self._set_rect_attr ("topleft", (x, y))
 
     def rect_to_client (self, rect=None):
@@ -427,7 +427,7 @@ class BaseWidget (BaseObject, sprite.Sprite):
 
         DEPREACATED - use set_minimum_size () instead.
         """
-        print "*** Warning: set_size() is deprecated, use set_minimum_size()."
+        print("*** Warning: set_size() is deprecated, use set_minimum_size().")
         self.set_minimum_size (width, height)
 
     def set_maximum_size (self, width, height):
@@ -567,8 +567,8 @@ class BaseWidget (BaseObject, sprite.Sprite):
 
         DEPRECATED - use the create_style() method instead
         """
-        print "*** Warning: get_style() is deprecated, use the create_style()"
-        print "             method instead."
+        print("*** Warning: get_style() is deprecated, use the create_style()")
+        print("             method instead.")
         return self.create_style ()
     
     def create_style (self):
@@ -709,7 +709,7 @@ class BaseWidget (BaseObject, sprite.Sprite):
 
         DEPRECATED - this is no longer used.
         """
-        print "*** Warning: set_event_area() is no longer used!"
+        print("*** Warning: set_event_area() is no longer used!")
 
     def lock (self):
         """W.lock () -> None
@@ -737,7 +737,7 @@ class BaseWidget (BaseObject, sprite.Sprite):
         Raises a TypeError, if the passed argument is not a string or
         unicode.
         """
-        if type (tooltip) not in (str, unicode):
+        if type (tooltip) not in (str, str):
             raise TypeError ("text must be a string or unicode")
         self._tooltip = tooltip
     
@@ -840,7 +840,7 @@ class BaseWidget (BaseObject, sprite.Sprite):
         if not self.dirty:
             children = kwargs.get ("children", {})
             blit = self.image.blit
-            items = children.items ()
+            items = list(children.items ())
 
             # Clean up the dirty areas on the widget.
             for child, rect in items:
@@ -854,7 +854,7 @@ class BaseWidget (BaseObject, sprite.Sprite):
             # they point to the absolute position on the widget and build
             # one matching them all for an update.
             if self.parent:
-                vals = children.values ()
+                vals = list(children.values ())
                 rect = oldrect
                 if len (vals) != 0:
                     rect = vals[0]
@@ -926,17 +926,17 @@ class BaseWidget (BaseObject, sprite.Sprite):
 
     # DEPRECATED
     position = property (lambda self: self.topleft,
-                         lambda self, (x, y): self.set_position (x, y),
+                         lambda self, xy: self.set_position (*xy),
                          doc = "The position of the topleft corner.")
     eventarea = property (lambda self: self.rect_to_client (),
                           lambda self, var: self.set_event_area (var),
                           doc = "The area, which gets the events.")
 
     minsize = property (lambda self: (self._minwidth, self._minheight),
-                     lambda self, (w, h): self.set_minimum_size (w, h),
+                     lambda self, wh: self.set_minimum_size (*wh),
                      doc = "The guaranteed size of the widget.")
     maxsize = property (lambda self: (self._maxwidth, self._maxheight),
-                        lambda self, (w, h): self.set_maximum_size (w, h),
+                        lambda self, wh: self.set_maximum_size (*wh),
                         doc = "The maximum size to occupy by the widget.")
     image = property (lambda self: self._image,
                       doc = "The visible surface of the widget.")

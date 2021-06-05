@@ -28,7 +28,7 @@
 """String drawing functions with font caching capabilities."""
 
 from pygame import font as PygameFont
-from Constants import *
+from .Constants import *
 
 __font_cache = {}
 
@@ -64,7 +64,7 @@ def create_file_font (fontfile, size, style=FONT_STYLE_NORMAL):
         raise TypeError ("style must be a value from FONT_STYLE_TYPES")
     
     # Try to clean up after 30 fonts, so we get rid of the old ones.
-    if len (__font_cache.items ()) > 30:
+    if len (list(__font_cache.items ())) > 30:
         __font_cache.clear ()
 
     if (fontfile, size, style) not in __font_cache:
@@ -111,13 +111,13 @@ def create_system_font (fontname, size, style=FONT_STYLE_NORMAL):
     underline = style & FONT_STYLE_UNDERLINE == FONT_STYLE_UNDERLINE
 
     # Try to clean up after 30 fonts, so we get rid of the old ones.
-    if len (__font_cache.items ()) > 30:
+    if len (list(__font_cache.items ())) > 30:
         __font_cache.clear ()
 
     if (fontname, size, style) not in __font_cache:
         retval = PygameFont.SysFont (fontname, size, bold, italic)
         __font_cache[(fontname, size, style)] = retval
-	retval.set_underline (underline)
+        retval.set_underline (underline)
         return retval
     else:
         return __font_cache[(fontname, size, style)]

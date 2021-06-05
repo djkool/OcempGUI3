@@ -31,55 +31,55 @@ program.
 """
 
 # Initialize the widget subsystem.
-import base
+from . import base
 base.init ()
 
-import Constants
-import StyleInformation
-from Style import WidgetStyle, Style
+from . import Constants
+from . import StyleInformation
+from .Style import WidgetStyle, Style
 
 # Basic widgets.
-from BaseWidget import BaseWidget
+from .BaseWidget import BaseWidget
 BaseWidget.initclass ()
 
-from Alignment import Alignment
-from ButtonBase import ButtonBase
-from Button import Button
-from CheckButton import CheckButton
-from Entry import Entry
-from ImageButton import ImageButton
-from Label import Label
-from ImageLabel import ImageLabel
-from ProgressBar import ProgressBar
-from RadioButton import RadioButton
-from Scale import HScale, VScale
-from ScrollBar import HScrollBar, VScrollBar
-from ToggleButton import ToggleButton
-from ImageMap import ImageMap
-from TooltipWindow import TooltipWindow
+from .Alignment import Alignment
+from .ButtonBase import ButtonBase
+from .Button import Button
+from .CheckButton import CheckButton
+from .Entry import Entry
+from .ImageButton import ImageButton
+from .Label import Label
+from .ImageLabel import ImageLabel
+from .ProgressBar import ProgressBar
+from .RadioButton import RadioButton
+from .Scale import HScale, VScale
+from .ScrollBar import HScrollBar, VScrollBar
+from .ToggleButton import ToggleButton
+from .ImageMap import ImageMap
+from .TooltipWindow import TooltipWindow
 
 # Container widgets.
-from Bin import Bin
-from ScrolledWindow import ScrolledWindow
-from ScrolledList import ScrolledList
-from ViewPort import ViewPort
-from ListViewPort import ListViewPort
-from Container import Container
-from Box import Box
-from Table import Table
-from Frame import HFrame, VFrame
-from Window import Window
-from DialogWindow import DialogWindow
-from StatusBar import StatusBar
-from FileList import FileList
+from .Bin import Bin
+from .ScrolledWindow import ScrolledWindow
+from .ScrolledList import ScrolledList
+from .ViewPort import ViewPort
+from .ListViewPort import ListViewPort
+from .Container import Container
+from .Box import Box
+from .Table import Table
+from .Frame import HFrame, VFrame
+from .Window import Window
+from .DialogWindow import DialogWindow
+from .StatusBar import StatusBar
+from .FileList import FileList
 
 # Complex widgets.
-from GenericDialog import GenericDialog
-from FileDialog import FileDialog
-from Diagram import Diagram
-from Graph2D import Graph2D
+from .GenericDialog import GenericDialog
+from .FileDialog import FileDialog
+from .Diagram import Diagram
+from .Graph2D import Graph2D
 
 # Event and rendering system.
-from Renderer import Renderer
+from .Renderer import Renderer
 Renderer.initclass ()
-from TwistedRenderer import TwistedRenderer
+from .TwistedRenderer import TwistedRenderer

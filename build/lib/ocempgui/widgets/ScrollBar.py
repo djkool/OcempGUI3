@@ -27,10 +27,10 @@
 
 from pygame import K_KP_PLUS, K_PLUS, K_RIGHT, K_DOWN, K_KP_MINUS, K_MINUS
 from pygame import K_LEFT, K_UP, K_PAGEUP, K_PAGEDOWN, K_HOME, K_END, Rect
-from Range import Range
-from Constants import *
-from StyleInformation import StyleInformation
-import base
+from .Range import Range
+from .Constants import *
+from .StyleInformation import StyleInformation
+from . import base
 
 # Timer value for the button press delay.
 _TIMER = 25

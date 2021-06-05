@@ -30,9 +30,9 @@ event classes and interfaces to make python objects easily event
 capable.
 """
 
-from EventManager import EventManager
-from Signals import Event, EventCallback
-from INotifyable import INotifyable
+from .EventManager import EventManager
+from .Signals import Event, EventCallback
+from .INotifyable import INotifyable
 
-from Subject import Subject
-from IObserver import IObserver
+from .Subject import Subject
+from .IObserver import IObserver

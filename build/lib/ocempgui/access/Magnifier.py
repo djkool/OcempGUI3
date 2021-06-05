@@ -246,7 +246,7 @@ class Magnifier (object):
         self._oldpos = offset
 
     size = property (lambda self: self._size,
-                     lambda self, (x, y): self.set_size (x, y),
+                     lambda self, xy: self.set_size (*xy),
                      doc = "The size of the magnification area.")
     factor = property (lambda self: self._factor,
                        lambda self, var: self.set_factor (var),

@@ -32,9 +32,9 @@ from pygame import error as PygameError, time as PygameTime, Rect
 from ocempgui.events import EventManager, Event
 from ocempgui.access import IIndexable
 from ocempgui.draw import Complex, String
-from BaseWidget import BaseWidget
-from Constants import *
-import base
+from .BaseWidget import BaseWidget
+from .Constants import *
+from . import base
 
 class _LayerEventManager (EventManager):
     """_LayerEventManager (renderer) -> _LayerEventManager
@@ -71,7 +71,7 @@ class _LayerEventManager (EventManager):
                 re.active_layer = re._layers[event.data.depth]
                 re._index_widget = event.data
 
-            layers = re._layers.keys ()
+            layers = list(re._layers.keys ())
             for layer in layers:
                 manager = re._layers.get (layer, (None, None, None))[2]
                 if manager:
@@ -486,8 +486,8 @@ class Renderer (IIndexable):
         # Locking system.
         self._lock = 0
 
-	# The mouse motion events to drop on each update.
-	self._drops = 0
+        # The mouse motion events to drop on each update.
+        self._drops = 0
 
     def _get_rect (self):
         """W._get_rect () -> pygame.Rect
@@ -544,7 +544,7 @@ class Renderer (IIndexable):
         Raises a TypeError, if the passed argument is not a string or
         unicode.
         """
-        if type (title) not in (str, unicode):
+        if type (title) not in (str, str):
             raise TypeError ("title must be a string or unicode")
         self._title = title
         display.set_caption (self._title)
@@ -569,7 +569,7 @@ class Renderer (IIndexable):
         self._screen = screen
         self._create_bg ()
 
-        layers = filter (None, self._layers.values ())
+        layers = [_f for _f in list(self._layers.values ()) if _f]
         for layer in layers:
             layer[2].emit_all (Event (SIG_SCREENCHANGED, screen))
         self.refresh ()
@@ -665,7 +665,7 @@ class Renderer (IIndexable):
         """
         if type (layer) == int:
             lay = self._layers.get (layer)
-      	    if lay:
+            if lay:
                 show = self._activelayer != layer
                 self._activelayer = lay
                 if show:
@@ -675,7 +675,7 @@ class Renderer (IIndexable):
                 return
 
         elif type (layer) == tuple:
-            layers = self._layers.values ()
+            layers = list(self._layers.values ())
             if layer in layers:
                 show = self._activelayer != layer
                 self._activelayer = layer
@@ -754,7 +754,7 @@ class Renderer (IIndexable):
 
         Removes and destroys all widgets and objects of the Renderer queues.
         """
-        keys = self._layers.keys ()
+        keys = list(self._layers.keys ())
         layers = self._layers
         rm_index = self.remove_index
         for key in keys:
@@ -765,7 +765,7 @@ class Renderer (IIndexable):
             for w in widgets:
                 w.destroy ()
 
-            if layers.has_key (key):
+            if key in layers:
                 # Remove all event capable objects.
                 layer[2].clear ()
                 
@@ -951,7 +951,7 @@ class Renderer (IIndexable):
         bg = self._background
         blit = self.screen.blit
         layers = self._layers
-        keys = self._layers.keys ()
+        keys = list(self._layers.keys ())
         keys.sort ()
 
         redraw = []
@@ -995,12 +995,12 @@ class Renderer (IIndexable):
         bg = self._background
 
         # Clear.
-        for rect in children.values ():
+        for rect in list(children.values ()):
             blit (bg, rect, rect)
 
         # Update dirty widgets.
         rect_widget = None
-        items = children.items ()
+        items = list(children.items ())
         for widget, rect in items:
             blit (bg, rect, rect)
             rect_widget = widget.rect
@@ -1034,7 +1034,7 @@ class Renderer (IIndexable):
         or the fullscreen mode is toggled.
         """
         # If widgets have been added already, show them.
-        layers = self._layers.values ()
+        layers = list(self._layers.values ())
         for layer in layers:
             for widget in layer[1]:
                 widget.update ()
@@ -1119,7 +1119,7 @@ class Renderer (IIndexable):
         
         Passes the keyboard focus to the next layer.
         """
-        layers = self._layers.values ()
+        layers = list(self._layers.values ())
         if len (layers) == 1:
             return
 
@@ -1210,7 +1210,7 @@ class Renderer (IIndexable):
         """
         indices = self._activelayer[0]
         for wid in indices:
-            if wid.sensitive and wid.activate_mnemonic (event.unicode):
+            if wid.sensitive and wid.activate_mnemonic (event.str):
                 return
 
     def get_managers (self):
@@ -1221,7 +1221,7 @@ class Renderer (IIndexable):
         Gets the event managers of the different layers as dictionary
         using the layer depth as key.
         """
-        keys = self._layers.keys ()
+        keys = list(self._layers.keys ())
         managers = {}
         for k in keys:
             managers[k] = self._layers[k][2]
@@ -1237,7 +1237,7 @@ class Renderer (IIndexable):
                 return [self._activelayer]
 
         # Get the key ids in reverse order
-        keys = self._layers.keys ()
+        keys = list(self._layers.keys ())
         keys.sort ()
         keys.reverse ()
 
@@ -1365,12 +1365,12 @@ class Renderer (IIndexable):
 
             if ev:
                 if ev.signal in (SIG_TICK, SIG_SCREENCHANGED):
-                    layers = filter (None, self._layers.values ())
+                    layers = [_f for _f in list(self._layers.values ()) if _f]
                     for layer in layers:
                         layer[2].emit_all (ev)
                 
                 elif not self._grabber:
-                    layers = filter (None, self._get_layers (ev.signal))
+                    layers = [_f for _f in self._get_layers (ev.signal) if _f]
                     for layer in layers:
                         if not ev.handled:
                             layer[2].emit_event (ev)

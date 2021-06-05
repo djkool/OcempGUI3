@@ -28,10 +28,10 @@ stack technique.
 """
 
 from datetime import datetime
-from Container import Container
-from Constants import *
-from StyleInformation import StyleInformation
-import base
+from .Container import Container
+from .Constants import *
+from .StyleInformation import StyleInformation
+from . import base
 
 _TIMER = 50
 
@@ -227,7 +227,7 @@ class StatusBar (Container):
         Raises a TypeError, if the passed argument is not a string or
         unicode.
         """
-        if type (tip) not in (str, unicode):
+        if type (tip) not in (str, str):
             raise TypeError ("tip must be a string or unicode")
         self._tips.append (tip)
         self.dirty = True

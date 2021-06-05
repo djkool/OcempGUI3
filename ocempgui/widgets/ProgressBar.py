@@ -25,9 +25,9 @@
 
 """A self-filling widget for progress states."""
 
-from BaseWidget import BaseWidget
-from Constants import *
-import base
+from .BaseWidget import BaseWidget
+from .Constants import *
+from . import base
 
 class ProgressBar (BaseWidget):
     """ProgressBar () -> ProgressBar
@@ -119,7 +119,7 @@ class ProgressBar (BaseWidget):
         Raises a TypeError, if the passed argument is not a string or
         unicode.
         """
-        if type (text) not in (str, unicode):
+        if type (text) not in (str, str):
             raise TypeError ("text must be a string or unicode")
         self._text = text
         self.dirty = True

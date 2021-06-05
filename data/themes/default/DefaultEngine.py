@@ -137,6 +137,7 @@ class DefaultEngine (object):
         r = rect
         if r == None:
             r = surface.get_rect ()
+        print(r)
 
         # Dependant on the border style, we will care about the used
         # colors. 3D effect such as sunken or raised make use of the
@@ -176,7 +177,7 @@ class DefaultEngine (object):
             # By default we will create bevel edges, for which the
             # topleft colors take the most place. Thus the bottomleft
             # array slices will be reduced continously.
-            for i in xrange (shadow):
+            for i in range (shadow):
                 array[r.left + i:r.right - i:space, r.top + i] = color1
                 array[r.left + i:r.right - i:space,
                       r.bottom - (i + 1)] = color2
@@ -225,11 +226,11 @@ class DefaultEngine (object):
         color = self.style.get_style_entry (cls, style, "shadowcolor")
         if shadow < 2:
             shadow = 2
-        half = shadow / 2
+        half = shadow // 2
         start = max (half, 3)
         rect = surface.get_rect ()
         array = array3d (surface)
-
+        print(rect)
         # Right and bottom inner shadow.
         array[rect.left + start:rect.right - half,
               rect.bottom - shadow:rect.bottom - half] = color[0]
@@ -354,12 +355,12 @@ class DefaultEngine (object):
             if center % 2 == 0:
                 center -= 1
             if arrowtype == ARROW_LEFT:
-                for i in xrange (arrow_width):
+                for i in range (arrow_width):
                     col = arrow_width + i
                     array[col:col + arrow_width - i:1, center + i] = color
                     array[col:col + arrow_width - i:1, center - i] = color
             elif arrowtype == ARROW_RIGHT:
-                for i in xrange (arrow_width):
+                for i in range (arrow_width):
                     col = rect.width - arrow_width - i - 1
                     array[col:col - arrow_width + i:-1, center + i] = color
                     array[col:col - arrow_width + i:-1, center - i] = color
@@ -371,12 +372,12 @@ class DefaultEngine (object):
                 center -= 1
 
             if arrowtype == ARROW_UP:
-                for i in xrange (arrow_height):
+                for i in range (arrow_height):
                     row = arrow_height + i
                     array[center + i, row:row + arrow_height - i:1] = color
                     array[center - i, row:row + arrow_height - i:1] = color
             elif arrowtype == ARROW_DOWN:
-                for i in xrange (arrow_height):
+                for i in range (arrow_height):
                     row = rect.height - arrow_height - i - 1
                     array[center + i, row:row - arrow_height + i:-1] = color
                     array[center - i, row:row - arrow_height + i:-1] = color

@@ -25,7 +25,7 @@
 
 """An abstract widget, which can hold other widgets."""
 
-from BaseWidget import BaseWidget
+from .BaseWidget import BaseWidget
 
 class Container (BaseWidget):
     """Container () -> Container
@@ -312,7 +312,7 @@ class Container (BaseWidget):
         else:
             # Get the intersections with other overlapping children and add
             # them to the update list.
-            items = children.items ()
+            items = list(children.items ())
             ch = self.children
             for w, rect in items:
                 for widget in ch:

@@ -26,16 +26,16 @@
 """Style class for widgets."""
 
 import os.path, copy
-from UserDict import IterableUserDict
-from Constants import *
-from StyleInformation import StyleInformation
+from collections import UserDict
+from .Constants import *
+from .StyleInformation import StyleInformation
 
 # Import the default theme engine path.
 import sys
 sys.path.append (DEFAULTDATADIR)
 from themes import default
 
-class WidgetStyle (IterableUserDict):
+class WidgetStyle (UserDict):
     """WidgetStyle (dict=None) -> WidgetStyle
 
     A style dictionary that tracks changes of its items.
@@ -62,7 +62,7 @@ class WidgetStyle (IterableUserDict):
     def __init__ (self, dict=None):
         # Notifier slot.
         self._valuechanged = None
-        IterableUserDict.__init__ (self, dict)
+        UserDict.__init__ (self, dict)
 
     def __copy__ (self):
         """W.__copy__ () -> WidgetStyle
@@ -70,7 +70,7 @@ class WidgetStyle (IterableUserDict):
         Creates a shallow copy of the WidgetStyle dictionary.
         """
         newdict = WidgetStyle ()
-        keys = self.keys ()
+        keys = list(self.keys ())
         for k in keys:
             newdict[k] = self[k]
             newdict.set_value_changed (self._valuechanged)
@@ -82,7 +82,7 @@ class WidgetStyle (IterableUserDict):
         Creates a deep copy of the WidgetStyle dictionary.
         """
         newdict = WidgetStyle ()
-        keys = self.keys ()
+        keys = list(self.keys ())
         for k in keys:
             newdict[copy.deepcopy (k, memo)] = copy.deepcopy (self[k], memo)
             newdict.set_value_changed (self._valuechanged)
@@ -92,7 +92,7 @@ class WidgetStyle (IterableUserDict):
     def __setitem__ (self, i, y):
         """W.__setitem__ (i, y) <==> w[i] = y
         """
-        IterableUserDict.__setitem__ (self, i, y)
+        UserDict.__setitem__ (self, i, y)
         if isinstance (y, WidgetStyle):
             y.set_value_changed (self._valuechanged)
         if self._valuechanged:
@@ -101,14 +101,14 @@ class WidgetStyle (IterableUserDict):
     def __delitem__ (self, y):
         """W.__delitem__ (i, y) <==> del w[y]
         """
-        IterableUserDict.__delitem__ (self, y)
+        UserDict.__delitem__ (self, y)
         if self._valuechanged:
             self._valuechanged ()
 
     def __repr__ (self):
         """W.__repr__ () <==> repr (W)
         """
-        return "WidgetStyle %s" % IterableUserDict.__repr__ (self)
+        return "WidgetStyle %s" % UserDict.__repr__ (self)
     
     def clear (self, y):
         """W.clear () -> None
@@ -117,7 +117,7 @@ class WidgetStyle (IterableUserDict):
         """
         changed = self._valuechanged
         self.set_value_changed (None)
-        IterableUserDict.clear (self)
+        UserDict.clear (self)
         self.set_value_changed (changed)
         if changed:
             changed ()
@@ -130,8 +130,8 @@ class WidgetStyle (IterableUserDict):
         If key is not found, d is returned if given, otherwise KeyError
         is raised.
         """
-        changed = IterableUserDict.has_key (self, k)
-        v = IterableUserDict.pop (self, k, d)
+        changed = UserDict.has_key (self, k)
+        v = UserDict.pop (self, k, d)
         if changed and self._valuechanged:
             self._valuechanged ()
         return v
@@ -143,7 +143,7 @@ class WidgetStyle (IterableUserDict):
 
         Raises a KeyError if D is empty.
         """
-        v = IterableUserDict.popitem (self)
+        v = UserDict.popitem (self)
         if self._valuechanged:
             self._valuechanged ()
         return v
@@ -151,8 +151,8 @@ class WidgetStyle (IterableUserDict):
     def setdefault (self, k, d=None):
         """W.setdefault (k,d=None) -> W.get (k, d), also set W[k] = d if k not in W
         """
-        changed = not IterableUserDict.has_key (self, k)
-        v = IterableUserDict.setdefault (self, k, d)
+        changed = not UserDict.has_key (self, k)
+        v = UserDict.setdefault (self, k, d)
         if changed and self._valuechanged:
             self._valuechanged ()
         return v
@@ -166,7 +166,7 @@ class WidgetStyle (IterableUserDict):
         W[k] = v) then: for k in F: W[k] = F[k]
         """
         amount = len (self)
-        IterableUserDict.update (self, E, **F)
+        UserDict.update (self, E, **F)
         if self._valuechanged and (len (self) != amount):
             self._valuechanged ()
 
@@ -187,7 +187,7 @@ class WidgetStyle (IterableUserDict):
         if method and not callable (method):
             raise TypeError ("method must be callable")
 
-        values = self.values ()
+        values = list(self.values ())
         for val in values:
             if isinstance (val, WidgetStyle):
                 val.set_value_changed (method)
@@ -523,7 +523,7 @@ class Style (object):
         """
         glob_dict = {}
         loc_dict = {}
-        execfile (file, glob_dict, loc_dict)
+        exec(compile(open(file, "rb").read(), file, 'exec'), glob_dict, loc_dict)
         setdefault = self.styles.setdefault
         for key in loc_dict:
             # Skip the Constants import directive and

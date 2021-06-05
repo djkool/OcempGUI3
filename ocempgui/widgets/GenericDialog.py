@@ -25,10 +25,10 @@
 
 """An universal dialog window class with additional buttons."""
 
-from DialogWindow import DialogWindow
-from Frame import VFrame, HFrame
-from Button import Button
-from Constants import *
+from .DialogWindow import DialogWindow
+from .Frame import VFrame, HFrame
+from .Button import Button
+from .Constants import *
 
 class GenericDialog (DialogWindow):
     """GenericDialog (title, buttons, results) -> GenericDialog
@@ -150,7 +150,7 @@ class GenericDialog (DialogWindow):
         for widget in self._actionframe.children:
             widget.destroy ()
 
-        for i in xrange (len (buttons)):
+        for i in range (len (buttons)):
             if not isinstance (buttons[i], Button):
                 raise TypeError ("All elements in buttons must inherit "
                                  "from Button")

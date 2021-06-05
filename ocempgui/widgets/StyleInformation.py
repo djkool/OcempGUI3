@@ -111,7 +111,7 @@ TOOLTIPWINDOW_COLOR
 The background color of the TooltipWindow widget.
 """
 
-import Constants
+from . import Constants
 
 StyleInformation = {
     "CHECK_SIZE" : 14,

@@ -25,10 +25,10 @@
 
 """Tooltip Window class."""
 
-from BaseWidget import BaseWidget
-from Constants import *
-from StyleInformation import StyleInformation
-import base
+from .BaseWidget import BaseWidget
+from .Constants import *
+from .StyleInformation import StyleInformation
+from . import base
 
 class TooltipWindow (BaseWidget):
     """TooltipWindow (text) -> TooltipWindow
@@ -106,7 +106,7 @@ class TooltipWindow (BaseWidget):
         Raises a TypeError, if the passed argument is not a string or
         unicode.
         """
-        if type (text) not in (str, unicode):
+        if type (text) not in (str, str):
             raise TypeError ("text must be a string or unicode")
         self._text = text
         self.dirty = True

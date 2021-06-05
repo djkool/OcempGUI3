@@ -343,6 +343,7 @@ Raised by a widget, when the mouse cursor leaves it.
 
 from pygame import KEYDOWN, KEYUP, MOUSEBUTTONDOWN, MOUSEMOTION, MOUSEBUTTONUP
 from pygame import USEREVENT
+import sys
 
 # State constants.
 STATE_NORMAL =      0
@@ -403,8 +404,8 @@ def constants_is_align (align):
            (align & ALIGN_NONE == ALIGN_NONE)
 
 # Orientation types.
-ORIENTATION_VERTICAL   = intern ("vertical")
-ORIENTATION_HORIZONTAL = intern ("horizontal")
+ORIENTATION_VERTICAL   = sys.intern ("vertical")
+ORIENTATION_HORIZONTAL = sys.intern ("horizontal")
 ORIENTATION_TYPES = (ORIENTATION_VERTICAL, ORIENTATION_HORIZONTAL)
 
 # Dialog results.
@@ -432,19 +433,19 @@ SIGNALS_KEYS = (SIG_KEYDOWN, SIG_KEYUP)
 SIGNALS_MOUSE = (SIG_MOUSEDOWN, SIG_MOUSEMOVE, SIG_MOUSEUP)
 
 # Signal constants, raised by the widgets.
-SIG_ACTIVATED =      intern ("activated")
-SIG_CLICKED =        intern ("clicked")
-SIG_FOCUSED =        intern ("focused")
-SIG_INPUT =          intern ("input")
-SIG_TOGGLED =        intern ("toggled")
-SIG_VALCHANGED =     intern ("value-changed")
-SIG_SELECTCHANGED =  intern ("selection-changed")
-SIG_LISTCHANGED =    intern ("list-changed")
-SIG_DOUBLECLICKED =  intern ("double-clicked")
-SIG_DIALOGRESPONSE = intern ("dialog-response")
-SIG_DESTROYED =      intern ("destroyed")
-SIG_ENTER =          intern ("entered")
-SIG_LEAVE =          intern ("left")
+SIG_ACTIVATED =      sys.intern ("activated")
+SIG_CLICKED =        sys.intern ("clicked")
+SIG_FOCUSED =        sys.intern ("focused")
+SIG_INPUT =          sys.intern ("input")
+SIG_TOGGLED =        sys.intern ("toggled")
+SIG_VALCHANGED =     sys.intern ("value-changed")
+SIG_SELECTCHANGED =  sys.intern ("selection-changed")
+SIG_LISTCHANGED =    sys.intern ("list-changed")
+SIG_DOUBLECLICKED =  sys.intern ("double-clicked")
+SIG_DIALOGRESPONSE = sys.intern ("dialog-response")
+SIG_DESTROYED =      sys.intern ("destroyed")
+SIG_ENTER =          sys.intern ("entered")
+SIG_LEAVE =          sys.intern ("left")
 
 # The default data directory, where the themes and co. get installed.
 # @DATAPATH@ will be replaced at installation usually.

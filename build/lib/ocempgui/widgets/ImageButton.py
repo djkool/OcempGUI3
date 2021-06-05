@@ -27,11 +27,11 @@
 
 from pygame import Surface
 from ocempgui.draw import Image
-from ButtonBase import ButtonBase
-from Label import Label
-from Constants import *
-from StyleInformation import StyleInformation
-import base
+from .ButtonBase import ButtonBase
+from .Label import Label
+from .Constants import *
+from .StyleInformation import StyleInformation
+from . import base
 
 class ImageButton (ButtonBase):
     """ImageButton (image) -> ImageButton
@@ -105,7 +105,7 @@ class ImageButton (ButtonBase):
         unicode or pygame.Surface.
         """
         if image:
-            if type (image) in (str, unicode):
+            if type (image) in (str, str):
                 self._path = image
                 self._picture = Image.load_image (image)
             elif isinstance (image, Surface):

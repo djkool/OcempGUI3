@@ -25,11 +25,11 @@
 
 """A button, which switches its state in dependance of other buttons."""
 
-from ToggleButton import ToggleButton
-from ButtonBase import ButtonBase
-from Constants import *
-from StyleInformation import StyleInformation
-import base
+from .ToggleButton import ToggleButton
+from .ButtonBase import ButtonBase
+from .Constants import *
+from .StyleInformation import StyleInformation
+from . import base
 
 class RadioButton (ToggleButton):
     """RadioButton (text, group=None) -> RadioButton

@@ -27,9 +27,9 @@
 
 from pygame import Surface
 from ocempgui.draw import Image
-from BaseWidget import BaseWidget
-from Constants import *
-import base
+from .BaseWidget import BaseWidget
+from .Constants import *
+from . import base
 
 class ImageLabel (BaseWidget):
     """ImageLabel (image) -> ImageLabel
@@ -132,7 +132,7 @@ class ImageLabel (BaseWidget):
         unicode or pygame.Surface.
         """
         if image:
-            if type (image) in (str, unicode):
+            if type (image) in (str, str):
                 self._path = image
                 self._picture = Image.load_image (image)
             elif isinstance (image, Surface):

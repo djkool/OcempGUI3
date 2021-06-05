@@ -26,12 +26,12 @@
 """File selection dialog class."""
 
 import os
-from GenericDialog import GenericDialog
-from FileList import FileList
-from Frame import HFrame
-from Label import Label
-from Entry import Entry
-from Constants import *
+from .GenericDialog import GenericDialog
+from .FileList import FileList
+from .Frame import HFrame
+from .Label import Label
+from .Entry import Entry
+from .Constants import *
 
 class FileDialog (GenericDialog):
     """FileDialog (title, buttons, results, directory=None) -> FileDialog
@@ -98,7 +98,7 @@ class FileDialog (GenericDialog):
         
         Sets the directory to list after a text input
         """
-        print "switching directory..."
+        print("switching directory...")
         path = os.path.normpath (self._txtpath.text)
         if os.path.isdir (path):
             if path != self.filelist.directory:

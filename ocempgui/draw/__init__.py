@@ -30,8 +30,8 @@ objects and different drawing primitives, which wrap existing pygame
 drawing methods.
 """
 
-import Constants
-import String
-import Draw
-import Image
-import Complex
+from . import Constants
+from . import String
+from . import Draw
+from . import Image
+from . import Complex

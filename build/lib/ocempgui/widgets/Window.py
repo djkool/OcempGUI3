@@ -25,12 +25,12 @@
 
 """Toplevel Window class."""
 
-from BaseWidget import BaseWidget
-from Bin import Bin
-from Container import Container
-from Constants import *
-from StyleInformation import StyleInformation
-import base
+from .BaseWidget import BaseWidget
+from .Bin import Bin
+from .Container import Container
+from .Constants import *
+from .StyleInformation import StyleInformation
+from . import base
 
 class Window (Bin):
     """Window (title=None) -> Window
@@ -137,7 +137,7 @@ class Window (Bin):
         Raises a TypeError, if the passed argument is not a string or
         unicode.
         """
-        if text and (type (text) not in (str, unicode)):
+        if text and (type (text) not in (str, str)):
             raise TypeError ("text must be a string or unicode")
         self._title = text
         self.dirty = True

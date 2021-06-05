@@ -25,9 +25,9 @@
 
 """An abstract widget for diagram and graph implementations."""
 
-from BaseWidget import BaseWidget
-from Constants import *
-import base
+from .BaseWidget import BaseWidget
+from .Constants import *
+from . import base
 
 class Diagram (BaseWidget):
     """Diagram () -> Diagram
@@ -306,7 +306,7 @@ class Diagram (BaseWidget):
         if self.eval_func != None:
             if self.data != None:
                 if type (self.data) in (list, tuple):
-                    self.values = map (self.eval_func, self.data)
+                    self.values = list(map (self.eval_func, self.data))
                 else:
                     self.values = self.eval_func (self.data)
                 return
@@ -328,7 +328,7 @@ class Diagram (BaseWidget):
                             lambda self, var: self.set_orientation (var),
                             doc = "The orientation of the axes.")
     origin = property (lambda self: self._origin,
-                       lambda self, (x, y): self.set_origin (x, y),
+                       lambda self, xy: self.set_origin (*xy),
                        doc = "Coordinates of the point of origin on the " \
                        "widget")
     data = property (lambda self: self._data,

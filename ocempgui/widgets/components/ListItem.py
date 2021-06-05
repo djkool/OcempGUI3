@@ -206,7 +206,7 @@ class TextListItem (ListItem):
         Raises a TypeError, if the passed argument is not a string or
         unicode.
         """
-        if text and type (text) not in (str, unicode):
+        if text and type (text) not in (str, str):
             raise TypeError ("text must be a string or unicode")
         self._text = text
         self.dirty = True

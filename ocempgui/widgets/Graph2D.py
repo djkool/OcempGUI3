@@ -27,10 +27,10 @@
 
 from pygame import K_PLUS, K_KP_PLUS, K_MINUS, K_KP_MINUS, K_DOWN, K_LEFT
 from pygame import K_RIGHT, K_UP
-from Diagram import Diagram
+from .Diagram import Diagram
 from ocempgui.draw import Draw
-from Constants import *
-import base
+from .Constants import *
+from . import base
 
 class Graph2D (Diagram):
     """Graph2D (width, height) -> Graph2D
@@ -153,7 +153,7 @@ class Graph2D (Diagram):
             raise TypeError ("units must be a list or tuple")
         if len (units) < 2:
             raise ValueError ("units must at least contains 2 values")
-        ov = filter (lambda x: type (x) not in (str, unicode), units)
+        ov = [x for x in units if type (x) not in (str, str)]
         if len (ov) != 0:
             raise ValueError ("values in units must be strings or unicode")
         self._scaleunits = units
@@ -179,7 +179,7 @@ class Graph2D (Diagram):
             raise TypeError ("units must be a list or tuple")
         if len (units) < 2:
             raise ValueError ("units must at least contains 2 values")
-        ov = filter (lambda x: (type (x) != int) or (x <= 0), units)
+        ov = [x for x in units if (type (x) != int) or (x <= 0)]
         if len (ov) != 0:
             raise ValueError ("values in units must be positive integers")
         self._units = units
@@ -204,7 +204,7 @@ class Graph2D (Diagram):
             raise TypeError ("axes must be a list or tuple")
         if len (axes) < 2:
             raise ValueError ("axes must at least contains 2 values")
-        ov = filter (lambda x: type (x) not in (str, unicode), axes)
+        ov = [x for x in axes if type (x) not in (str, str)]
         if len (ov) != 0:
             raise ValueError ("values in axes must be strings or unicode")
         self._axes = axes
@@ -249,7 +249,7 @@ class Graph2D (Diagram):
         if data != None:
             if type (data) not in (list, tuple):
                 raise TypeError ("data must be a list, tuple or array")
-            ov = filter (lambda x: type (x) not in (int, float), data)
+            ov = [x for x in data if type (x) not in (int, float)]
             if len (ov) != 0:
                 raise ValueError ("vales in data must be integers or float")
         Diagram.set_data (self, data)
@@ -493,8 +493,8 @@ class Graph2D (Diagram):
         if data and values:
             # Filter negative values.
             if not self.negative:
-                data = filter (lambda x: x >= 0, data)
-                values = filter (lambda y: y >= 0, values)
+                data = [x for x in data if x >= 0]
+                values = [y for y in values if y >= 0]
             
             # Create the coordinate tuples and take the unit resolution into
             # account.
@@ -502,19 +502,19 @@ class Graph2D (Diagram):
             org0 = origin[0]
             org1 = origin[1]
             if self.orientation == ORIENTATION_VERTICAL:
-                coords = map (lambda x, y: (int (org1 + (x * unitx)),
+                coords = list(map (lambda x, y: (int (org1 + (x * unitx)),
                                             int (org0 + (y * unity))),
-                              data, values)
+                              data, values))
             else:
-                coords = map (lambda x, y: (int (org0 + (x * unitx)),
+                coords = list(map (lambda x, y: (int (org0 + (x * unitx)),
                                             int (org1 - (y * unity))),
-                              data, values)
+                              data, values))
 
             # Filter non-visible values.
             width = self.width
             height = self.height
-            coords = filter (lambda (x, y): (0 < x < width) and \
-                             (0 < y < width), coords)
+            coords = [x_y for x_y in coords if (0 < x_y[0] < width) and \
+                             (0 < x_y[1] < width)]
             
             # Draw them.
             color = self.graph_color
@@ -533,5 +533,5 @@ class Graph2D (Diagram):
                             lambda self, var: self.set_graph_color (var),
                             doc = "The color of the graph.")
     zoom_factor = property (lambda self: self._zoom_factor,
-                            lambda self, (x, y): self.set_zoom_factory (x, y),
+                            lambda self, xy: self.set_zoom_factory (*xy),
                             doc = "Zoom factor for the axes.")

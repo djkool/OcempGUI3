@@ -25,7 +25,7 @@
 
 """Low level components needed by the widgets."""
 
-from ListItemCollection import ListItemCollection
-from ListItem import ListItem, TextListItem
-from FileListItem import FileListItem
+from .ListItemCollection import ListItemCollection
+from .ListItem import ListItem, TextListItem
+from .FileListItem import FileListItem
 #from TreeItem import TreeItem

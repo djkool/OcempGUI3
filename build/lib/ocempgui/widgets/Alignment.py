@@ -25,9 +25,9 @@
 
 """A widget which controls the alignment of its child."""
 
-from Bin import Bin
-from Constants import *
-import base
+from .Bin import Bin
+from .Constants import *
+from . import base
 
 class Alignment (Bin):
     """Alignment (width, height) -> Alignment

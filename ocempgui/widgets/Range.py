@@ -27,8 +27,8 @@
 adjustments.
 """
 
-from BaseWidget import BaseWidget
-from Constants import *
+from .BaseWidget import BaseWidget
+from .Constants import *
 
 class Range (BaseWidget):
     """Range (minimum, maximum, step=1.0) -> Range

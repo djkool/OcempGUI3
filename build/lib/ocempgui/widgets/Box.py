@@ -25,9 +25,9 @@
 
 """A container, which allows absolute positioning of its widgets."""
 
-from Container import Container
-from Constants import *
-import base
+from .Container import Container
+from .Constants import *
+from . import base
 
 class Box (Container):
     """Box (width, height) -> Box

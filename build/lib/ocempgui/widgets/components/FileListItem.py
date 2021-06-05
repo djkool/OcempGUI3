@@ -27,7 +27,7 @@
 
 import os, stat
 from ocempgui.draw import Image
-from ListItem import TextListItem
+from .ListItem import TextListItem
 from ocempgui.widgets.images import Icons16x16
 from ocempgui.widgets.Constants import *
 from ocempgui.widgets import base

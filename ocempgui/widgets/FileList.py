@@ -28,9 +28,9 @@
 import os, stat
 from pygame import K_RETURN
 from ocempgui.widgets.components import ListItemCollection, FileListItem
-from ScrolledList import ScrolledList
-from Constants import *
-import base
+from .ScrolledList import ScrolledList
+from .Constants import *
+from . import base
 
 class FileList (ScrolledList):
     """FileList (width, height, directory=None) -> FileList
@@ -93,7 +93,7 @@ class FileList (ScrolledList):
         try:
             self._list_contents ()
         except OSError:
-            print "\a"
+            print("\a")
             self._directory = olddir
 
     def _list_contents (self):
@@ -120,7 +120,7 @@ class FileList (ScrolledList):
         dirs.sort ()
         files.sort ()
         
-        map (items.append, [FileListItem (d, stat.S_IFDIR) for d in dirs])
+        list(map (items.append, [FileListItem (d, stat.S_IFDIR) for d in dirs]))
         for filename in files:
             stats = os.stat (pjoin (self._directory, filename))
             items.append (FileListItem (filename, stats.st_mode))

@@ -30,10 +30,10 @@ by accessibility interfaces and make them ready for the usage with
 accessiblity technologies. It also provides python interfaces to the
 ATK/AT-SPI accessibility system.
 """
-from IAccessible import IAccessible
-from IIndexable import IIndexable
+from .IAccessible import IAccessible
+from .IIndexable import IIndexable
 
 # Pygame Magnifier.
 try:
-    from Magnifier import Magnifier
+    from .Magnifier import Magnifier
 except: pass

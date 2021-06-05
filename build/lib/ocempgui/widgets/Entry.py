@@ -25,10 +25,10 @@
 
 """A widget, which handles text input."""
 
-from Editable import Editable
+from .Editable import Editable
 from ocempgui.draw import String
-from Constants import *
-import base
+from .Constants import *
+from . import base
 
 class Entry (Editable):
     """Entry (text="") -> Entry

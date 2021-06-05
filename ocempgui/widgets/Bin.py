@@ -25,7 +25,7 @@
 
 """An abstract widget, which can hold exactly one other widget."""
 
-from BaseWidget import BaseWidget
+from .BaseWidget import BaseWidget
 
 class Bin (BaseWidget):
     """Bin () -> Bin

@@ -25,7 +25,7 @@
 
 """An object class, which can listen to any event it gets connected to."""
 
-from BaseObject import BaseObject
+from .BaseObject import BaseObject
 from ocempgui.events.Signals import EventCallback
 
 class ActionListener (BaseObject):

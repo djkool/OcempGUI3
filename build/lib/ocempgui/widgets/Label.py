@@ -25,9 +25,9 @@
 
 """A simple widget, which can display text."""
 
-from BaseWidget import BaseWidget
-from Constants import *
-import base
+from .BaseWidget import BaseWidget
+from .Constants import *
+from . import base
 
 class Label (BaseWidget):
     """Label (text) -> Label
@@ -151,7 +151,7 @@ class Label (BaseWidget):
         Raises a TypeError, if the passed argument is not a string or
         unicode.
         """
-        if type (text) not in (str, unicode):
+        if type (text) not in (str, str):
             raise TypeError ("text must be a string or unicode")
         text = self._get_mnemonic (text)
         self._text = text
@@ -181,7 +181,7 @@ class Label (BaseWidget):
                     index -= 1
             elif hashfound:
                 if not mnemonicset:
-                    self._mnemonic = (index, unicode (char.lower()))
+                    self._mnemonic = (index, str (char.lower()))
                     mnemonicset = True
                 hashfound = False
                 newtext += char

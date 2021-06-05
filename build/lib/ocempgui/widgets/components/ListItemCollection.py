@@ -25,8 +25,8 @@
 
 """List item collection."""
 
-from UserList import UserList
-from ListItem import ListItem
+from collections import UserList
+from .ListItem import ListItem
 
 class ListItemCollection (UserList):
     """ListItemCollection (items=None) -> ListItemCollection
@@ -83,7 +83,7 @@ class ListItemCollection (UserList):
     """
     def __init__ (self, items=None):
         if items != None:
-            invalid = filter (lambda x: not isinstance (x, ListItem), items)
+            invalid = [x for x in items if not isinstance (x, ListItem)]
             if len (invalid) != 0:
                 raise ValueError ("items must contain only ListItem objects")
 

@@ -25,7 +25,7 @@
 
 """Simple observer subject class."""
 
-from IObserver import IObserver
+from .IObserver import IObserver
 
 class Subject (object):
     """Subject (name) -> Subject
@@ -95,7 +95,7 @@ class Subject (object):
         Raises a TypeError, if the passed argument is not a string or
         unicode.
         """
-        if type (name) not in (str, unicode):
+        if type (name) not in (str, str):
             raise TypeError ("name must be a string or unicode")
         self._name = name
         
@@ -111,7 +111,7 @@ class Subject (object):
         """
         for obj in observers:
             if not isinstance (obj, IObserver):
-                print "Warning: observer should inherit from IObserver"
+                print("Warning: observer should inherit from IObserver")
                 if not hasattr (obj, "update") or not callable (obj.update):
                     raise AttributeError ("update() method not found in"
                                           "observer %s" % obj)

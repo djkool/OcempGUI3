@@ -25,8 +25,8 @@
 
 """Event management system for any type of events and objects."""
 
-from Signals import Event
-from INotifyable import INotifyable
+from .Signals import Event
+from .INotifyable import INotifyable
 
 class EventManager (object):
     """EventManager () -> EventManager
@@ -54,7 +54,7 @@ class EventManager (object):
         Returns the amount of objects within the EventManager
         """
         length = 0
-        evlist = self.queues.keys ()
+        evlist = list(self.queues.keys ())
         for signal in evlist:
             length += len (self.queues[signal])
         return length
@@ -73,7 +73,7 @@ class EventManager (object):
         not have a callable notify attribute.
         """
         if not isinstance (obj, INotifyable):
-            print "Warning: object should inherit from INotifyable"
+            print("Warning: object should inherit from INotifyable")
             if not hasattr (obj, "notify") or not callable (obj.notify):
                 raise AttributeError ("notify() method not found in object %s"
                                       % obj)
@@ -94,7 +94,7 @@ class EventManager (object):
         not have a callable notify attribute.
         """
         if not isinstance (obj, INotifyable):
-            print "*** Warning: object should inherit from INotifyable"
+            print("*** Warning: object should inherit from INotifyable")
             if not hasattr (obj, "notify") or not callable (obj.notify):
                 raise AttributeError ("notify() method not found in object %s"
                                       % obj)
@@ -113,7 +113,7 @@ class EventManager (object):
         if signals:
             evlist = signals
         else:
-            evlist = self.queues.keys ()
+            evlist = list(self.queues.keys ())
 
         for signal in evlist:
             if obj in self.queues[signal]:
@@ -137,7 +137,7 @@ class EventManager (object):
         event grabbing object to filter the events, it received.
         """
         if (obj != None) and not isinstance (obj, INotifyable):
-            print "*** Warning: object should inherit from INotifyable"
+            print("*** Warning: object should inherit from INotifyable")
             if not hasattr (obj, "notify") or not callable (obj.notify):
                 raise AttributeError ("notify() method not found in object %s"
                                       % obj)

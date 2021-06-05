@@ -29,5 +29,5 @@ This module provides event capable object classes suitable for the usage
 with the ocempgui.events module.
 """
 
-from BaseObject import BaseObject
-from ActionListener import ActionListener
+from .BaseObject import BaseObject
+from .ActionListener import ActionListener

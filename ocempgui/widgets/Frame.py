@@ -27,10 +27,10 @@
 vertical alignment.
 """
 
-from Container import Container
-from BaseWidget import BaseWidget
-from Constants import *
-import base
+from .Container import Container
+from .BaseWidget import BaseWidget
+from .Constants import *
+from . import base
 
 class Frame (Container):
     """Frame (widget=None) -> Frame

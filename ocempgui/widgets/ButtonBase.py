@@ -27,9 +27,9 @@
 
 from pygame import time as PygameTime
 from pygame import K_SPACE, K_KP_ENTER, K_RETURN
-from Bin import Bin
-from Constants import *
-import base
+from .Bin import Bin
+from .Constants import *
+from . import base
 
 class ButtonBase (Bin):
     """

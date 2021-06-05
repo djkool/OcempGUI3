@@ -27,10 +27,10 @@
 
 from pygame import Surface, Rect
 from ocempgui.draw import Image
-from BaseWidget import BaseWidget
-from Constants import *
-from StyleInformation import StyleInformation
-import base
+from .BaseWidget import BaseWidget
+from .Constants import *
+from .StyleInformation import StyleInformation
+from . import base
 
 class ImageMap (BaseWidget):
     """ImageMap (image) -> ImageMap
@@ -118,7 +118,7 @@ class ImageMap (BaseWidget):
         unicode or pygame.Surface.
         """
         if image:
-            if type (image) in (str, unicode):
+            if type (image) in (str, str):
                 self._path = image
                 self._picture = Image.load_image (image)
             elif isinstance (image, Surface):

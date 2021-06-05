@@ -25,10 +25,10 @@
 
 """A widget, which acts upon different mouse events."""
 
-from ButtonBase import ButtonBase
-from Label import Label
-from Constants import *
-import base
+from .ButtonBase import ButtonBase
+from .Label import Label
+from .Constants import *
+from . import base
 
 class Button (ButtonBase):
     """Button (text=None) -> Button ()

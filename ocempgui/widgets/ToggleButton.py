@@ -25,10 +25,10 @@
 
 """A button widget, which can retain its state."""
 
-from ButtonBase import ButtonBase
-from Label import Label
-from Constants import *
-import base
+from .ButtonBase import ButtonBase
+from .Label import Label
+from .Constants import *
+from . import base
 
 class ToggleButton (ButtonBase):
     """ToggleButton (text) -> ToggleButton

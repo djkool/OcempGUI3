@@ -25,5 +25,5 @@
 
 """Image constants for the widgets module."""
 
-import Icons16x16
+from . import Icons16x16
 

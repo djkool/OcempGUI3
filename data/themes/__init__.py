@@ -25,4 +25,4 @@
 
 """Installed theme engines."""
 
-import default
+from . import default

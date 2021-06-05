@@ -26,8 +26,8 @@
 """Globally used variables and objects by the widgets."""
 
 from pygame import init as pygameinit, key
-from Style import Style
-from StyleInformation import StyleInformation
+from .Style import Style
+from .StyleInformation import StyleInformation
 
 # Globally used style object for the widgets.
 GlobalStyle = None

@@ -27,11 +27,11 @@
 
 from pygame import K_KP_PLUS, K_PLUS, K_RIGHT, K_DOWN, K_KP_MINUS, K_MINUS
 from pygame import K_LEFT, K_UP, K_PAGEUP, K_PAGEDOWN, K_HOME, K_END, Rect
-from Range import Range
+from .Range import Range
 from ocempgui.draw import Draw
-from Constants import *
-from StyleInformation import StyleInformation
-import base
+from .Constants import *
+from .StyleInformation import StyleInformation
+from . import base
 
 class Scale (Range):
     """Scale (minimum, maximum, step=1.0) -> Scale

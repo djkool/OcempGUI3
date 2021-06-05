@@ -25,11 +25,11 @@
 
 """A button widget with a check box."""
 
-from ToggleButton import ToggleButton
-from ButtonBase import ButtonBase
-from Constants import *
-from StyleInformation import StyleInformation
-import base
+from .ToggleButton import ToggleButton
+from .ButtonBase import ButtonBase
+from .Constants import *
+from .StyleInformation import StyleInformation
+from . import base
 
 class CheckButton (ToggleButton):
     """CheckButton (text) -> CheckButton

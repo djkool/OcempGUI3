@@ -28,13 +28,13 @@ scrollbars."""
 
 from pygame import K_RIGHT, K_LEFT, K_HOME, K_END, K_DOWN, K_UP, K_PAGEDOWN
 from pygame import K_PAGEUP
-from ScrollBar import HScrollBar, VScrollBar
-from Bin import Bin
-from BaseWidget import BaseWidget
-from ViewPort import ViewPort
-from StyleInformation import StyleInformation
-from Constants import *
-import base
+from .ScrollBar import HScrollBar, VScrollBar
+from .Bin import Bin
+from .BaseWidget import BaseWidget
+from .ViewPort import ViewPort
+from .StyleInformation import StyleInformation
+from .Constants import *
+from . import base
 
 class ScrolledWindow (Bin):
     """ScrolledWindow (width, height) -> ScrolledWindow

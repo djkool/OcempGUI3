@@ -26,10 +26,10 @@
 """A proxy class for widgets, that need to be scrolled."""
 
 from pygame import Rect
-from Bin import Bin
-from BaseWidget import BaseWidget
-from StyleInformation import StyleInformation
-import base
+from .Bin import Bin
+from .BaseWidget import BaseWidget
+from .StyleInformation import StyleInformation
+from . import base
 
 class ViewPort (Bin):
     """ViewPort (widget) -> ViewPort
@@ -204,7 +204,7 @@ class ViewPort (Bin):
 
             children = kwargs.get ("children", {})
             blit = self.image.blit
-            items = children.items ()
+            items = list(children.items ())
 
             # Clean up the dirty areas on the widget.
             vals = []

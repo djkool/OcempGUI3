@@ -26,4 +26,4 @@
 """Default theme engine."""
 
 RCFILE = "default.rc"
-from DefaultEngine import DefaultEngine
+from .DefaultEngine import DefaultEngine
