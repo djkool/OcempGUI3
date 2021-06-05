@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 # $Id: setup.py,v 1.36.2.17 2008/05/10 08:03:45 marcusva Exp $
+#                           2021/06/4 djkool
 # setup script for ocempgui
 
 import distutils.sysconfig
@@ -8,15 +9,13 @@ from distutils.core import setup, Extension
 from distutils.command.install_data import install_data
 import os, sys, glob, time
 
-VERSION = "0.2.9"
+VERSION = "3.0.1"
 
 # Minimum requirements.
 ATK_MINIMUM = "1.18.0"
-PYGAME_MINIMUM = (1, 7, 1)
-PYTHON_MINIMUM = (2, 3)
+PYGAME_MINIMUM = (2, 0, 1)
+PYTHON_MINIMUM = (3, 6)
 
-PAPI_VERSION = "0.0.5"
-PAPI_DEBUG = "1"
 
 ##
 # General configuration stuff.
@@ -118,7 +117,7 @@ class InstallData (install_data):
         isrpm = False
         iswininst = False
 
-        print bdist.bdist_base, self.install_dir
+        print(bdist.bdist_base, self.install_dir)
 
         for entry in sys.argv[1:]:
             if entry.startswith ("bdist"):
@@ -131,7 +130,7 @@ class InstallData (install_data):
                 isrpm = True
             elif entry == "--format=wininst":
                 iswininst = True
-    
+
         # Binary distribution build.
         if binary:
             path = bdist.bdist_base
@@ -149,19 +148,6 @@ class InstallData (install_data):
         # Update the .pyc file (s).
         install_lib.byte_compile (files)
 
-def get_papi_defines ():
-    """Builds the defines list for the C Compiler."""
-    val = [("DEBUG", PAPI_DEBUG), ("VERSION", '"0.0.5"')]
-    if sys.platform == "win32":
-        val.append (("IS_WIN32", "1"))
-    return val
-
-def get_papi_files ():
-    """Gets the list of file to use for building the papi accessibility
-    module."""
-    path = os.path.join ("ocempgui", "access", "papi")
-    files = glob.glob (os.path.join (path, "*.c"))
-    return files
 
 def get_data_files ():
     """Gets a list of the files beneath data/ to install."""
@@ -202,38 +188,24 @@ def run_checks ():
         if pygame.version.vernum < PYGAME_MINIMUM:
             raise Exception ("You should have at least Pygame >= %d.%d.%d "
                              "installed" % PYGAME_MINIMUM)
-	pygame_version = pygame.version.ver
+        pygame_version = pygame.version.ver
     except ImportError:
         pass
 
-    # Environment checks for the PAPI interfaces.
-    papi = False
+    # Environment checks for the ATK interfaces.
     atk_version = "not found"
-    if not check_pkgconfig ():
-        papi = False
-    else:
-        val = pkg_get_flags ("atk", "--modversion")
-        if val:
-            atk_version = val[0]
-            if atk_version >= ATK_MINIMUM:
-                papi = True
+    val = pkg_get_flags ("atk", "--modversion")
+    if val:
+        atk_version = val[0]
 
-    print "\nThe following information will be used to build OcempGUI:"
-    print "\t Python:     %d.%d.%d" % sys.version_info[0:3]
-    print "\t Pygame:     %s" % pygame_version
-    print "\t ATK:        %s" % atk_version
-    print "\t Build Papi: %s\n" % papi
+    print("\nThe following information will be used to build OcempGUI:")
+    print("\t Python:     %d.%d.%d" % sys.version_info[0:3])
+    print("\t Pygame:     %s" % pygame_version)
+    print("\t ATK:        %s" % atk_version)
 
-    return papi
+    return True
 
 if __name__ == "__main__":
-
-    want_papi = False
-    try:
-        want_papi = run_checks ()
-    except Exception, detail:
-        print "Error:", detail
-        sys.exit (1)
 
     docfiles = get_documentation_files ()
     datafiles = get_data_files ()
@@ -258,32 +230,5 @@ if __name__ == "__main__":
         "cmdclass" : { "install_data" : InstallData },
         }
 
-    if not want_papi:
-        # Do not build the accessibility extension.
-        setup (**setupdata)
-    else:
-        # Try to build the setup with the extension.
-        includes, libdirs, libs = pkg_get_all_cflags ("atk")
-        gmodflags = pkg_get_all_cflags ("gmodule-2.0")
-        includes += gmodflags[0]
-        libdirs += gmodflags[1]
-        libs += gmodflags[2]
-        #includes += distutils.sysconfig.get_python_inc ()
-
-        defines = get_papi_defines ()
-    
-        warn_flags = ["-W", "-Wall", "-Wpointer-arith", "-Wcast-qual",
-                      "-Winline", "-Wcast-align", "-Wconversion",
-                      "-Wstrict-prototypes", "-Wmissing-prototypes",
-                      "-Wmissing-declarations", "-Wnested-externs",
-                      "-Wshadow", "-Wredundant-decls"
-                      ]
-        compile_args = warn_flags + ["-std=c99","-g"]
-        papi = Extension ("ocempgui.access.papi", sources=get_papi_files (),
-                          include_dirs=includes, library_dirs=libdirs,
-                          libraries=libs, language="c",
-                          define_macros=defines,
-                          extra_compile_args=compile_args)
-  
-        setupdata["ext_modules"] = [papi]
-        setup (**setupdata)
+    # Do not build the accessibility extension.
+    setup (**setupdata)
