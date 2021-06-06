@@ -863,7 +863,7 @@ class Renderer (IIndexable):
                 layers[0].append (widget)
             # Sort the widget list, so we can access the index keys more
             # quickly.
-            layers[0].sort (lambda x, y: cmp (x.index, y.index))
+            layers[0].sort (key=lambda x: x.index)
 
     def remove_index (self, *objects):
         """R.remove_index (...) -> None
@@ -966,7 +966,7 @@ class Renderer (IIndexable):
                         append ((w, intersect))
 
         # We have the intersection list, blit it.
-        redraw.sort (lambda x, y: cmp (x[0].depth, y[0].depth))
+        redraw.sort (key=lambda x: x[0].depth)
 
         # Clean up.
         for w, i in redraw:

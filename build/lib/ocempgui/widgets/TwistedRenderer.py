@@ -159,7 +159,7 @@ class TwistedRenderer (Renderer):
             if not self.distribute_events (*events):
                 return # QUIT event
             if self.timer > 0:
-                delay (1000 / self.timer)
+                delay (1000 // self.timer)
 
     reactor = property (lambda self: self._reactor,
                         lambda self, var: self.set_reactor (var),

@@ -137,7 +137,6 @@ class DefaultEngine (object):
         r = rect
         if r == None:
             r = surface.get_rect ()
-        print(r)
 
         # Dependant on the border style, we will care about the used
         # colors. 3D effect such as sunken or raised make use of the
@@ -230,7 +229,7 @@ class DefaultEngine (object):
         start = max (half, 3)
         rect = surface.get_rect ()
         array = array3d (surface)
-        print(rect)
+
         # Right and bottom inner shadow.
         array[rect.left + start:rect.right - half,
               rect.bottom - shadow:rect.bottom - half] = color[0]
@@ -350,7 +349,7 @@ class DefaultEngine (object):
         array = array3d (surface)
 
         if arrowtype in (ARROW_LEFT, ARROW_RIGHT):
-            arrow_width = rect.width / 3
+            arrow_width = rect.width // 3
             center = rect.centery
             if center % 2 == 0:
                 center -= 1
@@ -366,7 +365,7 @@ class DefaultEngine (object):
                     array[col:col - arrow_width + i:-1, center - i] = color
 
         elif arrowtype in (ARROW_UP, ARROW_DOWN):
-            arrow_height = rect.height / 3
+            arrow_height = rect.height // 3
             center = rect.centerx
             if center % 2 == 0:
                 center -= 1
@@ -723,8 +722,8 @@ class DefaultEngine (object):
             totalwidth = max (totalwidth, rect.width)
         
         # Blit all in the center using centered justification.
-        posx = (width - totalwidth) / 2
-        posy = (height - totalheight) / 2
+        posx = (width - totalwidth) // 2
+        posy = (height - totalheight) // 2
         for rtext, rect in labels:
             rect.topleft = posx, posy
             posy += rect.height
@@ -751,7 +750,7 @@ class DefaultEngine (object):
                 rect.right = right
         else:
             for rtext, rect in labels:
-                rect.left = (width - rect.width) / 2
+                rect.left = (width - rect.width) // 2
         
         for rtext, rect in labels:
             blit (rtext, rect)
@@ -946,7 +945,7 @@ class DefaultEngine (object):
             r = None
             if rect_img and rect_child:
                 rect_img.center = rect.center
-                rect_img.right -= button.child.rect.width / 2 + spacing
+                rect_img.right -= button.child.rect.width // 2 + spacing
                 rect_child.center = rect.center
                 rect_child.left = rect_img.right + spacing
                 r = rect_img.union (rect_child)
@@ -1083,8 +1082,8 @@ class DefaultEngine (object):
 
         rect = surface.get_rect ()
         if frame.widget:
-            rect.y = frame.widget.height / 2
-            rect.height -= frame.widget.height / 2
+            rect.y = frame.widget.height // 2
+            rect.height -= frame.widget.height // 2
         self.draw_border (surface, frame.state, cls, frame.style, frame.border,
                           rect)
         return surface
@@ -1135,11 +1134,11 @@ class DefaultEngine (object):
         surface = self.draw_rect (width, height, scale.state, cls, scale.style)
         rect = None
         if orientation == ORIENTATION_VERTICAL:
-            r = pygame.Rect (width / 3, 0, width / 3, height)
-            r.centery = height / 2
+            r = pygame.Rect (width // 3, 0, width // 3, height)
+            r.centery = height // 2
         else:
-            r = pygame.Rect (0, height / 3, width, height /3)
-            r.centerx = width / 2
+            r = pygame.Rect (0, height // 3, width, height // 3)
+            r.centerx = width // 2
         
         self.draw_border (surface, scale.state, cls, scale.style,
                           StyleInformation.get ("SCALE_BORDER"), r)

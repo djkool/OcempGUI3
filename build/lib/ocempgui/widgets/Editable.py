@@ -291,14 +291,14 @@ class Editable (BaseWidget):
                 handled = True
 
             # Non-printable characters or maximum exceeded.
-            elif (len (event.str) == 0) or (ord (event.str) < 32):
+            elif (len (event.unicode) == 0) or (ord (event.unicode) < 32):
                 # Any unicode character smaller than 0x0020 (32, SPC) is
                 # ignored as those are control sequences.
                 return False
 
             # Any other case is okay, so show it.
             else:
-                self._text = self._text[:caret] + event.str + \
+                self._text = self._text[:caret] + event.unicode + \
                              self._text[caret:]
                 caret += 1
                 handled = True
