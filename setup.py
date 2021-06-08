@@ -100,7 +100,7 @@ def adjust_paths (datadir, files):
         fd = open (f, "r+")
         lines = fd.readlines ()
         for i, l in enumerate (lines):
-            lines[i] = l.replace ("@DATAPATH@", path)
+            lines[i] = l.replace ("@DATAPATH@", path.replace("\\", "\\\\"))
         fd.seek (0)
         fd.writelines (lines)
         fd.close ()
